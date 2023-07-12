@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>are you there, god? it's me, worm boy 3!</title>
+
+    <!-- preview meta -->
+    <meta property="description" content="i'm just a little wormy boy OOOHHH i'm a little wiggly guy aren't i!">
+    <meta property="author" content="worm">
+	
+    <!-- google font[s] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+	<script src="https://kit.fontawesome.com/efae99f57b.js" crossorigin="anonymous"></script>
+
+    <!-- mine -->
+    <link rel="stylesheet" href="/css/styles.css">
+	<link rel="icon" href="assets/worm.ico">
+    <script type="module" src="js/drag.js"></script>
+    <script type="module" src="js/blinkies.js"></script>
+</head>
+<body onload="populateBlinkes();">
+    <div class="drag-wrap">
+        <!-- manually set to draggable for the sake of explicitness. -->
+        <img src="assets/cd.gif" alt="a gif of a rotating cd." class="little-img" draggable="false" onmousedown="makeDraggable(this);">
+    </div>
+
+    <div class="wrapper" id="nav-win">
+        <!-- all titles are automatically made draggable, see drag.js -->
+        <div class="title">
+            <span>nav-window</span>
+        </div>
+        <div class="content">
+            <img src="assets/long_worm.png" alt="a long and colorful worm." id="long-worm">
+            <nav>
+                <a href="#">item one</a>
+                <a href="#">item two</a>
+                <a href="#">item three</a>
+                <a href="#">item four</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="wrapper" id="main-win">
+        <div class="title">
+            <span>main-window</span>
+        </div>
+        <div class="content">
+            <h1>welcome to my site!</h1>
+            <p>welcome to worm boy 3! it's me, wormboy!</p>
+            <p>site under major construction for now, but try dragging some things around!</p>
+        </div>
+    </div>
+
+    <div class="wrapper" id="blinkie-win">
+        <div class="title">
+            <span>blinkie-window</span>
+        </div>
+        <div class="content"><!-- placeholder for blinkie population. --></div>
+    </div>
+
+    <div class="wrapper" id="footer-win">
+        <div class="title">
+            <span>footer-window</span>
+        </div>
+        <div class="content">
+            <p>copyright 2023 WORM BOY!</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+:root {
+    --font-color: #fff;
+    --purple: #9313c5;
+    --highlight-purple: #8d13c5;
+    --link: #61e20c;
+    --link-hover: #cbf122;
+    --link-visited: #13c74f;
+    --border: 1px solid var(--purple);
+}
+
+::selection, ::-moz-selection {
+	background-color: var(--highlight-purple);
+	color: #fff;
+}
+
+/* unselectable elements */
+div.title span, div.drag-wrap > img, div.drag-wrap {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* the rest of the css. */
+body {
+    background-image: url("../assets/carpet.png"); /* sourced from http://www.thebestneoncarpet.com ! */
+    color: var(--font-color);
+    font-family: 'VT323', monospace;;
+}
+
+img.little-img {
+    max-width: 100px;
+}
+
+img.blinkie {
+    image-rendering: crisp-edges;
+    margin: 0 0.5em;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+/* nav */
+nav {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+nav > a {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+
+/* wrapper for windows, and the invisible wrapper. */
+div.wrapper, div.drag-wrap {
+    position: absolute;
+}
+
+div.wrapper {
+    border: 1px solid black;
+    max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
+}
+
+div.title {
+    background-color: var(--purple);
+    border: var(--border);
+    margin-bottom: 0;
+    overflow-x: hidden;
+    padding: .2em 0.5em 0 1em;
+}
+
+div.title i {
+    float: right;
+    margin-left: .5em;
+}
+
+div.title i:hover {
+    color: #fffa;
+}
+
+div.content {
+    background-color: #000a;
+    border: var(--border);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 2em;
+}
+
+
+/* index.html positions--will i reuse these ids? will i need more/others? */
+#main-win {
+    left: 30%;
+    top: 45%;
+    max-width: 40%;
+}
+
+#nav-win {
+    left: 40%;
+    top: 2%;
+    width: 40%;   
+}
+
+#nav-win > div.content {
+    max-height: fit-content;
+}
+
+#blinkie-win {
+    left: 80%;
+    top: 20%;
+    width: min-content;
+}
+
+#blinkie-win > div.content {
+    min-height: fit-content;
+    max-height: none;
+}
+
+#footer-win {
+    left: 45%;
+    top: 80%;
+}
+
+/* ids */
+#long-worm {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* ****** SCROLL BAR ****** */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #0000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
