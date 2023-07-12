@@ -2,11 +2,13 @@
 
 ![signature](https://img.shields.io/badge/crane%20did%20this-926cd4?style=for-the-badge)
 
-this site is my silly neocities for silly things :]!
+this site is my silly neocities for silly things :]! see it live here:
 
-i am making this git repo public because i love to peruse the source of my favorite sites, and i hope that this may make that easier.
+[![wormboy button](assets/button.png)](https://wormboy3.neocities.org/)
 
-> of course don't steal my code dummy. please learn from it, but this is my site, default copyright laws apply.
+i am making this git repo public because i love to peruse the source of my favorite sites, and i hope that this may make that easier for others to see mine.
+
+> of course don't steal my code dummy. please learn from it, but this is my site.
 
 
 ## notes
@@ -25,5 +27,7 @@ these settings may not be for everyone, but they work for me.
 
 
 ## asset sources
+
 [bowling alley bg](http://www.thebestneoncarpet.com/Bowling-Centers.html) *modified
+
 *i need to source my blinkies!!!! AHHH!

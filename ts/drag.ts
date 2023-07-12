@@ -73,3 +73,7 @@ for (let e of draggables) {
     e.setAttribute("onmousedown", "makeDraggable(this);");
     e.parentElement.setAttribute("onmousedown", "bringToFront(this);")
 }
+
+for (let e of document.getElementsByClassName("drag-wrap")) {
+    e.setAttribute("onmousedown", "bringToFront(this);")
+}

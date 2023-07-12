@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>wormy links</title>
+
+    <!-- preview meta -->
+    <meta property="description" content="look at all those cool links! i have somethign to share with YOU!!!!!">
+    <meta property="author" content="wormboy">
+	
+    <!-- google font[s] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- mine -->
+    <link rel="stylesheet" href="/css/styles.css">
+	<link rel="icon" href="assets/worm.ico">
+    <script type="module" src="js/drag.js"></script>
+</head>
+<body>
+    <!-- because this page is empty, have some chickens and a disk -->
+    <div class="drag-wrap">
+        <img src="assets/chicken.gif" alt="chicken gif" class="little-img" draggable="false" onmousedown="makeDraggable(this);">
+    </div>
+    <div class="drag-wrap">
+        <img src="assets/chicken.gif" alt="chicken gif" class="little-img" draggable="false" onmousedown="makeDraggable(this);">
+    </div>
+    <div class="drag-wrap">
+        <img src="assets/chicken.gif" alt="chicken gif" class="little-img" draggable="false" onmousedown="makeDraggable(this);">
+    </div>
+    <div class="drag-wrap">
+        <!-- manually set to draggable for the sake of explicitness. -->
+        <img src="assets/cd.gif" alt="a gif of a rotating cd." class="little-img" draggable="false" onmousedown="makeDraggable(this);">
+    </div>
+
+    <div class="wrapper" id="nav-win">
+        <!-- all titles are automatically made draggable, see drag.js -->
+        <div class="title">
+            <span>nav-window</span>
+        </div>
+        <div class="content">
+            <nav>
+                <a href="/index.html">home</a>
+                <a href="/about.html">about</a>
+                <a href="/links.html">links</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="wrapper" id="main-win">
+        <div class="title">
+            <span>main-window</span>
+        </div>
+        <div class="content">
+            <h1>nothign here yet sorry guys :(</h1>
+            <p>i put some chickens in the corner with the disk if you wanna play with those...</p>
+            <p class="whisper">unless you're on mobile then this just really stinks...</p>
+        </div>
+    </div>
+
+    <div class="wrapper" id="footer-win">
+        <div class="title">
+            <span>footer-window</span>
+        </div>
+        <div class="content">
+            <p>copyright 2023 WORM BOY!</p>
+            <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
+            or 
+            <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
+        </div>
+    </div>
+</body>

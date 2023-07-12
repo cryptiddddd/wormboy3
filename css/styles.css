@@ -1,4 +1,6 @@
 :root {
+    --page-bg: url("../assets/carpet.png"); /* sourced from http://www.thebestneoncarpet.com ! */
+
     --font-color: #fff;
     --whisper-color: #bbb;
     --purple: #9313c5;
@@ -7,7 +9,8 @@
     --link-hover: #cbf122;
     --link-visited: #13c74f;
     
-    --border: 1px solid var(--purple);
+    --content-border: 1px solid var(--purple);
+    --win-border: 1px solid black;
     --win-background: #000a;
 }
 
@@ -17,7 +20,7 @@
 }
 
 /* unselectable elements */
-div.title span, div.drag-wrap > img, div.drag-wrap {
+div.title span, img, div.drag-wrap {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -28,7 +31,7 @@ div.title span, div.drag-wrap > img, div.drag-wrap {
 
 /* the rest of the css. */
 body {
-    background-image: url("../assets/carpet.png"); /* sourced from http://www.thebestneoncarpet.com ! */
+    background-image: var(--page-bg);
     color: var(--font-color);
     font-family: 'VT323', monospace;;
 }
@@ -80,7 +83,6 @@ nav {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-between;
-    margin-bottom: 1.4em;
 }
 
 nav > a {
@@ -91,10 +93,6 @@ nav > a {
 nav > a, nav > a:visited {
     color: var(--link);
 }
-/* 
-nav > a:hover {
-    text-decoration: none;
-} */
 
 /* wrapper for windows, and the invisible wrapper. */
 div.wrapper, div.drag-wrap {
@@ -102,13 +100,13 @@ div.wrapper, div.drag-wrap {
 }
 
 div.wrapper {
-    border: 1px solid black;
+    border: --win-border;
     max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
 }
 
 div.title {
     background-color: var(--purple);
-    border: var(--border);
+    border: var(--content-border);
     margin-bottom: 0;
     overflow-x: hidden;
     padding: .2em 0.5em 0 1em;
@@ -116,10 +114,14 @@ div.title {
 
 div.content {
     background-color: var(--win-background);
-    border: var(--border);
+    border: var(--content-border);
     max-height: 200px;
     overflow-y: auto;
     padding: 2em;
+}
+
+div.content > h1:first-of-type {
+    margin-top: 0;
 }
 
 
@@ -162,6 +164,15 @@ div.content {
     max-height: none;
 }
 
+#changelog-win {
+    left: 25%;
+    top: 80%;
+}
+
+div.update-win {
+    max-width: 30%;
+}
+
 #footer-win {
     left: 2%;
     top: 70%;
@@ -175,7 +186,7 @@ div.content {
 #long-worm {
     display: block;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 /* mobile edition */
@@ -216,10 +227,10 @@ div.content {
         flex: 0 1 auto;   
     } */
 
-    /* img.blinkie {
+    img.blinkie {
         display: block;
         margin: 0.5em auto;
-    } */
+    }
 }
 
 /* ****** SCROLL BAR ****** */
