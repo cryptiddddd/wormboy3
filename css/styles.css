@@ -1,15 +1,18 @@
 :root {
     --font-color: #fff;
+    --whisper-color: #bbb;
     --purple: #9313c5;
-    --highlight-purple: #8d13c5;
+
     --link: #61e20c;
     --link-hover: #cbf122;
     --link-visited: #13c74f;
+    
     --border: 1px solid var(--purple);
+    --win-background: #000a;
 }
 
 ::selection, ::-moz-selection {
-	background-color: var(--highlight-purple);
+	background-color: var(--purple);
 	color: #fff;
 }
 
@@ -30,6 +33,19 @@ body {
     font-family: 'VT323', monospace;;
 }
 
+ul {
+    display: block;
+    list-style-type: square;
+    list-style-position: inside;
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+li {
+    text-indent: none;
+}
+
 img.little-img {
     max-width: 100px;
 }
@@ -39,6 +55,12 @@ img.blinkie {
     margin: 0 0.5em;
 }
 
+/* text styles */
+.whisper {
+    color: var(--whisper-color);    
+    font-style: italic;
+}
+
 a {
     color: var(--link);
     text-decoration: none;
@@ -46,7 +68,7 @@ a {
 
 a:hover, a:visited:hover {
     color: var(--link-hover);
-    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 a:visited {
@@ -58,7 +80,7 @@ nav {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-between;
-    margin-top: 1em;
+    margin-bottom: 1.4em;
 }
 
 nav > a {
@@ -66,6 +88,13 @@ nav > a {
     text-transform: uppercase;
 }
 
+nav > a, nav > a:visited {
+    color: var(--link);
+}
+/* 
+nav > a:hover {
+    text-decoration: none;
+} */
 
 /* wrapper for windows, and the invisible wrapper. */
 div.wrapper, div.drag-wrap {
@@ -85,17 +114,8 @@ div.title {
     padding: .2em 0.5em 0 1em;
 }
 
-div.title i {
-    float: right;
-    margin-left: .5em;
-}
-
-div.title i:hover {
-    color: #fffa;
-}
-
 div.content {
-    background-color: #000a;
+    background-color: var(--win-background);
     border: var(--border);
     max-height: 200px;
     overflow-y: auto;
@@ -104,14 +124,9 @@ div.content {
 
 
 /* index.html positions--will i reuse these ids? will i need more/others? */
-#main-win {
-    left: 30%;
-    top: 45%;
-    max-width: 40%;
-}
 
 #nav-win {
-    left: 40%;
+    left: 20%;
     top: 2%;
     width: 40%;   
 }
@@ -120,9 +135,25 @@ div.content {
     max-height: fit-content;
 }
 
+#nav-win p {
+    margin: 0;
+    text-align: center;
+}
+
+#main-win {
+    left: 30%;
+    top: 40%;
+    max-width: 40%;
+}
+
+#music-win {
+    left: 3%;
+    top: 30%;
+}
+
 #blinkie-win {
     left: 80%;
-    top: 20%;
+    top: 15%;
     width: min-content;
 }
 
@@ -132,8 +163,12 @@ div.content {
 }
 
 #footer-win {
-    left: 45%;
-    top: 80%;
+    left: 2%;
+    top: 70%;
+}
+
+#footer-win div.content {
+    text-align: center;
 }
 
 /* ids */
@@ -141,6 +176,50 @@ div.content {
     display: block;
     max-width: 300px;
     margin: 0 auto;
+}
+
+/* mobile edition */
+@media (max-width: 960px) {
+    /* body {
+        column-gap: 1em;
+        display: flex;
+        flex-flow: row wrap;
+    } */
+
+    div.wrapper {
+        flex-shrink: 0;
+        position: static;
+        min-width: 95%;
+        margin: 1em auto;
+    }
+
+    div.drag-wrap {
+        z-index: -1;
+    }
+
+    #blinkie-win > div.content {
+        max-height: 300px;
+        min-height: 100px;
+        overflow-y: auto;
+    }
+/* 
+    #blinkie-win, #music-win {
+        max-width: 50%;
+        min-width: min-content;
+    } */
+
+    /* #music-win {
+        flex: 1 1 auto;
+    }
+
+    #blinkie-win {
+        flex: 0 1 auto;   
+    } */
+
+    /* img.blinkie {
+        display: block;
+        margin: 0.5em auto;
+    } */
 }
 
 /* ****** SCROLL BAR ****** */
@@ -151,12 +230,15 @@ div.content {
 ::-webkit-scrollbar-track {
     background: #0000;
 }
-  
+ 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #888a;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-background: #555;
+    background: #555a;
 }
 
+::-webkit-scrollbar-button {
+    height: 4px;
+}

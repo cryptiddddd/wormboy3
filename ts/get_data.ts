@@ -8,7 +8,7 @@ this file written by wormboy.
 function fetchJSON(file_name: string, callback: Function): void {
     const xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onload = function():void {
+    xmlhttp.onload = function(): void {
         callback(JSON.parse(this.responseText));
     };
 

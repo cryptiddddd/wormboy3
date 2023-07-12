@@ -10,6 +10,19 @@ var xOffset: number; var yOffset: number;
 
 var currentWrapper: HTMLElement = null;
 
+// brings a window to front index.
+function bringToFront(wrapper: HTMLElement): void {
+    // if the current highest is only one higher than the wrapper's z, no need for adjustment
+    if (wrapper.style.zIndex == "" || highestZ - 1 != Number(wrapper.style.zIndex)) {
+        wrapper.style.zIndex = "" + highestZ;
+        highestZ ++;
+    }
+}
+
+// declared both independent, then tied to the window.
+(window as any).bringToFront = bringToFront;
+
+
 // disables element dragging.
 (window as any).closeDrag = function closeDrag(handle: HTMLElement): void {
     handle.setAttribute("onmouseup", "");
@@ -23,13 +36,6 @@ var currentWrapper: HTMLElement = null;
 (window as any).makeDraggable = function makeDraggable(handle: HTMLElement): void {
     // the direct parent of the handling div should Always be the wrapper div.
     currentWrapper = handle.parentElement;
-
-    // set its z-index to the top, if needed.
-    if (currentWrapper.style.zIndex == "" || highestZ - 1 != Number(currentWrapper.style.zIndex)) {
-        currentWrapper.style.zIndex = "" + highestZ;
-        highestZ ++;
-    }
-    // if the current highest is only one higher than the wrapper's z, no need for adjustment
 
     // set global vars -- get difference between position and cursor.
     xOffset = currentWrapper.offsetLeft - cursorX;
@@ -65,4 +71,5 @@ let draggables = document.getElementsByClassName("title");
 
 for (let e of draggables) {
     e.setAttribute("onmousedown", "makeDraggable(this);");
+    e.parentElement.setAttribute("onmousedown", "bringToFront(this);")
 }

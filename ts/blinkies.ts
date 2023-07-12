@@ -13,7 +13,7 @@ interface AssetIndex {
 
 function blinkieCallback(data: AssetIndex) {
     // div.content element
-    let container: Element = document.getElementById("blinkie-win").lastElementChild;
+    let container: Element = document.getElementById("blinkie-wrapper");
     
     // todo: shuffle the array
 
