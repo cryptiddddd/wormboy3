@@ -82,6 +82,7 @@ interface UpdateLog {
 
     let updateLink = document.createElement("a");
     updateLink.href = entry.gitCommit;
+    updateLink.target = "_blank";
     updateLink.innerText = "view code notes on github";
 
     // put it all together

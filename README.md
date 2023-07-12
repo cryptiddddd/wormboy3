@@ -30,4 +30,10 @@ these settings may not be for everyone, but they work for me.
 
 [bowling alley bg](http://www.thebestneoncarpet.com/Bowling-Centers.html) *modified
 
+disk from [momg neocities](https://momg.neocities.org)
+
+chickens from [gifcities](https://gifcities.org)
+
+i just need to stapm those on my site somewhere.
+
 *i need to source my blinkies!!!! AHHH!
