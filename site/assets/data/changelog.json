@@ -1,5 +1,13 @@
 [
     {
+        "date": "undecided",
+        "title": "undecided",
+        "body": "working on creating one or more alternate themes, and it's making me rethink how many colors i define. i gotta be a little less lazy about it...",
+        "gitCommit": "",
+        "id": 1,
+        "isMajor": false
+    },
+    {
         "date": "07/12/2023",
         "title": "added changelog!",
         "body": "i have created the beginnings of a changelog! and a full changelog page! if you are reading this, you are probably on that changelog page and hitting buttons. i have future plans for this little window to be able to close, or maaaybe to prevent duplicates from opening.. but that's not really fun :(</p><p>anyways, i have some work to do with how it displays the changelog list, and how it'll highlight major updates! i have soooooo many other things to be doing but for today, this might be wormboy out!.... byebye!!!!!!</p><p>edit: i added more stuff, beginnings for <a href=\"./about.html\">about</a> and <a href=\"./links.html\">links</a>. WORM BOY OUT FORREAL NOW!!!!!", 

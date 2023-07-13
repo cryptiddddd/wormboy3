@@ -6,7 +6,7 @@ written in typescript, compiled with tsc.
 this file written by wormboy. 
 */
 import { fetchJSON } from "./get_data.js";
-import { makeWinElement } from "./window.js";
+import { getExistingWin, makeWinElement } from "./window.js";
 
 // interface for each item of changelog.json.
 interface UpdateLog {
@@ -70,8 +70,14 @@ interface UpdateLog {
  * @param entry updatelog entry data for this specific window.
  */
 (window as any).createEntryWin = function createEntryWin(entry: UpdateLog): void {
+    // first check if it exists, and exit early if it does.
+    let winID = `update-${entry.id}`;
+    if (getExistingWin(winID)) return;
+
     // shortcut to make the wrapper.
-    let wrapper = makeWinElement(`update ${entry.id}`, ["update-win"]);
+    let wrapper = makeWinElement(winID);
+    wrapper.id = winID;
+    wrapper.classList.add("update-win");
 
     // create content
     let updateTitleP = document.createElement("h1");

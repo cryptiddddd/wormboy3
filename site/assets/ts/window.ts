@@ -7,21 +7,32 @@ this file written by WORMBOY!!!!
 */
 
 /**
+ * checks if a window exists and brings it to front if it does.
+ * technically could be used for plenty of other elements atm... but the intended use it with a window thingy.
+ * @param winID id of the desired window
+ * @returns true if the window exists, false otherwise.
+ */
+function getExistingWin(winID: string): boolean {
+    let wrapper = document.getElementById(winID);
+    
+    // imaginary click.
+    if (wrapper) {
+        wrapper.onmousedown(null);
+    }
+
+    return wrapper != null;
+}
+
+/**
  * creates one of those little window thingies, complete with draggability.
  * to add content: append children to the last element child.
  * @param headerText window title text
- * @param cls a list of css classes to add. optional.
  * @returns a window wrapper structure.
  */
-function makeWinElement(headerText: string, cls?: string[]): HTMLElement {
+function makeWinElement(headerText: string): HTMLElement {
     // create wrapper.
     let wrapper = document.createElement("div");
     wrapper.classList.add("wrapper");
-    if (cls.length > 0) {
-        for (let className of cls) {
-            wrapper.classList.add(className);
-        }
-    }
     wrapper.setAttribute("onmousedown", "bringToFront(this);");
 
     // create title
@@ -45,4 +56,7 @@ function makeWinElement(headerText: string, cls?: string[]): HTMLElement {
     return wrapper;
 }
 
-export { makeWinElement };
+export { 
+    getExistingWin,
+    makeWinElement
+ };

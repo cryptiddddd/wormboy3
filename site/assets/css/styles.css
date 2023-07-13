@@ -1,5 +1,5 @@
 :root {
-    --page-bg: url("../images/carpet.png"); /* sourced from http://www.thebestneoncarpet.com ! */
+    --page-bg: url("../images/carpet.png");
 
     --font-color: #fff;
     --whisper-color: #bbb;
@@ -20,7 +20,7 @@
 }
 
 /* unselectable elements */
-div.title span, img, div.drag-wrap {
+div.title span, img, div.free-elem {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -31,7 +31,7 @@ div.title span, img, div.drag-wrap {
 
 /* the rest of the css. */
 body {
-    background-image: var(--page-bg);
+    background: var(--page-bg);
     color: var(--font-color);
     font-family: 'VT323', monospace;;
 }
@@ -95,12 +95,12 @@ nav > a, nav > a:visited {
 }
 
 /* wrapper for windows, and the invisible wrapper. */
-div.wrapper, div.drag-wrap {
+div.wrapper, div.free-elem {
     position: absolute;
 }
 
 div.wrapper {
-    border: --win-border;
+    border: var(--win-border);
     max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
 }
 
@@ -191,12 +191,6 @@ div.update-win {
 
 /* mobile edition */
 @media (max-width: 960px) {
-    /* body {
-        column-gap: 1em;
-        display: flex;
-        flex-flow: row wrap;
-    } */
-
     div.wrapper {
         flex-shrink: 0;
         position: static;
@@ -204,7 +198,7 @@ div.update-win {
         margin: 1em auto;
     }
 
-    div.drag-wrap {
+    div.free-elem {
         z-index: -1;
     }
 
@@ -213,19 +207,6 @@ div.update-win {
         min-height: 100px;
         overflow-y: auto;
     }
-/* 
-    #blinkie-win, #music-win {
-        max-width: 50%;
-        min-width: min-content;
-    } */
-
-    /* #music-win {
-        flex: 1 1 auto;
-    }
-
-    #blinkie-win {
-        flex: 0 1 auto;   
-    } */
 
     img.blinkie {
         display: block;

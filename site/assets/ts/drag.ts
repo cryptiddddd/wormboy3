@@ -47,7 +47,7 @@ function bringToFront(wrapper: HTMLElement): void {
 
 
 // track mouse position.
-document.onmousemove = function(event) {
+document.onmousemove = function(event: MouseEvent) { // todo: maybe rewrite the other functions to be a little more advanced and use the mouseevent thing. hmm
     cursorX = event.pageX;
     cursorY = event.pageY;
 
@@ -67,13 +67,16 @@ document.onmousemove = function(event) {
 };
 
 // set up
-let draggables = document.getElementsByClassName("title");
+// draggable elements -- anything marked with these two classes. turn collections into two arrays and add them...
+let draggables = Array.from(document.getElementsByClassName("wrapper")).concat(Array.from(document.getElementsByClassName("free-elem")));
 
+// then iterate through them all. the rule is that the first element child is the "handle"
 for (let e of draggables) {
-    e.setAttribute("onmousedown", "makeDraggable(this);");
-    e.parentElement.setAttribute("onmousedown", "bringToFront(this);")
-}
+    e.setAttribute("onmousedown", "bringToFront(this);");
+    e.firstElementChild.setAttribute("onmousedown", "makeDraggable(this);");
 
-for (let e of document.getElementsByClassName("drag-wrap")) {
-    e.setAttribute("onmousedown", "bringToFront(this);")
+    // if it's an image, make it non draggable.
+    if (e.firstElementChild.tagName == "IMG") {
+        e.firstElementChild.setAttribute("draggable", "false");
+    }
 }
