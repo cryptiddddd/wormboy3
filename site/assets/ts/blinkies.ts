@@ -27,7 +27,7 @@ interface AssetIndex {
         // for each blinkie, add an img.
         data.blinkies.forEach(fileName => {
             let newImg = document.createElement("img");
-            newImg.src = `assets/blinkies/${fileName}`
+            newImg.src = `assets/images/blinkies/${fileName}`
             newImg.classList.add("blinkie");
     
             // add to container.
@@ -36,5 +36,5 @@ interface AssetIndex {
     }
     
     // now get that data
-    fetchJSON("../assets/index.json", blinkieCallback);
+    fetchJSON("../assets/images/index.json", blinkieCallback);
 };

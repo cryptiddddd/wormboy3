@@ -61,7 +61,7 @@ interface UpdateLog {
     }
 
     // get the data.
-    fetchJSON("../data/changelog.json", changelogCallback);
+    fetchJSON("assets/data/changelog.json", changelogCallback); // woof, learned something: relative to the html page...
 };
 
 
