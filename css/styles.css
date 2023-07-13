@@ -161,7 +161,7 @@ div.content > h1:first-of-type {
 
 #blinkie-win > div.content {
     min-height: fit-content;
-    max-height: none;
+    max-height: 600px;
 }
 
 #changelog-win {

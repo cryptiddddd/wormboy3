@@ -6,6 +6,8 @@ this site is my silly neocities for silly things :]! see it live here:
 
 [![wormboy button](assets/button.png)](https://wormboy3.neocities.org/)
 
+note: the repo and live site may not always match 1:1. updates may be offset from one another, but i'll be publishing updates as regularly as i feel appropriate.
+
 i am making this git repo public because i love to peruse the source of my favorite sites, and i hope that this may make that easier for others to see mine.
 
 > of course don't steal my code dummy. please learn from it, but this is my site.
