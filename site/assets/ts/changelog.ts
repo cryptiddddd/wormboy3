@@ -36,15 +36,16 @@ interface UpdateLog {
         
         // build the entry things....
         for (let entry of log) {
-            // this sequence creates a p>span.whisper + some text
-            let entryP = document.createElement("p");
+            // this sequence creates a div>span.whisper + some text
+            let div = document.createElement("div");
             
             let dateSpan = document.createElement("span");
-            dateSpan.classList.add("whisper");
+            dateSpan.classList.add(entry.isMajor? "major-update" : "whisper");
+            
             dateSpan.innerHTML = entry.date + ":";
 
-            entryP.appendChild(dateSpan);
-            entryP.innerHTML += ` ${entry.title}`;
+            div.appendChild(dateSpan);
+            div.innerHTML += ` ${entry.title} `;
 
             // if enabled, add the detail link. 
             // expectation: only set to true for the changelog page -- on any other page, the window will link to the changelog page.
@@ -53,10 +54,10 @@ interface UpdateLog {
                 testLink.setAttribute("onclick", `createEntryWin(${JSON.stringify(entry)});`);
                 testLink.innerText = "view";
     
-                entryP.appendChild(testLink);
+                div.appendChild(testLink);
             }
             
-            container.appendChild(entryP);
+            container.appendChild(div);
         }
     }
 

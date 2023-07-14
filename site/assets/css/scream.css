@@ -1,0 +1,160 @@
+:root {
+    --page-bg: radial-gradient(ellipse at top, black 50%, var(--accent) 250%);
+
+    --font-color: #fdecec;
+    
+    --link: var(--accent);
+    --link-hover: #bc19ee;
+    --link-visited: var(--accent);
+
+    /* scream-specific */
+    --overlay-bg: #000a;
+}
+
+/* misc / minor */
+body {
+    font-size: 19px;
+}
+
+/* header */
+header {
+    background: var(--overlay-bg);
+    position: absolute;
+    width: 100vw;
+}
+
+div.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5em;
+}
+
+.flex-wrap a {
+    flex: auto;
+}
+
+.privacy {
+    color: var(--font-color);
+    text-align: right;
+}
+
+.privacy:hover {
+    color: var(--font-color);
+    text-decoration: underline;
+    text-transform: none;
+}
+
+header .privacy:before {
+    content: "? ";
+    font-size: smaller;
+}
+
+/* aside */
+aside {
+    background-color: var(--overlay-bg);
+    border-left: var(--content-border);
+    display: none;
+    padding: 2em;
+    position: absolute;
+    right: 0%;
+    height: 100vh;
+    max-width: 30vw;
+    z-index: 1;
+}
+
+aside > a {
+    display: block;
+    width: 100%;
+}
+
+aside > div {
+    margin: auto 1em;
+}
+
+/* main woe container */
+div#container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: 2em;
+    row-gap: 1.5em;
+    z-index: -1;
+}
+
+div#container:empty::before {
+    content: "the open void";
+    color: #fff8;
+}
+
+div#container div {
+    flex: 0 3 auto;
+    max-width: 20%;
+    padding: 0.5em;
+    text-align: center;
+    z-index: -1;
+
+    /* animations */
+    animation-name: fade-in, rock;
+    animation-iteration-count: 1, infinite;
+    animation-duration: 0.8s, 3s;
+    animation-timing-function: ease-in, linear;
+}
+
+/* woe animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+        transform: scale(0.3);
+    } 100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes rock {
+    25% {
+        transform: rotate(-5deg);
+    } 75% {
+        transform: rotate(5deg);
+    }
+}
+
+/* interface styling */
+div#interface {
+    bottom: 0%;
+    position: absolute;
+    width: 100vw;
+}
+
+div#interface-input {
+    align-items: center;
+    background: var(--overlay-bg);
+    display: flex;
+    column-gap: 2em;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    padding: 1em 2em;
+}
+
+/* woe entry */
+button, input[type=text] {
+    min-height: 2em;
+    padding: 0.5em;
+}
+
+button#woe-btn {
+    flex: 0 1 10%;
+}
+
+input[type=text] {
+    flex: 1 0 60%;
+}
+
+/* destruction button */
+button#woe-clear {
+    margin-left: 2em;
+}

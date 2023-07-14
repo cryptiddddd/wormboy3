@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>talk to the void</title>
+
+    <!-- preview meta -->
+    <meta name="description" content="let it all out!">
+    <meta name="author" content="wormboy">
+
+    <!-- google font[s] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- mine -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/scream.css">
+    <link rel="shortcut icon" href="assets/worm.ico">
+    <!-- scripts go here -->
+    <script type="module" src="assets/js/scream.js"></script>
+</head>
+<body>
+    <!-- header nav thing -->
+    <header>
+        <div class="flex-wrap">
+            <a href="index.html">⟵ return to wormboy3</a>
+            <a class="privacy" onclick="toggleAside();">privacy and tips</a>
+        </div>
+    </header>
+
+    <!-- privacy aside -->
+    <aside id="privacy-statement">
+        <a class="privacy" onclick="toggleAside();">close</a>
+        <div>
+            <p>absolutely no information you enter on this page is collected by myself or any third party. any text entered is handled solely by your browser manipulating the page. no http requests are involved. this is not to brag, this is to be explicitly transparent. <span class="whisper">because otherwise i wouldn't be comfortable putting this out there.</span></p>
+            <p>if you are interested in the source, you can find that <a href="assets/js/scream.js">here</a>. i try to make my code readable for beginning developer. happy venting.</p>
+            <hr>
+            <p>tips:</p>
+            <ul>
+                <li>zoom out if you need more space.</li>
+                <li>the character limit is 400. the entry limit is none.</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- contains the shouted things -->
+    <div id="container"></div>
+    <!-- where the shouting happens -->
+    <div id="interface">
+        <button type="button" id="woe-clear" onclick="clearVoid();">clear the void</button>
+        <div id="interface-input">
+            <input type="text" id="woe-input" placeholder="type something..." maxlength="400" autofocus>
+            <button type="button" id="woe-btn" disabled="true" onclick="addScream();">place into the void</button>
+        </div>
+    </div>
+</body>
+</html>

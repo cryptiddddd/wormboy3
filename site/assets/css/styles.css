@@ -2,38 +2,56 @@
     --page-bg: url("../images/carpet.png");
 
     --font-color: #fff;
+    --font: 'VT323', monospace;
     --whisper-color: #bbb;
-    --purple: #9313c5;
+    --accent: #9313c5;
 
     --link: #61e20c;
     --link-hover: #cbf122;
     --link-visited: #13c74f;
     
-    --content-border: 1px solid var(--purple);
+    --content-border: 1px solid var(--accent);
     --win-border: 1px solid black;
     --win-background: #000a;
 }
 
 ::selection, ::-moz-selection {
-	background-color: var(--purple);
+	background-color: var(--accent);
 	color: #fff;
 }
 
-/* unselectable elements */
-div.title span, img, div.free-elem {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+html, body {
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
 }
 
 /* the rest of the css. */
 body {
     background: var(--page-bg);
     color: var(--font-color);
-    font-family: 'VT323', monospace;;
+    font-family: var(--font);
+    overflow: hidden;
+}
+
+button, input[type=text] {
+    background-color: black;
+    border: var(--content-border);
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: 1em;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1b1b1b;
+}
+
+button:disabled {
+    color: var(--whisper-color);
+}
+
+input[type=text]:focus {
+    border-color: var(--font-color);
 }
 
 ul {
@@ -78,6 +96,12 @@ a:visited {
     color: var(--link-visited);
 }
 
+.major-update {
+    color: var(--accent);
+    font-style: italic;
+    text-decoration: underline;
+}
+
 /* nav */
 nav {
     display: flex;
@@ -92,126 +116,6 @@ nav > a {
 
 nav > a, nav > a:visited {
     color: var(--link);
-}
-
-/* wrapper for windows, and the invisible wrapper. */
-div.wrapper, div.free-elem {
-    position: absolute;
-}
-
-div.wrapper {
-    border: var(--win-border);
-    max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
-}
-
-div.title {
-    background-color: var(--purple);
-    border: var(--content-border);
-    margin-bottom: 0;
-    overflow-x: hidden;
-    padding: .2em 0.5em 0 1em;
-}
-
-div.content {
-    background-color: var(--win-background);
-    border: var(--content-border);
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 2em;
-}
-
-div.content > h1:first-of-type {
-    margin-top: 0;
-}
-
-
-/* index.html positions--will i reuse these ids? will i need more/others? */
-
-#nav-win {
-    left: 20%;
-    top: 2%;
-    width: 40%;   
-}
-
-#nav-win > div.content {
-    max-height: fit-content;
-}
-
-#nav-win p {
-    margin: 0;
-    text-align: center;
-}
-
-#main-win {
-    left: 30%;
-    top: 40%;
-    max-width: 40%;
-}
-
-#music-win {
-    left: 3%;
-    top: 30%;
-}
-
-#blinkie-win {
-    left: 80%;
-    top: 15%;
-    width: min-content;
-}
-
-#blinkie-win > div.content {
-    min-height: fit-content;
-    max-height: 600px;
-}
-
-#changelog-win {
-    left: 25%;
-    top: 80%;
-}
-
-div.update-win {
-    max-width: 30%;
-}
-
-#footer-win {
-    left: 2%;
-    top: 70%;
-}
-
-#footer-win div.content {
-    text-align: center;
-}
-
-/* ids */
-#long-worm {
-    display: block;
-    max-width: 300px;
-    margin: 1em auto;
-}
-
-/* mobile edition */
-@media (max-width: 960px) {
-    div.wrapper {
-        flex-shrink: 0;
-        position: static;
-        min-width: 95%;
-        margin: 1em auto;
-    }
-
-    div.free-elem {
-        z-index: -1;
-    }
-
-    #blinkie-win > div.content {
-        max-height: 300px;
-        min-height: 100px;
-        overflow-y: auto;
-    }
-
-    img.blinkie {
-        display: block;
-        margin: 0.5em auto;
-    }
 }
 
 /* ****** SCROLL BAR ****** */
@@ -233,4 +137,45 @@ div.update-win {
 
 ::-webkit-scrollbar-button {
     height: 4px;
+}
+
+/* animations */
+.new {
+    display: inline-block;
+
+    /* animation */
+    animation-name: rainbow, wobble;
+    animation-duration: 2s, 5s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: hsl(0, 100%, 55%);
+    } 12.5% {
+        color: hsl(45, 100%, 55%);
+    } 25% {
+        color: hsl(90, 100%, 55%);
+    } 37.5% {
+        color: hsl(135, 100%, 55%);
+    } 50% {
+        color: hsl(180, 100%, 55%);
+    } 62.5% {
+        color: hsl(225, 100%, 55%);
+    } 75% {
+        color: hsl(270, 100%, 55%);
+    } 87.5% {
+        color: hsl(315, 100%, 55%);
+    } 100% {
+        color: hsl(360, 100%, 55%);
+    }
+}
+
+@keyframes wobble {
+    25% {
+        transform: rotateY(55deg);
+    } 75% {
+        transform: rotateY(-55deg);
+    }
 }
