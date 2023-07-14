@@ -53,7 +53,7 @@ header .privacy:before {
 /* aside */
 aside {
     background-color: var(--overlay-bg);
-    border-left: var(--content-border);
+    border-left: var(--win-border);
     display: none;
     height: 100vh;
     max-width: 30vw;

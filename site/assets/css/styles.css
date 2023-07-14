@@ -76,6 +76,13 @@ img.blinkie {
     margin: 0 0.5em;
 }
 
+/* ids */
+#long-worm {
+    display: block;
+    max-width: 300px;
+    margin: 1em auto;
+}
+
 /* text styles */
 .whisper {
     color: var(--whisper-color);    
@@ -116,6 +123,34 @@ nav > a {
 
 nav > a, nav > a:visited {
     color: var(--link);
+}
+
+/* win aesthetic */
+div.wrapper {
+    border: var(--win-border);
+    display: flex;
+    flex-direction: column;
+    max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
+}
+
+div.title {
+    background-color: var(--accent);
+    border: var(--content-border);
+    margin-bottom: 0;
+    overflow-x: hidden;
+    padding: .2em 0.5em 0 1em;
+}
+
+div.content {
+    background-color: var(--win-background);
+    border: var(--content-border);
+    padding: 2em;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+div.content > h1:first-of-type {
+    margin-top: 0;
 }
 
 /* ****** SCROLL BAR ****** */
