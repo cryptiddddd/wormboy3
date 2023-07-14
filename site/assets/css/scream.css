@@ -158,3 +158,20 @@ input[type=text] {
 button#woe-clear {
     margin-left: 2em;
 }
+
+
+/* mobile edits */
+
+@media (max-width: 960px) {
+    aside {
+        max-width: 100%;
+    }
+
+    button#woe-btn {
+        flex: 10%;
+    }
+
+    input[type=text] {
+        flex: 60%;
+    }
+}
