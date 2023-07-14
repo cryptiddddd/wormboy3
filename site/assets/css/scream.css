@@ -20,6 +20,7 @@ body {
 header {
     background: var(--overlay-bg);
     position: absolute;
+    top: 0%;
     width: 100vw;
 }
 
@@ -54,11 +55,12 @@ aside {
     background-color: var(--overlay-bg);
     border-left: var(--content-border);
     display: none;
+    height: 100vh;
+    max-width: 30vw;
     padding: 2em;
     position: absolute;
     right: 0%;
-    height: 100vh;
-    max-width: 30vw;
+    top: 0%;
     z-index: 1;
 }
 
@@ -72,16 +74,21 @@ aside > div {
 }
 
 /* main woe container */
+div.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 div#container {
     align-content: center;
     align-items: center;
     display: flex;
     flex-flow: row wrap;
-    height: 100vh;
     justify-content: space-evenly;
-    padding: 2em;
+    margin: 2em;
     row-gap: 1.5em;
-    z-index: -1;
 }
 
 div#container:empty::before {
@@ -159,12 +166,12 @@ button#woe-clear {
     margin-left: 2em;
 }
 
-
 /* mobile edits */
 
 @media (max-width: 960px) {
     aside {
         max-width: 100%;
+        border: none;
     }
 
     button#woe-btn {
@@ -173,5 +180,9 @@ button#woe-clear {
 
     input[type=text] {
         flex: 60%;
+    }
+    
+    div#interface-input {
+        column-gap: 1em;
     }
 }

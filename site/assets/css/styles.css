@@ -174,8 +174,8 @@ nav > a, nav > a:visited {
 
 @keyframes wobble {
     25% {
-        transform: rotateY(55deg);
+        transform: rotateY(55deg) rotate(-5deg);
     } 75% {
-        transform: rotateY(-55deg);
+        transform: rotateY(-55deg) rotate(5deg);
     }
 }
