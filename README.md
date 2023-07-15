@@ -38,6 +38,10 @@ disk from [momg neocities](https://momg.neocities.org)
 
 chickens from [gifcities](https://gifcities.org)
 
+[highlightjs](https://github.com/highlightjs/highlight.js)
+
+[theme](https://github.com/Yukaii/github-highlightjs-themes) for highlightjs 
+
 i just need to stapm those on my site somewhere.
 
 *i need to source my blinkies!!!! AHHH!

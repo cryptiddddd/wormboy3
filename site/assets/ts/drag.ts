@@ -13,7 +13,7 @@ var currentWrapper: HTMLElement = null;
 // brings a window to front index.
 function bringToFront(wrapper: HTMLElement): void {
     // if the current highest is only one higher than the wrapper's z, no need for adjustment
-    if (wrapper.style.zIndex == "" || highestZ - 1 != Number(wrapper.style.zIndex)) {
+    if (wrapper.style.zIndex === "" || highestZ - 1 != Number(wrapper.style.zIndex)) {
         wrapper.style.zIndex = "" + highestZ;
         highestZ ++;
     }
@@ -24,7 +24,7 @@ function bringToFront(wrapper: HTMLElement): void {
 
 
 // disables element dragging.
-(window as any).closeDrag = function closeDrag(handle: HTMLElement): void {
+(window as any).closeDrag = function (handle: HTMLElement): void {
     handle.setAttribute("onmouseup", "");
 
     xOffset = yOffset = null;
@@ -33,7 +33,7 @@ function bringToFront(wrapper: HTMLElement): void {
 
 
 // main attraction.
-(window as any).makeDraggable = function makeDraggable(handle: HTMLElement): void {
+(window as any).makeDraggable = function (handle: HTMLElement): void {
     // the direct parent of the handling div should Always be the wrapper div.
     currentWrapper = handle.parentElement;
 
@@ -45,9 +45,8 @@ function bringToFront(wrapper: HTMLElement): void {
     handle.setAttribute("onmouseup", "closeDrag(this);");
 };
 
-
 // track mouse position.
-document.onmousemove = function(event: MouseEvent) { // todo: maybe rewrite the other functions to be a little more advanced and use the mouseevent thing. hmm
+document.onmousemove = function (event: MouseEvent) { // todo: maybe rewrite the other functions to be a little more advanced and use the mouseevent thing. hmm
     cursorX = event.pageX;
     cursorY = event.pageY;
 
@@ -66,7 +65,8 @@ document.onmousemove = function(event: MouseEvent) { // todo: maybe rewrite the 
     currentWrapper.style.top = topVal + "px";  
 };
 
-// set up
+// setup
+
 // draggable elements -- anything marked with these two classes. turn collections into two arrays and add them...
 let draggables = Array.from(document.getElementsByClassName("wrapper")).concat(Array.from(document.getElementsByClassName("free-elem")));
 

@@ -1,5 +1,5 @@
 /*
-a function to create a window thingy, cuz i may use that for multiple scripts and i don't wanna rewrite it. also shortcut.
+a function to create a window thingy, cuz i may use that for multiple scripts and i don't wanna rewrite it. also shortcut. made to import.
 
 written in typescript, compiled in tsc.
 
@@ -17,7 +17,7 @@ function getExistingWin(winID: string): boolean {
     
     // imaginary click.
     if (wrapper) {
-        wrapper.onmousedown(null);
+        wrapper.onmousedown(null); // no event, sneaky...
     }
 
     return wrapper != null;

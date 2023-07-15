@@ -24,9 +24,9 @@ woeInput.addEventListener("keyup", event => {
 /**
  * adds input to the container.
  */
-(window as any).addScream = function addScream() {
+(window as any).addScream = function () {
     // protection
-    if (woeInput == null || woeInput.value == "") return;
+    if (woeInput === null || woeInput.value === "") return;
 
     let newWoe = document.createElement("div");
 
@@ -42,7 +42,7 @@ woeInput.addEventListener("keyup", event => {
 /**
  * clears all input.
 */
-(window as any).clearVoid = function clearVoid() {
+(window as any).clearVoid = function () {
     let container = document.getElementById("container");
 
     if (container.childElementCount == 0) return;
@@ -54,7 +54,7 @@ woeInput.addEventListener("keyup", event => {
 /**
  * toggles the aside's visibility.
 */
-(window as any).toggleAside = function toggleAside() {
+(window as any).toggleAside = function () {
     // get the aside 
     let asideElem = document.getElementById("privacy-statement");
 

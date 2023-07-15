@@ -4,40 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<title>wormy links</title>
+    <title>wormboy3's hot tips</title>
 
     <!-- preview meta -->
-    <meta property="description" content="look at all those cool links! i have somethign to share with YOU!!!!!">
+    <meta name="description" content="worm boy has a tip for that.">
     <meta property="og:site_name" content="wormboy3">
     <meta property="author" content="wormboy">
-	
+
     <!-- google font[s] -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
+    <!-- highlightjs -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <!-- theme for highlightjs -->
+    <link rel="stylesheet" href="assets/css/yukaii-dark-dimmed.css">
+
     <!-- mine -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/tips.css">
 	<link rel="icon" href="assets/worm.ico">
     <script type="module" src="assets/js/drag.js"></script>
+    <script type="module" src="assets/js/tips.js"></script>
+
+    <!-- hljs call appended here once document is built. -->
 </head>
 <body>
-    <!-- because this page is empty, have some chickens and a disk -->
-    <div class="free-elem">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
-    <div class="free-elem">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
-    <div class="free-elem">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
-    <div class="free-elem">
-        <!-- manually set to draggable for the sake of explicitness. -->
-        <img src="assets/images/cd.gif" alt="a gif of a rotating cd." class="little-img">
-    </div>
-
     <div class="wrapper" id="nav-win">
         <!-- all titles are automatically made draggable, see drag.js -->
         <div class="title">
@@ -53,17 +48,31 @@
         </div>
     </div>
 
+    <!-- main content -->
     <div class="wrapper" id="main-win">
         <div class="title">
             <span>main-window</span>
         </div>
+        <!-- main stuff goes here!!! -->
         <div class="content">
-            <a href="tips.html"><h1>my advice page</h1></a>
-            <p>putting together some minor tutorials for novice web designers and programmers. i am just a little worm so i may not have much to offer, but if i can teach anyone anything it will be worth it.</p>
-            <p>find my new page <a class="new" href="tips.html">here!</a></p>
+            <!-- todo: a different worm... also i wanna edit the existing worm. -->
+            <a href="tips.html"><img src="assets/images/long_worm.png" alt="a long and colorful worm." id="long-worm"></a>
+            <hr>
+            <nav id="tips-nav"></nav>
+            <hr>
+
+            <!-- fill in article content -->
+            <div id="article"></div>
+
+            <div id="tips-default">
+                <p>this is my work-in-progress page for random programming advice!... and maybe baking and other things. <span class="whisper">i have SO much wisdom in me...</span></p>
+
+            </div>
+
         </div>
     </div>
 
+    <!-- footer -->
     <div class="wrapper" id="footer-win">
         <div class="title">
             <span>footer-window</span>
@@ -75,4 +84,6 @@
             <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
         </div>
     </div>
+
 </body>
+</html>

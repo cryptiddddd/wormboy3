@@ -1,18 +1,6 @@
-/* unselectable elements */
-div.title span, img, div.free-elem {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+ul {
+    margin: auto;
 }
-
-/* wrapper for windows, and the invisible wrapper. */
-div.wrapper, div.free-elem {
-    position: absolute;
-}
-
 
 /* index.html positions--will i reuse these ids? will i need more/others? */
 #nav-win {
@@ -21,24 +9,11 @@ div.wrapper, div.free-elem {
     width: 40%;   
 }
 
-#nav-win > div.content {
-    max-height: fit-content;
-}
-
-#nav-win p {
-    margin: 0;
-    text-align: center;
-}
 
 #main-win {
     left: 30%;
     top: 40%;
     max-width: 40%;
-}
-
-#music-win {
-    left: 3%;
-    top: 30%;
 }
 
 #blinkie-win {
@@ -48,12 +23,10 @@ div.wrapper, div.free-elem {
 }
 
 #blinkie-win > div.content {
-    min-height: fit-content;
     max-height: 600px;
 }
 
 #changelog-win {
-    /* bottom: 22%; */
     left: 3%;
     top: 40%;
 }
@@ -67,27 +40,8 @@ div.update-win {
     left: 1%;
 }
 
-#footer-win div.content {
-    text-align: center;
-}
-
 /* mobile edition */
 @media (max-width: 960px) {
-    body {
-        overflow-y: auto;
-    }
-
-    div.wrapper {
-        flex-shrink: 0;
-        position: static;
-        min-width: 95%;
-        margin: 1em auto;
-    }
-
-    div.free-elem {
-        z-index: -1;
-    }
-
     #blinkie-win > div.content {
         max-height: 300px;
         min-height: 100px;

@@ -23,7 +23,7 @@ interface UpdateLog {
  * populates the changelog. 
  * @param maxEntries maximum # of entries to add to the log. if -1, no limit. otherwise, a limit will not raise error if there are not enough entries.
  */
-(window as any).populateChangelog = function populateChangelog(maxEntries: number, viewDetails: boolean = false): void {
+(window as any).populateChangelog = function (maxEntries: number, viewDetails: boolean = false): void {
     // first get the changelog window content field
     let container: HTMLElement = document.getElementById("changelog-wrapper");
     
@@ -70,7 +70,7 @@ interface UpdateLog {
  * creates a whole new window for the specific entry.
  * @param entry updatelog entry data for this specific window.
  */
-(window as any).createEntryWin = function createEntryWin(entry: UpdateLog): void {
+(window as any).createEntryWin = function (entry: UpdateLog): void {
     // first check if it exists, and exit early if it does.
     let winID = `update-${entry.id}`;
     if (getExistingWin(winID)) return;

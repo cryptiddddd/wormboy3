@@ -1,0 +1,110 @@
+:root {
+    --main-width: 45%;
+    --win-background: #000d
+}
+
+/* font/block styles */
+p {
+    margin-bottom: 0;
+}
+
+.notes > p {
+    margin: initial;
+}
+
+p code {
+    font-size: 14px;
+}
+
+pre {
+    font-size: 12px;
+    margin: 1em auto;
+    overflow-x: auto;
+    width: 70%;
+}
+
+.hljs {
+    border-radius: 5px;
+}
+
+/* overall site nav ... change? */
+nav {
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 0.5em;
+}
+
+#nav-win {
+    /* max-width: none; */
+    top: 30%;
+    left: 5%;
+}
+
+/* tips nav */
+#tips-nav {
+    flex-direction: row;
+}
+
+/* main window */
+#main-win {
+    bottom: 0%;
+    top: 0%;
+    left: calc(50% - var(--main-width) / 2); /* center it! */
+    width: var(--main-width);
+}
+
+#main-win > div.content {
+    font-size: 19px;
+    max-height: none;
+    padding: 4em;
+    padding-top: 1em;
+}
+
+#tips-default {
+    display: none;
+}
+
+.timestamp {
+    font-style: italic;
+    text-align: right;
+}
+
+div.notes {
+    border: 1px dashed var(--accent);
+    margin: 1em auto;
+    padding: 0.8em 2em;
+    width: 65%;
+
+    animation: borderCycle 5s ease-in-out infinite;
+}
+
+#article hr {
+    font-size: 13px;
+    height: 0;
+    margin: 3em 1em;
+    overflow: visible;
+    text-align: right;
+}
+
+#article hr::before {
+    color: var(--font-color);
+    content: "checkpoint! go practice what you've learned!";
+}
+
+/* footer */
+div#footer-win {
+    left: 76%;
+    top: 75%;
+}
+
+
+/* mobile */
+@media (max-width: 960px) {
+    #main-win {
+        min-width: 95%;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+}

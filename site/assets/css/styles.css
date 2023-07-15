@@ -5,6 +5,7 @@
     --font: 'VT323', monospace;
     --whisper-color: #bbb;
     --accent: #9313c5;
+    --secondary-accent: #f7f71c;
 
     --link: #61e20c;
     --link-hover: #cbf122;
@@ -15,18 +16,30 @@
     --win-background: #000a;
 }
 
+/* unselectable elements */
+div.title span, img, div.free-elem {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* selection */
 ::selection, ::-moz-selection {
 	background-color: var(--accent);
 	color: #fff;
 }
 
+
+/* the rest of the css. */
 html, body {
     height: 100vh;
     margin: 0;
     width: 100vw;
 }
 
-/* the rest of the css. */
 body {
     background: var(--page-bg);
     color: var(--font-color);
@@ -54,11 +67,21 @@ input[type=text]:focus {
     border-color: var(--font-color);
 }
 
+code {
+    color: var(--secondary-accent);
+}
+
+hr {
+    color: var(--accent);
+    opacity: 70%;
+    height: 0;
+}
+
 ul {
     display: block;
     list-style-type: square;
     list-style-position: inside;
-    margin: auto;
+    margin: 0 2em;
     padding: 0;
     width: fit-content;
 }
@@ -89,6 +112,11 @@ img.blinkie {
     font-style: italic;
 }
 
+.silenced {
+    color: var(--whisper-color);
+    text-decoration: line-through;
+}
+
 a {
     color: var(--link);
     text-decoration: none;
@@ -104,9 +132,8 @@ a:visited {
 }
 
 .major-update {
-    color: var(--accent);
+    animation: rainbow 2s linear infinite;
     font-style: italic;
-    text-decoration: underline;
 }
 
 /* nav */
@@ -125,19 +152,40 @@ nav > a, nav > a:visited {
     color: var(--link);
 }
 
+#nav-win > div.content {
+    max-height: fit-content;
+}
+
+#nav-win p {
+    margin: 0;
+    text-align: center;
+}
+
+
 /* win aesthetic */
+/* wrapper for windows, and the invisible wrapper. */
+div.wrapper, div.free-elem {
+    position: absolute;
+}
+
+div.content > h1:first-of-type {
+    margin-top: 0;
+}
+
 div.wrapper {
     border: var(--win-border);
     display: flex;
     flex-direction: column;
     max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
+    position: absolute;
 }
 
 div.title {
     background-color: var(--accent);
     border: var(--content-border);
+    height: max-content;
     margin-bottom: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     padding: .2em 0.5em 0 1em;
 }
 
@@ -146,12 +194,14 @@ div.content {
     border: var(--content-border);
     padding: 2em;
     max-height: 200px;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
-div.content > h1:first-of-type {
-    margin-top: 0;
+#footer-win div.content {
+    text-align: center;
 }
+
 
 /* ****** SCROLL BAR ****** */
 ::-webkit-scrollbar {
@@ -214,3 +264,25 @@ div.content > h1:first-of-type {
         transform: rotateY(-55deg) rotate(5deg);
     }
 }
+
+/* mobile */
+@media (max-width: 960px) {
+    body {
+        background-attachment: fixed;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 1em;
+        overflow-y: auto;
+        gap: 1em;
+    }
+    
+    div.wrapper {
+        flex: 1 0 100%;
+        position: static;
+        min-width: 95%;
+    }
+
+    div.free-elem {
+        z-index: -1;
+    }
+}   

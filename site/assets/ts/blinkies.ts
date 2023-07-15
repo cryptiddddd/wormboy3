@@ -16,7 +16,7 @@ interface AssetIndex {
  * expected usage: body onload.
  * this function populates the blinkie-wrapper [nested withiin the blinkie window] with the blinkies.
  */
-(window as any).populateBlinkes = function populateBlinkies(): void {
+(window as any).populateBlinkes = function (): void {
     // get div.blinkie-wrapper element
     let container: HTMLElement = document.getElementById("blinkie-wrapper");
 

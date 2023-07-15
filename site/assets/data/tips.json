@@ -1,0 +1,21 @@
+{
+    "css": {
+        "name": "css",
+        "description": "these are my tutorials and tips for using css! i am by no means certified to be giving this advice, but alas.",
+        "index": [
+            {
+                "id": 0,
+                "dateCreated": "07/14/2023",
+                "dateModified": null,
+                "title": "first css tutorial!",
+                "contentPath": "assets/data/css-1.html",
+                "readMore": [["mozilla documentation on custom css variables", "https://developer.mozilla.org/en-US/docs/Web/CSS/--*"], ["world wide web consortium's article on css variables", "https://www.w3.org/TR/css-variables-1/"]]
+            }
+        ]
+    },
+    "baking": {
+        "name": "baking",
+        "description": "someday i'd like to do baking tips..? depression meal tips?",
+        "index": []
+    }
+}
