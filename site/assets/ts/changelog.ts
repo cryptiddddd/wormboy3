@@ -20,6 +20,30 @@ interface UpdateLog {
 
 
 /**
+ * if hashed, an update page will automatically open.
+ */
+function autoOpen(): void {
+    // get changelog div and count elements.
+    let changelog = document.getElementById("changelog-wrapper");
+    let logCount = changelog.childElementCount;
+
+    let query = document.location.hash.substring(1);
+
+    // no worries, nothing to do. if there is no query or the query is not a number, or out of range.
+    if (query === "" || isNaN(Number(query)) || Number(query) >= logCount) return; 
+
+    // otherwise, calculate index.
+    let idx = logCount - Number(query) - 1; // calculate index, keeping in mind they are listed in reverse order.
+
+    // click it
+    let anchor = changelog.children[idx].lastElementChild as HTMLAnchorElement;
+    anchor.click();
+}
+
+(window as any).autoOpen = autoOpen;
+
+
+/**
  * populates the changelog. 
  * @param maxEntries maximum # of entries to add to the log. if -1, no limit. otherwise, a limit will not raise error if there are not enough entries.
  */
@@ -59,6 +83,9 @@ interface UpdateLog {
             
             container.appendChild(div);
         }
+        
+        // after everything.. check if any update is hashed.
+        autoOpen();
     }
 
     // get the data.
