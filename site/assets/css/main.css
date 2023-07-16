@@ -17,6 +17,10 @@
     max-height: 300px;
 }
 
+#about-win {
+    max-width: 400px;
+}
+
 #self-promo {
     max-width: 250px;
 }
@@ -34,7 +38,6 @@
 
 #blinkie-win img {
     flex: auto;
-    /* max-width: 200px; */
 }
 
 #changelog-win {

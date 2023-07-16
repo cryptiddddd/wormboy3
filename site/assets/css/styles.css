@@ -17,7 +17,7 @@
 }
 
 /* unselectable elements */
-div.title span, img, div.free-elem {
+div.title, div.title span, img, div.free-elem {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -165,6 +165,10 @@ a free-elem is another element that can be dragged around the page.
 */
 div.wrapper, div.free-elem {
     position: absolute;
+}
+
+div.free-elem {
+    transition: transform 0.25s ease-in-out;
 }
 
 div.wrapper {

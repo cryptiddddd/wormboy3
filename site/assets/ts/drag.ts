@@ -22,6 +22,17 @@ function bringToFront(wrapper: HTMLElement): void {
 // declared both independent, then tied to the window.
 (window as any).bringToFront = bringToFront;
 
+// flips an element horizontally.
+(window as any).flipImg = function (element: HTMLElement) {
+    element.style.transform = "scaleX(-1)";
+    element.setAttribute("ondblclick", "unFlipImg(this);")
+};
+
+// unflips an element
+(window as any).unFlipImg = function (element: HTMLElement) {
+    element.style.transform = "scaleX(1)";
+    element.setAttribute("ondblclick", "flipImg(this);")
+};
 
 // disables element dragging.
 (window as any).closeDrag = function (handle: HTMLElement): void {
@@ -69,7 +80,8 @@ document.onmousemove = function (event: MouseEvent) { // todo: maybe rewrite the
 // setup
 
 // draggable elements -- anything marked with these two classes. turn collections into two arrays and add them...
-let draggables = Array.from(document.getElementsByClassName("wrapper")).concat(Array.from(document.getElementsByClassName("free-elem")));
+let freeImgs = document.getElementsByClassName("free-elem");
+let draggables = Array.from(document.getElementsByClassName("wrapper")).concat(Array.from(freeImgs));
 
 // then iterate through them all. the rule is that the first element child is the "handle"
 for (let e of draggables) {
@@ -80,4 +92,8 @@ for (let e of draggables) {
     if (e.firstElementChild.tagName == "IMG") {
         e.firstElementChild.setAttribute("draggable", "false");
     }
+}
+
+for (let e of freeImgs) {
+    e.setAttribute("ondblclick", "flipImg(this);");
 }

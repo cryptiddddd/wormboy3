@@ -1,9 +1,17 @@
 [
     {
         "date": "07/15/2023",
+        "title": "double click flip chicken",
+        "body": "desktop only: double clicking on a free-floating image flips it horizontally. try that <a href='/about.html'>here</a>! this is HUGE.",
+        "gitCommit": "",
+        "id": 4,
+        "isMajor": true
+    },
+    {
+        "date": "07/15/2023",
         "title": "css polish, links",
         "body": "fixed my css for desktop AND mobile. took the time to learn what i was actually doing!</p><p class='whisper'>oh and now this changelog page will automatically open an update based on the hash. [<a href='#0'>try that here.</a>], finally added a couple of links, more to come [<a href='/links.html'>here</a>], and now certain windows will randomly scatter themselves across the page on desktop..... good luck. wormboy away!",
-        "gitCommit": "",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/af469f7f21c9be6d8977e7f8294cf4f2615b780b",
         "id": 3,
         "isMajor": false
     },
