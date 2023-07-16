@@ -21,19 +21,20 @@
     <link rel="stylesheet" href="assets/css/main.css">
 	<link rel="icon" href="assets/worm.ico">
     <script type="module" src="assets/js/drag.js"></script>
+    <script type="module" src="assets/js/scatter.js"></script>
 </head>
 <body>
     <!-- because this page is empty, have some chickens and a disk -->
-    <div class="free-elem">
+    <div class="randomPos free-elem">
         <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
     </div>
-    <div class="free-elem">
+    <div class="randomPos free-elem">
         <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
     </div>
-    <div class="free-elem">
+    <div class="randomPos free-elem">
         <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
     </div>
-    <div class="free-elem">
+    <div class="randomPos free-elem">
         <!-- manually set to draggable for the sake of explicitness. -->
         <img src="assets/images/cd.gif" alt="a gif of a rotating cd." class="little-img">
     </div>
@@ -48,19 +49,67 @@
                 <a href="/index.html">home</a>
                 <a href="/about.html">about</a>
                 <a href="/links.html">links</a>
+                <a href="/tips.html">tutorials</a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
             </nav>
         </div>
     </div>
 
-    <div class="wrapper" id="main-win">
+    <div class="wrapper randomPos" id="self-promo">
         <div class="title">
-            <span>main-window</span>
+            <span>self-promo</span>
         </div>
         <div class="content">
-            <a href="tips.html"><h1>my advice page</h1></a>
-            <p>putting together some minor tutorials for novice web designers and programmers. i am just a little worm so i may not have much to offer, but if i can teach anyone anything it will be worth it.</p>
-            <p>find my new page <a class="new" href="tips.html">here!</a></p>
+            <p>looking for coding tutorials?</p>
+            <p>i'm putting together some tips and advice for html, css, and js! i am just a little worm so i may not have much to offer, but if i can teach anyone anything it will be worth it.</p>
+            <p>find my first article <a class="new" href="tips.html?c=css&a=0">here!</a></p>
+        </div>
+    </div>
+
+    <div class="wrapper randomPos" id="site-resources">
+        <div class="title">
+            <span>resources</span>
+        </div>
+        <div class="content">
+            <h1>valuable sites</h1>
+            <p>in the spirit of not letting the web become monopolized:</p>
+            <ul>
+                <li><a href="https://archive.org">archive dot org!!</a> i cannot overemphasize the importance of this site.</li>
+                <li>more to come.... i'm embarrassed to not have more!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper randomPos" id="neocities-resources">
+        <div class="title">
+            <span>tools for neocities!</span>
+        </div>
+        <div class="content">
+            <h1>do you have neocities?</h1>
+            <p>oh YEAH you do babey. here are some tools:</p>
+            <ul>
+                <li><a href="https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3">site info API</a> -- replace my sitename with yours, get a json with information such as when your site last updated.</li>
+                <li><a href="https://code.visualstudio.com/">vscode</a> -- approachable text editor if you're getting into coding and neocities!</li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">vscode local preview server</a> -- a plug-in for vscode that i use to preview my site as i edit!</li>
+            </ul>
+            <p> and graphics. who doesn't like some good graphics.</p>
+            <ul>
+                <li><a href="https://gifcities.org">gifcities</a> -- the internet archive's geocities gif archive.</li>
+                <li><a href="https://plasticdino.neocities.org/graphics">plasticdino's graphics</a>, she has some really cool art too.</li>
+                <li><a href="https://momg.neocities.org/">the gif gallery!</a></li>
+                <li><a href="https://blinkies.cafe/">blinkies.cafe!!!</a> everybody love blinkies.cafe. they got home stuck.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper" id="random-win">
+        <div class="title">
+            <span>random-links</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li><a href="https://www.returnyoutubedislike.com/">browser extension for the youtube dislike button.</a></li>
+            </ul>
         </div>
     </div>
 
@@ -68,7 +117,7 @@
         <div class="title">
             <span>footer-window</span>
         </div>
-        <div class="content">
+        <div class="content centered">
             <p>copyright 2023 WORM BOY!</p>
             <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
             or 

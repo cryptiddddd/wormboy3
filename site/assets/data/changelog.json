@@ -1,9 +1,17 @@
 [
     {
+        "date": "07/15/2023",
+        "title": "css polish, links",
+        "body": "fixed my css for desktop AND mobile. took the time to learn what i was actually doing!</p><p class='whisper'>oh and now this changelog page will automatically open an update based on the hash. [<a href='#0'>try that here.</a>], finally added a couple of links, more to come [<a href='/links.html'>here</a>], and now certain windows will randomly scatter themselves across the page on desktop..... good luck. wormboy away!",
+        "gitCommit": "",
+        "id": 3,
+        "isMajor": false
+    },
+    {
         "date": "07/14/2023",
         "title": "beginning tutorial page",
         "body": "just BARELY putting this in on the 14th, but anyways...</p><p>added <a href='tips.html'>a tutorial page</a>. currently labelled 'tips' but i'm not sure if i stick to that. i'm not asking for you to tip me, but 'tutorial' sounds to formal. the idea for this page is for me to document things i learn and have a spot to refer my friends to when they have questions. currently there is but one tutorial up, but the bulk of today's work was <span class='silenced'>getting myself to focus on just one page</span> getting the framework in place. worm boy BED TIME!!!",
-        "gitCommit": "",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/2efdc193683aa2fcec3ef3ac963e24d9865c0717",
         "id": 2,
         "isMajor": false
     },

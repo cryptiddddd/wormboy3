@@ -65,6 +65,7 @@ document.onmousemove = function (event: MouseEvent) { // todo: maybe rewrite the
     currentWrapper.style.top = topVal + "px";  
 };
 
+
 // setup
 
 // draggable elements -- anything marked with these two classes. turn collections into two arrays and add them...

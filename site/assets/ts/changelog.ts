@@ -128,5 +128,7 @@ function autoOpen(): void {
     wrapper.style.left = (Math.random() * 100) % 80 + "%";
     wrapper.style.top = (Math.random() * 100) % 70 + "%";
 
-    document.body.appendChild(wrapper);
+    // insert before footer, for mobile viewer convenience.
+    let footer = document.getElementById("footer-win");
+    document.body.insertBefore(wrapper, footer);
 };

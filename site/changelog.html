@@ -22,6 +22,7 @@
 	<link rel="icon" href="assets/worm.ico">
     <script type="module" src="assets/js/drag.js"></script>
     <script type="module" src="assets/js/changelog.js"></script>
+    <script type="module" src="assets/js/scatter.js"></script>
 </head>
 <body onload="populateChangelog(-1, true);" onhashchange="autoOpen();">
     <div class="wrapper" id="nav-win">
@@ -34,12 +35,13 @@
                 <a href="index.html">home</a>
                 <a href="about.html">about</a>
                 <a href="links.html">links</a>
+                <a href="/tips.html">tutorials</a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
             </nav>
         </div>
     </div>
 
-    <div class="wrapper" id="changelog-win">
+    <div class="wrapper randomPos" id="changelog-win">
         <div class="title">
             <span>full-changelog</span>
         </div>
@@ -52,7 +54,7 @@
         <div class="title">
             <span>footer-window</span>
         </div>
-        <div class="content">
+        <div class="content centered">
             <p>copyright 2023 WORM BOY!</p>
             <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
             or 

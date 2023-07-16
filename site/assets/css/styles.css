@@ -26,27 +26,83 @@ div.title span, img, div.free-elem {
     user-select: none;
 }
 
-/* selection */
+/* selection highlight affect */
 ::selection, ::-moz-selection {
 	background-color: var(--accent);
 	color: #fff;
 }
 
 
-/* the rest of the css. */
-html, body {
-    height: 100vh;
-    margin: 0;
-    width: 100vw;
-}
-
+/* body and body elements.. */
 body {
+    min-height: 100vh;
+    margin: 0;
     background: var(--page-bg);
     color: var(--font-color);
     font-family: var(--font);
     overflow: hidden;
 }
 
+hr {
+    color: var(--accent);
+    opacity: 70%;
+    height: 0;
+}
+
+img.little-img {
+    max-width: 100px;
+}
+
+img.blinkie {
+    image-rendering: crisp-edges;
+}
+
+img#long-worm {
+    display: block;
+    max-width: 300px;
+    margin: 1em auto;
+}
+
+/* text styles */
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+    color: var(--link-hover);
+    text-transform: uppercase;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+code {
+    color: var(--secondary-accent);
+}
+
+.whisper {
+    color: var(--whisper-color);    
+    font-style: italic;
+}
+
+.silenced {
+    color: var(--whisper-color);
+    text-decoration: line-through;
+}
+
+.major-update {
+    animation: rainbow 2s linear infinite;
+    font-style: italic;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+/* interfaces */
 button, input[type=text] {
     background-color: black;
     border: var(--content-border);
@@ -67,16 +123,7 @@ input[type=text]:focus {
     border-color: var(--font-color);
 }
 
-code {
-    color: var(--secondary-accent);
-}
-
-hr {
-    color: var(--accent);
-    opacity: 70%;
-    height: 0;
-}
-
+/* lists */
 ul {
     display: block;
     list-style-type: square;
@@ -90,61 +137,15 @@ li {
     text-indent: none;
 }
 
-img.little-img {
-    max-width: 100px;
-}
-
-img.blinkie {
-    image-rendering: crisp-edges;
-    margin: 0 0.5em;
-}
-
-/* ids */
-#long-worm {
-    display: block;
-    max-width: 300px;
-    margin: 1em auto;
-}
-
-/* text styles */
-.whisper {
-    color: var(--whisper-color);    
-    font-style: italic;
-}
-
-.silenced {
-    color: var(--whisper-color);
-    text-decoration: line-through;
-}
-
-a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-a:hover, a:visited:hover {
-    color: var(--link-hover);
-    text-transform: uppercase;
-}
-
-a:visited {
-    color: var(--link-visited);
-}
-
-.major-update {
-    animation: rainbow 2s linear infinite;
-    font-style: italic;
-}
-
 /* nav */
 nav {
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 nav > a {
-    font-size: 1.3em;
+    font-size: 1.4em; /* 1.3x the base size.. */
     text-transform: uppercase;
 }
 
@@ -156,54 +157,52 @@ nav > a, nav > a:visited {
     max-height: fit-content;
 }
 
-#nav-win p {
-    margin: 0;
-    text-align: center;
-}
 
-
-/* win aesthetic */
-/* wrapper for windows, and the invisible wrapper. */
+/* 
+a window is made up of a wrapper, a title, and content. 
+it's supposed to be an absolutely-positioned flexbox, which becomes a static part of another flex box on mobile.
+a free-elem is another element that can be dragged around the page.
+*/
 div.wrapper, div.free-elem {
     position: absolute;
-}
-
-div.content > h1:first-of-type {
-    margin-top: 0;
 }
 
 div.wrapper {
     border: var(--win-border);
     display: flex;
     flex-direction: column;
-    max-width: 50%; /* maximum width is half of the screen. for window height, see div.content. */
+    max-width: 50%;
     position: absolute;
 }
 
 div.title {
     background-color: var(--accent);
     border: var(--content-border);
-    height: max-content;
-    margin-bottom: 0;
-    overflow: hidden;
-    padding: .2em 0.5em 0 1em;
+    /* flex-basis: 1.5em; */
+    padding: 0.2em 0.5em 0 1em;
+}
+
+div.title span {
+    vertical-align: baseline;
 }
 
 div.content {
     background-color: var(--win-background);
     border: var(--content-border);
     padding: 2em;
-    max-height: 200px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: auto;
 }
 
-#footer-win div.content {
-    text-align: center;
+div.content > :first-child {
+    margin-top: 0;
 }
 
 
 /* ****** SCROLL BAR ****** */
+html {
+    scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -265,13 +264,15 @@ div.content {
     }
 }
 
-/* mobile */
+
+/* mobile theme */
 @media (max-width: 960px) {
     body {
         background-attachment: fixed;
         display: flex;
         flex-flow: row wrap;
         margin: 1em;
+        min-height: unset;
         overflow-y: auto;
         gap: 1em;
     }
@@ -279,10 +280,16 @@ div.content {
     div.wrapper {
         flex: 1 0 100%;
         position: static;
-        min-width: 95%;
+        max-width: unset;
+        width: unset;
+    }
+    
+    div.content {
+        height: 100%;
     }
 
+    /* push images to the background */
     div.free-elem {
         z-index: -1;
     }
-}   
+}

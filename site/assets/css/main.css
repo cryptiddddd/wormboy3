@@ -1,38 +1,70 @@
-ul {
-    margin: auto;
+/* stamp flex */
+.stamp-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* index.html positions--will i reuse these ids? will i need more/others? */
 #nav-win {
-    left: 20%;
+    left: 2%;
     top: 2%;
     width: 40%;   
 }
 
-
 #main-win {
-    left: 30%;
+    left: 27%;
     top: 40%;
-    max-width: 40%;
+    max-height: 300px;
+}
+
+#self-promo {
+    max-width: 250px;
 }
 
 #blinkie-win {
-    left: 80%;
-    top: 15%;
-    width: min-content;
+    left: 84%;
+    top: 0.75%;
 }
 
-#blinkie-win > div.content {
-    max-height: 600px;
+#blinkie-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.4em;
+}
+
+#blinkie-win img {
+    flex: auto;
+    /* max-width: 200px; */
 }
 
 #changelog-win {
     left: 3%;
     top: 40%;
+    max-width: 30%;
 }
 
-div.update-win {
-    max-width: 30%;
+#changelog-wrapper {
+    margin-bottom: 1.4ex;
+}
+
+#changelog-win div.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#site-resources {
+    max-width: 450px;
+}
+
+#neocities-resources {
+    max-height: 350px;
+    max-width: 960px;
+}
+
+#random-win {
+    left: 70%;
+    top: 80%;
 }
 
 #footer-win {
@@ -40,16 +72,25 @@ div.update-win {
     left: 1%;
 }
 
-/* mobile edition */
 @media (max-width: 960px) {
-    #blinkie-win > div.content {
-        max-height: 300px;
-        min-height: 100px;
-        overflow-y: auto;
+    #blinkie-win {
+        flex: 1;
     }
 
-    img.blinkie {
-        display: block;
-        margin: 0.5em auto;
+    #blinkie-win div.content {
+        overflow: auto;
+    }
+
+    #blinkie-win, #changelog-win {
+        height: 250px;
+    }
+
+    #blinkie-wrapper {
+        flex-flow: row wrap;
+    }
+
+    /* wish it weren't necessary to repeat but COME ON! */
+    div.wrapper {
+        max-width: unset;
     }
 }
