@@ -1,0 +1,29 @@
+<p>so you're on neocities. you probably like these bad boys:</p>
+
+<img src="assets/images/blinkies/bee_all.gif" alt="bee all you can bee blinkie" class="blinkie">
+<img src="assets/images/blinkies/penguin_fancier.gif" alt="penguin blinkie" class="blinkie">
+<img src="assets/images/blinkies/proud_cat.gif" alt="cat dad blinkie" class="blinkie">
+<p class="whisper centered">a small collection of blinkies.</p>
+
+<p>blinkies are one of many types of nostalgic pixel decorations. these are all about 20x150 pixels, however there's the 88x31 style, among literally anything anyone wants to put on the internet. the point is that pixels are LITTLE and these images are little! how do they look so crisp??</p>
+
+<p>css has an <code>image-rendering</code> property that i use to ensure my gifs aren't turned into fuzzy garbage. here's a blinkie with the default image rendering setting:</p>
+
+<img src="assets/images/blinkies/when_fruit.gif" alt="when fruit go bad blinkie">
+<p class="whisper centered">a blurry mess.. sad to look at...</p>
+
+<p>for crispness, my other blinkies use a <code>blinkie</code> class i define like so:</p>
+
+<pre><code class="language-css">
+.blinkie {
+    image-rendering: crisp-edges;
+}
+</code></pre>
+
+<p>and that's it. now they look clean and sharp. <span class="whisper">my personal preference, though there's something special about the blur.</span></p>
+
+<img src="assets/images/blinkies/teddy_bear.gif" alt="teddy bear lover blinkie" class="blinkie">
+
+<hr class="checkpoint">
+
+<p>alternate to <code>crisp-edges</code>, some people use the <code>pixelated</code> value. i honestly can't distinguish the difference between these two. the <code>image-rendering</code> property goes a little deeper it seems, but this is where i check out! see links below for more information.</p>

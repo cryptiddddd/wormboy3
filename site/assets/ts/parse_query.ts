@@ -16,7 +16,6 @@ interface QueryDict {
  * @return true if the object has no properties. false otherwise.
  */
 function isEmpty(test: Object): boolean {
-    console.log(Object.keys(test));
     for (let i in test) {
         if (i !== "") return false;
     }

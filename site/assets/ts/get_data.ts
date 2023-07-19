@@ -40,7 +40,36 @@ function fetchTXT(file_name: string, callback: Function): void {
     xmlhttp.send();
 }
 
+/**
+ * finds the most recent entry in an array of objects.
+ * @param index the array of objects. default is "dateCreated" cuz that's my own standard.
+ * @param dateProperty the name of the date property
+ */
+function recentEntry(index: Record<string, string>[], dateProperty: string = "dateCreated"): Object {
+    let recent: Object;
+    let minDiff = Infinity; // the smallest difference between today's date and any record. 
+
+    let today = new Date();
+    
+    let difference, current; // loop vars
+    for (let obj of index) {
+        current = new Date(obj[dateProperty]);
+        console.log(current);
+        difference = today.getTime() - current.getTime();
+
+        if (difference < minDiff) {
+            minDiff = difference;
+            recent = obj;
+        }
+        console.log(minDiff);
+    }
+    // theoretically, by the end, we should have the most recent.
+    return recent;
+}
+
+
 export {
     fetchJSON,
-    fetchTXT
+    fetchTXT,
+    recentEntry
 };

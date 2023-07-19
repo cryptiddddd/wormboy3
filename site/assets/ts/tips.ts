@@ -5,12 +5,13 @@ written in typescript, compiled with tsc.
 
 this file written by... WORMBOY!!!!
 */
-import { fetchJSON, fetchTXT } from "./get_data.js";
+import { fetchJSON, fetchTXT, recentEntry } from "./get_data.js";
 import { getQueries, isEmpty } from "./parse_query.js";
 
 
 // define data structures. article data is the smallest structure...
 interface ArticleData {
+    category: string,
     id: number,
     dateCreated: string,
     dateModified: string,
@@ -171,7 +172,7 @@ function loadCategory(category: CategoryData): void {
  * populates the existing nav element
  * @param categories an array of names of categories.
  */
-function makeNav(categories: string[]) {
+function makeNav(categories: string[]): void {
     let nav = document.getElementById("tips-nav");
     
     if (categories.length == 0) {
@@ -193,8 +194,35 @@ function makeNav(categories: string[]) {
 /**
  * reveals the default page when no query is given.
  */
-function showDefault() {
-    document.getElementById("tips-default").style.display = "block";
+function showDefault(data: TipsDoc): void {
+    let entries: ArticleData[] = [];
+
+    for (let category in data) {
+        entries = entries.concat(data[category].index);
+    }
+
+    let mostRecent = recentEntry((entries as unknown as Record<string, string>[])) as ArticleData; // funny workaround but alright.
+    
+    // show + create page.
+    let tipsDiv = document.getElementById("tips-default");
+    
+    let ad = document.createElement("p");
+    ad.classList.add("centered");
+
+    let splash = document.createElement("span");
+    splash.classList.add("new");
+    splash.innerText = "newest tip:"
+
+    let link = document.createElement("a");
+    link.href = `?c=${mostRecent.category}&a=${mostRecent.id}`;
+    link.innerText = mostRecent.title;
+
+    ad.appendChild(splash); 
+    ad.innerHTML += " ";
+    ad.appendChild(link);
+    tipsDiv.appendChild(ad);
+
+    tipsDiv.style.display = "block";
 }
 
 
@@ -214,7 +242,7 @@ function setup(rawData: TipsDoc): void {
     
     // exit... unless.. what does the default page look like again? probably just toggle a display thingy.
     if (isEmpty(query)) {
-        showDefault();
+        showDefault(rawData);
         return;
     }
 

@@ -108,7 +108,7 @@ li {
 }
 
 .major-update {
-    animation: rainbow 2s linear infinite;
+    animation: rainbow 4s linear infinite;
     font-style: italic;
 }
 

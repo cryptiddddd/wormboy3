@@ -4,6 +4,19 @@
         "description": "these are my tutorials and tips for using css! i am by no means certified to be giving this advice, but alas.",
         "index": [
             {
+                "category": "css",
+                "id": 2,
+                "dateCreated": "07/19/2023",
+                "dateModified": null,
+                "title": "quick tip: image rendering settings",
+                "contentPath": "assets/data/css-2.html",
+                "readMore": [
+                    ["interactive comparison", "https://css-tricks.com/almanac/properties/i/image-rendering/"],
+                    ["mozilla image rendering documentation", "https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering"]
+                ]
+            },
+            {
+                "category": "css",
                 "id": 1,
                 "dateCreated": "07/18/2023",
                 "dateModified": null,
@@ -16,6 +29,7 @@
                 ]
             },
             {
+                "category": "css",
                 "id": 0,
                 "dateCreated": "07/14/2023",
                 "dateModified": "07/18/2023",

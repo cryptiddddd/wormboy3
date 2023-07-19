@@ -13,8 +13,8 @@
 
 #main-win {
     left: 27%;
-    top: 40%;
-    max-height: 300px;
+    top: 30%;
+    max-width: 500px;
 }
 
 #about-win {
@@ -43,7 +43,7 @@
 #changelog-win {
     left: 3%;
     top: 40%;
-    max-width: 30%;
+    max-width: 400px;
 }
 
 #changelog-wrapper {
