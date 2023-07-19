@@ -4,12 +4,27 @@
         "description": "these are my tutorials and tips for using css! i am by no means certified to be giving this advice, but alas.",
         "index": [
             {
+                "id": 1,
+                "dateCreated": "07/18/2023",
+                "dateModified": null,
+                "title": "css units and dimensions",
+                "contentPath": "assets/data/css-1.html",
+                "readMore": [
+                    ["freecodecamp's css unit guide", "https://www.freecodecamp.org/news/css-unit-guide/"],
+                    ["freecodecamp's guide to setting up width and height for the html/body elements", "https://www.freecodecamp.org/news/html-page-width-height/"],
+                    ["there are no absolute units in css [or, insight into how pixels in css are calculated]", "https://www.smashingmagazine.com/2021/07/css-absolute-units/"]
+                ]
+            },
+            {
                 "id": 0,
                 "dateCreated": "07/14/2023",
                 "dateModified": null,
-                "title": "first css tutorial!",
-                "contentPath": "assets/data/css-1.html",
-                "readMore": [["mozilla documentation on custom css variables", "https://developer.mozilla.org/en-US/docs/Web/CSS/--*"], ["world wide web consortium's article on css variables", "https://www.w3.org/TR/css-variables-1/"]]
+                "title": "working with css variables",
+                "contentPath": "assets/data/css-0.html",
+                "readMore": [
+                    ["mozilla documentation on custom css variables", "https://developer.mozilla.org/en-US/docs/Web/CSS/--*"],
+                    ["world wide web consortium's article on css variables", "https://www.w3.org/TR/css-variables-1/"]
+                ]
             }
         ]
     },

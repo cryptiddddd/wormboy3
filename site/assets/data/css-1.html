@@ -1,147 +1,205 @@
-<p>this is a brief tutorial to introduce you to the wonder if defining <code>:root</code> variables in your css file.</p>
+<p>CSS UNITS!!! there are so many of them: <code>px</code>, <code>em</code>, <code>ex</code>, <em><code>rem</code>, <code>rex</code></em>, <code>%</code>, <code>vw</code>, <code>vh</code>, <code>ch</code>, <span class="whisper">hold on, we're almost done,</span> <code>pc</code>, <code>pt</code>, even milimeters, centimeters, and inches!</p>
+
+<p>right now those are just a bunch of letters, but i want to talk about what's what and which i actually think are most useful.</p>
+
+<p class="whisper">disclaimer: while i aim to have accurate information on what units are what and how they work, some of this article will be my personal opinion! for a quick and complete guide to css units, <a href="#read-more">check my readmore</a>!</p>
 
 <p>this tutorial assumes:</p>
-<ul>    
-    <li>you understand the basics of html/css usage and syntax.</li>
-    <li>you understand how css relates to html.</li>
+
+<ul>
+    <li>you understand the general structure/syntax of css and have used it before.</li>
+    <li>you've been using css but ignoring the unit measurements and technical details, because who has time for that!</li>
 </ul>
 
-<p>does YOUR css look like THIS?!??!</p>
 
-<pre><code class="language-css">
-body {
-    background-color: #66b3ff;
-    color: #f2f2ff;
-    font-family: 'fonty mcfontface', monospace;
-}
+<h2 id="pixels">pixels</h2>
 
-div {
-    background-color: #161654;
-    border: 2px solid #f2f2ff;
-    color: #66b3ff;
-}
-
-p.style-1 {
-    color: #161654;
-}
-</code></pre>
-
-<p class="whisper">to be clear: there is NOTHING wrong with this. this works. this is good! no idea what it looks like rendered, cuz i am making shit up for this tutorial, but there is nothing wrong with the format, it's totally normal and functional css.</p>
-
-<p>but it is a tad.... JUVENILE. notice how we have 3 different hex colors to keep track of? and 3 is a low number. looking at <code>#161654</code> means nothing unless you're insane. you could maybe guesstimate that <code>#f2f2ff</code> is a very light blue. but who has time for that!!</p> 
-
-<p>furthermore: what about when you want to update a color? you COULD search and replace, and there is nothing wrong with that. however not all text editors have this option, and i forget the shortcuts all the time.</p>
-
-<p>there is a way in css to create variables, or "labels", for your colors.</p>
-
-<p>at the very top of your file, you're going to use the <code>:root</code> selector. this is where we can declare global variables for css styling! here is our example:</p>
-
-<pre><code class="language-css">
-:root {
-    --light-blue: #f2f2ff;
-    --mid-blue: #66b3ff;
-    --dark-blue: #161654;
-}
-</code></pre>
+<p>i need to use pixels more. <code>px</code> is the simplest unit in css. <span class="whisper">though my site may not currently live by these rules,</span> pixels are the best unit for elements/attributes you want to give a static or absolute size. for example: <code>font-size</code>, or <code>border-size</code>.</p>
 
 <div class="notes">
-    <p>starting a variable with <code>--</code> is an important convention to prevent clashing with built-in css variables! additionally, variable names are case-sensitive, meaning that <code>--MY-VAR</code> will be different from <code>--my-var</code> will be different from <code>--My-Var</code> will be differrnt from <code>--mY-vAR</code>! <span class="whisper">but those wouldn't be very practical names...</span></p>
+    <p>ironically, one <em>css pixel</em> does not always mean one single physical screen pixel. this is to help ensure consistent display across different resolutions. again, <a href="#read-more">more info here</a>!</p>
 </div>
 
-<p>this snippet would go at the top of our code from before, and i'll refactor the uses of these colors. to use a variable, you call the css <code>var()</code> function:</p>
+<p>pixels are fairly self-explanatory. however, understanding them is important to understanding how to use other more advanced units.</p>
+
+<h2 id="em-and-rem">"em" and "rem"</h2>
+
+<p>an "em" <span class="whisper">[not to be confused with the html element <code>&lt;em&gt;</code>]</span> is a relative measurement in css. this unit goes back to newspaper printing and physical typography, when it once represented the width of the widest letter [most often "M"!]. today in css, 1em is equal to the size of the font. for example:</p>
 
 <pre><code class="language-css">
-:root {
-    --light-blue: #f2f2ff;
-    --mid-blue: #66b3ff;
-    --dark-blue: #161654;
+html {
+    font-size: 11px; /* whereas 16px is the default in most browsers! */
 }
 
-body {
-    background-color: var(--mid-blue);
-    color: var(--light-blue);
-    font-family: 'fonty mcfontface', monospace;
-}
-
-div {
-    background-color: var(--dark-blue);
-    border: 2px solid var(--light-blue);
-    color: var(--mid-blue);
-}
-
-p.style-1 {
-    color: var(--dark-blue);
+.shouting {
+    font-size: 2em;
 }
 </code></pre>
 
-<p>yay! now we have an easy-to-maintain color palette.</p>
+<p>with the above css, the root font size is 11 pixels, just a little smaller than the default 16. however, elements with the <code>shouting</code> class are multiplied by 2, making their font size 22 pixels!</p>
+
+<p>this relativity is great for heading elements [<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, so on], as those are given their power by their relativity to other elements.</p>
+
+<p><span class="whisper">but hold on! what about "rem"??</span> let's look at another example.</p>
+
+<pre><code class="language-css">
+html {
+    font-size: 11px;
+}
+
+.shouting {
+    font-size: 2em;
+}
+
+div#jumbotron {
+    font-size: 30px;
+}
+</code></pre>
+
+<p>now, we want to have a section on our html page that's even louder. putting a 22px-sized font won't stand up to 30px... but we're NOT using 22px, we're using 2em! so if our html looks like this:</p>
+
+<pre><code class="language-html">
+&lt;div id="jumbotron"&gt;
+    &lt;p&gt;exciting announcement everyone!&lt;/p&gt;
+    &lt;a href="#" class="shouting"&gt;buy product here!&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>the <code>&lt;a&gt;</code> element with the <code>shouting</code> class will be twice the size of its sibling <code>&lt;p&gt;</code>, at 60 pixels!</p>
+
+<p><code>em</code> is relative to the parent's <code>font-size</code> attribute. <code>rem</code>, on the other hand, is shorthand for "<em>root</em>-em", meaning that it's relative to the <code>&lt;html&gt;</code> element's font size. this allows you to have a little more control over the css rules you write, and specify your exceptions.</p>
+
+<h2 id="ex-and-rex">"ex" and "rex"</h2>
+
+<p>i still struggle with all the info i've dished so far! these next units are simpler, and expand on the same concept.</p>
+
+<p>similar to the origin of "em"s, an "ex" is the <em>height</em> of a little-x in a font, which was often half the height of a capital M. therefore, an "ex" is half of an "em", and an "rex" is half of an "rem"!</p>
+
+<p>i don't have any examples for this one. imagine the previous example, but using 4ex's instead!</p>
 
 <hr class="checkpoint">
 
-<p>these variables can apply to other values, too!</p>
+<p>the last four units i've talked about, <code>em</code>, <code>rem</code>, <code>ex</code>, and <code>rex</code> are all relative to the <em>font's</em> pixel size. these next units i talk about are going to be relevant to the dimensions of parent elements!</p>
 
-<p>let's say that we have a handful of fonts for a website. let's say we have three: one for the headers, one for most everything else, and then a third for finer print. our css could look like this:</p>
+<h2 id="percentages">percentages</h2>
+
+<p>try this!</p>
+
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;worm boy tutorial babey!&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            background-color: mediumaquamarine;
+            width: 50%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;p&gt;text here :]&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>it does what you would expect--the <code>&lt;div&gt;</code>'s width is about half of your total document's width. <span class="whisper">it's a little more complicated for height, so we'll use width as an example for now...</span> now try this:</p>
+
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;worm boy tutorial babey!&lt;/title&gt;
+    &lt;style&gt;
+        html {
+            background-color: white;
+        }
+
+        body {
+            background-color: violet;
+            margin: 0 auto; /* no top or bottom margin -- but an equal right and left margin.*/
+            width: 60%;
+        }
+
+        div {
+            background-color: mediumaquamarine;
+            width: 50%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;p&gt;text here&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>oh. the world just got a little scarier.</p>
+
+<p>for anyone not coding along:</p>
+
+<img src="assets/images/tutorials/css_body_relativity-1.png" alt="an image of the above html">
+<p class="whisper centered">where the turquoise is our <code>&lt;div&gt;</code>, and the pink is our <code>&lt;body&gt;</code> peeking out from behind.</p>
+
+<p>this above scrap of code demonstrates not only relativity, but how little and malleable your body element is. yes! our div is still half the width of our body, we have proved that the % is relative to the immediate parent element's corresponding dimension, whether that is the <code>&lt;html&gt;</code> element, <code>&lt;body&gt;</code>, or even <code>&lt;div&gt;</code>. and nobody is surprised that our body is 60% the width of our total html, as we announced that rather plainly.</p>
+
+<p>however, where is our body's height!? why is there that white strip at the top?? what is going on? <span class="whisper">what would happen if you set your body's height to 100%, you ask? nothing! there is no height measurement of the <code>&lt;html&gt;</code> element to be relative to!</span></p>
+
+<p>this brings us to...</p>
+
+<h2 id="vw-and-vh">"vw" and "vh"</h2>
+
+<p class="whisper">oh god more letters, and they're scary letters.</p>
+
+<p>"vw" and "vh" very simply stand for "viewport width" and "viewport height"! where the "viewport" is the screen space available displaying your web page. <code>1vw</code> is equal to <em>1%</em> of your total viewport width, and <code>100vw</code> is equal to the total 100% of your viewport width.</p>
+
+<div class="notes">
+    <p>the relationship between <code>%</code> and <code>vw</code>/<code>vh</code> is similar to that of <code>em</code> and <code>rem</code>. where <code>%</code> is relative to the immedate parent element, <code>vw</code> and <code>vh</code> are relevant to the <code>&lt;html&gt;</code> element.</p>
+</div>
+
+<p>so let's return to the issue of height... add <code>min-height: 100vh;</code> to your <code>&lt;body&gt;</code> element.</p>
+
+<img src="assets/images/tutorials/css_body_relativity-2.png" alt="another image of the edited html">
+<p class="whisper centered">awesome! now the pink body stretches the whole height of the viewport.</p>
+
+<p>but hold on: why is there that white strip above the body? and WHY is there a SCROLLBAR if the height is supposed to be exactly matched the the viewport height!</p>
+
+<div class="notes">
+    <p>removing the white background styling for our <code>&lt;html&gt;</code> element will turn the whole page pink! <span class="whisper">the gap in the above example will remain, however...</span></p>
+    <p>this is a weird quirk of css -- though the <code>&lt;body&gt;</code> element is a child of the <code>&lt;html&gt;</code> element, the <code>&lt;html&gt;</code> element can inherit from the <code>&lt;body&gt;</code> element if it doesn't have its own defined property.</p>
+</div>
+
+<p>this.. is another quirk of css that i don't quite understand: the gap comes from the <code>&lt;p&gt;</code> elements built-in 1em top and [and bottom] margin. <span class="whisper">try changing that <code>&lt;p&gt;</code> to <code>&lt;span&gt;</code> and watch the gap vanish!</span> it's odd that the paragraph's margin isn't contained by the <code>&lt;div&gt;</code>, but i have a solution: add so much as a single pixel of padding to the <code>&lt;div&gt;</code>, and it'll snap to the margin needs of the <code>&lt;p&gt;</code> element.</p>
+
+<img src="assets/images/tutorials/css_body_relativity-3.png" alt="another image of the edited html">
+<p class="whisper centered">this page... this page is beautiful. the <code>&lt;body&gt;</code> stretches from top to bottom. the <code>&lt;div&gt;</code> is contained totally. the <code>&lt;p&gt;</code> has the space it needs.</p>
+
+<p>weird... but now! now, we have a setup for a page with no confusing height stuff, no hidden margins. this is how i am learning to style my <code>&lt;body&gt;</code> cleanly for this site!:</p>
 
 <pre><code class="language-css">
 body {
-    font-family: 'fonty mcfontface', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'angelbaby handwriting', cursive;
-}
-
-.other, .misc, .selectors {
-    font-family: 'fine print', monospace;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    ... /* then all the fun settings. */
 }
 </code></pre>
 
-<p>wherein we select multiple elements at once just to say they all share a font. <span class="whisper">again, nothing wrong with this, preference is key, but i want to share these tricks.</span></p>
-
-<p>or we could do this:</p>
-
-<pre><code class="language-css">
-:root {
-    --body-font: 'fonty mcfontface', sans-serif;
-    --fancy-font: 'angelbaby handwriting', cursive;
-    --extra-font: 'fine print', monospace;
-}
-    
-body {
-    font-family: var(--body-font);
-    ...
-    ...
-}
-
-h1 {
-    font-family: var(--fancy-font);
-    ...
-    ...
-}
-
-...
-
-.misc {
-    font-family: var(--extra-font);
-}
-
-...
-</code></pre>
-
-<p>and sprinkle our variables throughout our css file. a bunch of points that all tie back to a single, editable value.</p>
+<p>some quick notes:</p>
+<ul>
+    <li><code>margin: 0;</code> is personal preference/needs! but be warned! there is a default 8px margin for the <code>&lt;body&gt;</code> element! this adds to the height of your total webpage if your min-height is set to 100vh!</li>
+    <li>setting the <em>minimum</em> height to 100vh is also personal preference. i use this because i have the whole "os desktop" look and i need a constant page size!</li>
+    <li>keep in mind that regardless, so long as you have your <code>&lt;html&gt;</code>'s background unset, your body's background will automatically cover the entire viewport, <span class="whisper">in whatever way you have it set to do so.</span></li>
+    <li>also keep in mind: hidden overflow doesn't mean that things aren't there. <span class="whisper">on desktop? go drag this very window off to the right. notice that it doesn't shrink or squish!</span></li>
+</ul>
 
 <hr class="checkpoint">
 
-<p>along with <code>var()</code> as a css variable, we have <code>calc()</code>. let's look at basic example usage of <code>calc()</code>: imagine we want an element's width to be just 5 pixels under half the total width available. that could be easily and flexibly achieved like so:</p>
+<p>in that last section, i didn't talk much about vw. so far, i don't use them much. setting your page's <code>min-width</code> to 100vw is in fact redundant, and sometimes only further complicates things.</p>
 
-<pre><code class="language-css">
-.element-class {
-    width: calc(50% - 5px);
-}
-</code></pre>
-
-<p>what makes <code>calc()</code> important is that it allows us to modify some variables a bit. i found this out when i wanted to have a base hex color and use variations for different elements. it wasn't as easy as typing <code>var(--accent-color)de</code>, tacking on two letters to indicate the <code>aa</code> value of a <code>#rrggbbaa</code> color.</p>
-
-<p>it turns out that <code>var(--my-number-var)px</code> does not output <code>5px</code>. <span class="whisper">where <code>--my-number-var</code> is set to 5...</span> instead, it outputs <code>5 px</code>, the whitespace being lethal to functional css.</p>
-
-<p>this final section is mostly a word of warning, or at least where my own struggle remains. i'll probably be updating this soon enough, as i learn more. <span class="whisper">also because i'm sure i'll nitpick all night.</span></p>
+<p>check out some links below for more information, and what taught and inspired me to write all this!</p>

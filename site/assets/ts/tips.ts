@@ -66,11 +66,16 @@ function fillArticleHeader(data: ArticleData): void {
     timestamp.classList.add("timestamp");
 
     timestamp.innerText = `posted on ${data.dateCreated}`;
-
+    
     if (data.dateModified) {
-        timestamp.innerText += `, last edited ${data.dateModified}`;
-    }
+        timestamp.appendChild(document.createElement("br"));
+        
+        let span = document.createElement("span");
+        span.classList.add("whisper");
+        span.innerText = `last edited ${data.dateModified}`;
 
+        timestamp.appendChild(span);
+    }
 
     // create title
     let title = document.createElement("h1");
@@ -89,6 +94,7 @@ function fillArticleHeader(data: ArticleData): void {
 function fillArticleReadmore(data: ArticleData): void {
     // create title
     let title = document.createElement("h2");
+    title.id = "read-more";
     title.innerText = "read more:";
 
     let readList = document.createElement("ul");
@@ -136,7 +142,6 @@ function loadArticle(article: ArticleData): void {
 
 /* FOR LOADING A CATEGORY */
 
-// todo: a function that fills out the category index.
 function loadCategory(category: CategoryData): void {
     let title = document.createElement("h1");
     title.innerText = `${category.name} advice`;
@@ -219,7 +224,7 @@ function setup(rawData: TipsDoc): void {
     
     // call the appropriate function!!! 
     if (hasArticle && hasCategory) {
-        loadArticle(rawData[query.c].index[Number(query.a)]);
+        loadArticle(rawData[query.c].index[rawData[query.c].index.length - 1 - Number(query.a)]);
     } else if (hasCategory) {
         loadCategory(rawData[query.c]);
     } else {

@@ -4,15 +4,11 @@
 }
 
 /* font/block styles */
-p {
-    margin-bottom: 0;
-}
-
 .notes > p {
     margin: initial;
 }
 
-p code {
+p code, li code {
     font-size: 14px;
 }
 
@@ -52,6 +48,12 @@ nav {
 
 #tips-win > div.content {
     font-size: 19px;
+}
+
+#article img {
+    display: block;
+    margin: auto;
+    width: 70%;
 }
 
 #tips-default {
@@ -103,5 +105,9 @@ div.notes {
 
     nav {
         flex-direction: row;
+    }
+
+    #article img {
+        width: 95%;
     }
 }

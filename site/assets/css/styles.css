@@ -41,6 +41,7 @@ body {
     color: var(--font-color);
     font-family: var(--font);
     overflow: hidden;
+    overflow-y: auto;
 }
 
 hr {
@@ -82,6 +83,20 @@ code {
     color: var(--secondary-accent);
 }
 
+/* lists */
+ul {
+    display: block;
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 0 2em;
+    padding: 0;
+    width: fit-content;
+}
+
+li {
+    text-indent: -1em;
+}
+
 .whisper {
     color: var(--whisper-color);    
     font-style: italic;
@@ -121,20 +136,6 @@ button:disabled {
 
 input[type=text]:focus {
     border-color: var(--font-color);
-}
-
-/* lists */
-ul {
-    display: block;
-    list-style-type: square;
-    list-style-position: inside;
-    margin: 0 2em;
-    padding: 0;
-    width: fit-content;
-}
-
-li {
-    text-indent: none;
 }
 
 /* nav */
@@ -195,6 +196,7 @@ div.content {
     border: var(--content-border);
     padding: 2em;
     overflow: auto;
+    height: 100%;
 }
 
 div.content > :first-child {
@@ -277,7 +279,6 @@ html {
         flex-flow: row wrap;
         margin: 1em;
         min-height: unset;
-        overflow-y: auto;
         gap: 1em;
     }
     
