@@ -1,9 +1,17 @@
 [
     {
+        "date": "07/18/2023",
+        "title": "new tutorial!",
+        "body": "minor bug fixes around the site's css and ts.</p><p>check out the new article <a href='/tips.html?c=css&a=1'>here!</a>",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/f1734674748a2ead3112c696caa95e8afc54ab15",
+        "id": 5,
+        "isMajor": false
+    },
+    {
         "date": "07/15/2023",
-        "title": "double click flip chicken",
+        "title": "double click chicken flip",
         "body": "desktop only: double clicking on a free-floating image flips it horizontally. try that <a href='/about.html'>here</a>! this is HUGE.",
-        "gitCommit": "",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/791bee6e1b0035161cbf6af5135c0a2d3e312057",
         "id": 4,
         "isMajor": true
     },
