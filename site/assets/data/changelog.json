@@ -2,8 +2,8 @@
     {
         "date": "07/19/2023",
         "title": "about update",
-        "body": "finally updated my about page with some more detail. definitely not its final form, but here we go...</p><p class='whisper'>also, <a href='/links.html?c=css&a=2'>another new tip</a>, this one's quick. plus some minor edits here and there.",
-        "gitCommit": "",
+        "body": "finally updated my about page with some more detail. definitely not its final form, but here we go...</p><p class='whisper'>also, <a href='/tips.html?c=css&a=2'>another new tip</a>, this one's quick. plus some minor edits here and there. worm boy bed time....",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/ef13a2258e405c6d56100f9b775633dbe2a7bfa6",
         "id": 6,
         "isMajor": false
     },
