@@ -14,6 +14,7 @@
 /* misc / minor */
 body {
     font-size: 19px;
+    overflow-y: hidden;
 }
 
 /* header */
