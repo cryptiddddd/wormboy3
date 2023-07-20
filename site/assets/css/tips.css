@@ -80,7 +80,7 @@ div.notes {
     text-align: right;
 }
 
-#article hr::before {
+hr.checkpoint::before {
     color: var(--font-color);
     content: "checkpoint! go practice what you've learned!";
 }
