@@ -23,26 +23,12 @@ pre {
     border-radius: 5px;
 }
 
-/* overall site nav ... change? */
-nav {
-    flex-direction: column;
-    justify-content: space-evenly;
-    row-gap: 0.5em;
-}
-
-#nav-win {
-    top: 30%;
-    left: 5%;
-    width: unset;
-}
-
-
 /* main window */
 #tips-win {
-    bottom: 0%;
+    /* bottom: 0%; */
     top: 0%;
     left: calc(50% - var(--main-width) / 2); /* center it! */
-    max-height: none;
+    height: 100%;
     width: var(--main-width);
 }
 

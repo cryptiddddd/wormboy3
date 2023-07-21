@@ -25,70 +25,90 @@
     <script type="module" src="assets/js/scatter.js"></script>
 </head>
 <body>
-    <!-- have some chickens -->
-    <div class="free-elem randomPos" style="left: 55%; top: 90%;">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
-    <div class="free-elem randomPos" style="left: 60%; top: 90%;">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
-    <div class="free-elem randomPos" style="left: 65%; top: 90%;">
-        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-    </div>
+    <header id="main-header">
+        <marquee scrollamount="3">welcome to wormOS :]</marquee>
+        
+        <div class="middle-wrapper">
+            <div class="button-wrapper"><!-- buttons here later...--></div>
+            <img src="assets/images/long_worm.png" alt="a long and colorful worm." id="long-worm">
+            
+            <div class="button-wrapper"> 
+                <!-- my button and friend stamps!! -->
+                <a href="https://neocities.org/site/wormboy3"><img src="assets/images/button.png" alt="wormboy3's button!"></a>
+                <a href="https://everetcetera.neocities.org/"><img src="https://everetcetera.neocities.org/images/ETCbutton.png" alt="etc my good friend etc"></a>
+                <!-- other things that are SO cool but i don't know them personally -->
+                <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="say no to web3"></a>
+                <a href="https://plasticdino.neocities.org/"><img src="assets/images/stamps/plasticdinogif.gif" alt="plastic dino's gif button"></a>
+                <a target="_blank" href="https://momg.neocities.org/"><img alt="visit the gif gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+            </div>
+        </div>
+            
+        <nav>
+            <div class="link-wrapper">
+                <a href="/index.html">home</a><!-- using comments to prevent the whitespace, which has implications on the spacing. 
+                --><a href="/about.html">about</a><!--
+                --><a href="/links.html">bookmarks</a><!--
+                --><a href="/tips.html">tutorials</a><!--
+                --><a href="/scream.html">scream</a>
+            </div>
+            
+            <div class="link-wrapper">
+                <a href="/changelog.html">changelog</a><!--
+                --><a class="external" href="https://github.com/cryptiddddd/wormboy3" target="_blank">github</a><!--
+            --><a class="external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- have some chickens -->
+        <div class="free-elem randomPos" style="left: 55%; top: 90%;">
+            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
+        </div>
+        <div class="free-elem randomPos" style="left: 60%; top: 90%;">
+            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
+        </div>
+        <div class="free-elem randomPos" style="left: 65%; top: 90%;">
+            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
+        </div>
+        <div class="wrapper" id="main-win">
+            <div class="title">
+                <span>main-window</span>
+            </div>
+            <div class="content">
+                <h1>about the site</h1>
+                <p>this site is my very own WORM OS!!!!!! that is, worm operating system. i want this site to be an amusing space to visit, with educational and dare i say uplifting materials sprinkled around!</p>
+                <p><a href="scream.html">here</a> is an example of my interactive pages! <span class="whisper">i'm not sure how i want to link this from my homepage just yet but i'll get there..</span></p>
+                <hr>
+                <p>i think that a free internet is very important. and while making a personal site <em>is</em> a piece of fighting to de-monopolize social media, it misses the point. not everyone has the time/energy/interest/passion for creating and upholding a personal website, even a silly neocities. there's more to the issue than that: it's about how we engage with one another. <a href="https://yesterweb.org/webring/">the shut down of yesterweb</a> has got me thinking about the importance of community.</p>
+                <p>that said, i sincerely want my site to encourage and foster interests in coding, webmastery, etc. it is empowering to create small digital spaces, personal or not. <span class="whisper">and by god digital literacy is important.</span></p>
+                <hr>
+                <p>you can check my footer for a link to the site's git repo, if you're interested.</p>
+            </div>
+        </div>
+        <div class="wrapper randomPos" id="about-win">
+            <div class="title">
+                <span>biography-window</span>
+            </div>
+            <div class="content">
+                <h1>about me</h1>
+                <p>i'm wormboy!!!!!!!!!!!!!!!</p>
+                <p>i am 22, i've got pronouns [they/them], and i'm just hitting buttons on a keyboard. i guess i will share that i am a compsci student and also just some guy.</p>
+                <p>talking to people is hard, but i am here wanting to connect.</p>
+            </div>
+        </div>
+        <div class="wrapper" id="footer-win">
+            <div class="title">
+                <span>footer-window</span>
+            </div>
+            <div class="content centered">
+                <p>copyright 2023 WORM BOY!</p>
+                <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
+                or
+                <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
+            </div>
+        </div>
+    </main>
 
-    <div class="wrapper" id="nav-win">
-        <!-- all titles are automatically made draggable, see drag.js -->
-        <div class="title">
-            <span>nav-window</span>
-        </div>
-        <div class="content">
-            <nav>
-                <a href="/index.html">home</a>
-                <a href="/about.html">about</a>
-                <a href="/links.html">links</a>
-                <a href="/tips.html">tutorials</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
-            </nav>
-        </div>
-    </div>
-
-    <div class="wrapper" id="main-win">
-        <div class="title">
-            <span>main-window</span>
-        </div>
-        <div class="content">
-            <h1>about the site</h1>
-            <p>this site is my very own WORM OS!!!!!! that is, worm operating system. i want this site to be an amusing space to visit, with educational and dare i say uplifting materials sprinkled around!</p>
-            <p><a href="scream.html">here</a> is an example of my interactive pages! <span class="whisper">i'm not sure how i want to link this from my homepage just yet but i'll get there..</span></p>
-            <hr>
-            <p>i think that a free internet is very important. and while making a personal site <em>is</em> a piece of fighting to de-monopolize social media, it misses the point. not everyone has the time/energy/interest/passion for creating and upholding a personal website, even a silly neocities. there's more to the issue than that: it's about how we engage with one another. <a href="https://yesterweb.org/webring/">the shut down of yesterweb</a> has got me thinking about the importance of community.</p>
-            <p>that said, i sincerely want my site to encourage and foster interests in coding, webmastery, etc. it is empowering to create small digital spaces, personal or not. <span class="whisper">and by god digital literacy is important.</span></p>
-            <hr>
-            <p>you can check my footer for a link to the site's git repo, if you're interested.</p>
-        </div>
-    </div>
-
-    <div class="wrapper randomPos" id="about-win">
-        <div class="title">
-            <span>biography-window</span>
-        </div>
-        <div class="content">
-            <h1>about me</h1>
-            <p>i'm wormboy!!!!!!!!!!!!!!!</p>
-            <p>i am 22, i've got pronouns [they/them], and i'm just hitting buttons on a keyboard. i guess i will share that i am a compsci student and also just some guy.</p>
-            <p>talking to people is hard, but i am here wanting to connect.</p>
-        </div>
-    </div>
-
-    <div class="wrapper" id="footer-win">
-        <div class="title">
-            <span>footer-window</span>
-        </div>
-        <div class="content centered">
-            <p>copyright 2023 WORM BOY!</p>
-            <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
-            or 
-            <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
-        </div>
-    </div>
 </body>
+</html>

@@ -1,19 +1,6 @@
-/* stamp flex */
-.stamp-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* index.html positions--will i reuse these ids? will i need more/others? */
-#nav-win {
-    left: 2%;
-    top: 2%;
-    width: 40%;   
-}
-
 #main-win {
     left: 27%;
-    top: 30%;
+    top: 10%;
     max-width: 500px;
 }
 
@@ -27,7 +14,7 @@
 
 #blinkie-win {
     left: 84%;
-    top: 0.75%;
+    top: 2%;
 }
 
 #blinkie-wrapper {
@@ -42,7 +29,7 @@
 
 #changelog-win {
     left: 3%;
-    top: 40%;
+    top: 20%;
     max-width: 400px;
 }
 
@@ -71,7 +58,7 @@
 }
 
 #footer-win {
-    top: 80%;
+    top: 65%;
     left: 1%;
 }
 

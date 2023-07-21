@@ -25,43 +25,63 @@
     <script type="module" src="assets/js/scatter.js"></script>
 </head>
 <body onload="populateChangelog(-1, true);" onhashchange="autoOpen();">
-    <div class="wrapper" id="nav-win">
-        <!-- all titles are automatically made draggable, see drag.js -->
-        <div class="title">
-            <span>nav-window</span>
+    <header id="main-header">
+        <marquee scrollamount="3">welcome to wormOS :]</marquee>
+        
+        <div class="middle-wrapper">
+            <div class="button-wrapper"><!-- buttons here later...--></div>
+            <img src="assets/images/long_worm.png" alt="a long and colorful worm." id="long-worm">
+            
+            <div class="button-wrapper"> 
+                <!-- my button and friend stamps!! -->
+                <a href="https://neocities.org/site/wormboy3"><img src="assets/images/button.png" alt="wormboy3's button!"></a>
+                <a href="https://everetcetera.neocities.org/"><img src="https://everetcetera.neocities.org/images/ETCbutton.png" alt="etc my good friend etc"></a>
+                <!-- other things that are SO cool but i don't know them personally -->
+                <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="say no to web3"></a>
+                <a href="https://plasticdino.neocities.org/"><img src="assets/images/stamps/plasticdinogif.gif" alt="plastic dino's gif button"></a>
+                <a target="_blank" href="https://momg.neocities.org/"><img alt="visit the gif gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+            </div>
         </div>
-        <div class="content">
-            <nav>
-                <a href="index.html">home</a>
-                <a href="about.html">about</a>
-                <a href="links.html">links</a>
-                <a href="/tips.html">tutorials</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
-            </nav>
-        </div>
-    </div>
+            
+        <nav>
+            <div class="link-wrapper">
+                <a href="/index.html">home</a><!-- using comments to prevent the whitespace, which has implications on the spacing. 
+                --><a href="/about.html">about</a><!--
+                --><a href="/links.html">bookmarks</a><!--
+                --><a href="/tips.html">tutorials</a><!--
+                --><a href="/scream.html">scream</a>
+            </div>
+            
+            <div class="link-wrapper">
+                <a href="/changelog.html">changelog</a><!--
+                --><a class="external" href="https://github.com/cryptiddddd/wormboy3" target="_blank">github</a><!--
+            --><a class="external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="wrapper randomPos" id="changelog-win">
-        <div class="title">
-            <span>full-changelog</span>
+    <main>
+        <div class="wrapper randomPos" id="changelog-win">
+            <div class="title">
+                <span>full-changelog</span>
+            </div>
+            <div class="content">
+                <p>note: i don't quite update the changelog with <em>every</em> update... it's not worth it for me if i edit only a couple files. check my git commits for the full changelog.</p>
+                <div id="changelog-wrapper"><!-- placeholder for changelog entries... --></div>
+            </div>
         </div>
-        <div class="content">
-            <p>note: i don't quite update the changelog with <em>every</em> update... it's not worth it for me if i edit only a couple files. check my git commits for the full changelog.</p>
-            <div id="changelog-wrapper"><!-- placeholder for changelog entries... --></div>
+        <div class="wrapper" id="footer-win">
+            <div class="title">
+                <span>footer-window</span>
+            </div>
+            <div class="content centered">
+                <p>copyright 2023 WORM BOY!</p>
+                <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
+                or
+                <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
+            </div>
         </div>
-    </div>
-
-    <div class="wrapper" id="footer-win">
-        <div class="title">
-            <span>footer-window</span>
-        </div>
-        <div class="content centered">
-            <p>copyright 2023 WORM BOY!</p>
-            <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
-            or 
-            <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
-        </div>
-    </div>
+    </main>
 
 </body>
 </html>
