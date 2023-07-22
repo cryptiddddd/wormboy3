@@ -1,6 +1,11 @@
 :root {
-    --main-width: 45%;
+    --main-width: 90%;
     --win-background: #000d
+}
+
+/* header mod */
+img#long-worm {
+    display: none;
 }
 
 /* font/block styles */
@@ -25,10 +30,11 @@ pre {
 
 /* main window */
 #tips-win {
-    /* bottom: 0%; */
-    top: 0%;
-    left: calc(50% - var(--main-width) / 2); /* center it! */
+    box-sizing: border-box;
     height: 100%;
+    left: calc(50% - var(--main-width) / 2); /* center it! */
+    top: 0%;
+    max-width: unset;
     width: var(--main-width);
 }
 
@@ -73,13 +79,17 @@ hr.checkpoint::before {
 
 /* tips nav */
 #tips-nav {
-    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#tips-nav a {
+    border: none;
 }
 
 /* footer placement */
 #footer-win {
     left: 76%;
-    top: 75%;
+    top: 70%;
 }
 
 
@@ -87,10 +97,6 @@ hr.checkpoint::before {
 @media (max-width: 960px) {
     #tips-win {
         min-width: 95%;
-    }
-
-    nav {
-        flex-direction: row;
     }
 
     #article img {

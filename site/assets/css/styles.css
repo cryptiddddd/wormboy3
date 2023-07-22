@@ -40,10 +40,13 @@ div.title, div.title span, img, div.free-elem {
 body {
     background: var(--page-bg);
     color: var(--font-color);
+    display: flex;
+    flex-flow: column nowrap;
     font-family: var(--font);
     margin: 0;
-    height: 100vh; /* important that it's a set height, not min- or max-*/
-    overflow: hidden;
+    height: 100vh;  
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -95,8 +98,17 @@ nav {
     padding: 1ex 3ex;
 }
 
+nav span {
+    color: var(--accent);
+    opacity: 50%;
+}
+
+.link-wrapper:last-child {
+    text-align: right;
+}
+
 div.link-wrapper {
-    white-space: discard;
+    min-width: 40%;
 }
 
 /* nav */
@@ -129,8 +141,9 @@ nav a.external:hover, nav a.external:visited:hover {
 
 /* MAIN BODY CONTAINER */
 main {
-    height: 100%;
+    flex-grow: 1;
     position: relative;
+    height: 100vh;
 }
 
 hr {
@@ -238,6 +251,7 @@ div.free-elem {
 
 div.wrapper {
     border: var(--win-border);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     max-width: 50%;
@@ -339,17 +353,22 @@ html {
 @media (max-width: 960px) {
     body {
         background-attachment: fixed;
+        min-height: unset;
+        overflow-y: auto;
+    }
+
+    main {
+        box-sizing: border-box;
         display: flex;
         flex-flow: row wrap;
-        margin: 1em;
-        min-height: unset;
         gap: 1em;
+        margin: 1em;
     }
     
     div.wrapper {
         flex: 1 0 100%;
         position: static;
-        max-width: unset;
+        max-width: unset!important;
         width: unset;
     }
     
@@ -360,5 +379,9 @@ html {
     /* push images to the background */
     div.free-elem {
         z-index: -1;
+    }
+
+    nav {
+        overflow-x: auto;
     }
 }

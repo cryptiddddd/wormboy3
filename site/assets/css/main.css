@@ -14,7 +14,6 @@
 
 #blinkie-win {
     left: 84%;
-    top: 2%;
 }
 
 #blinkie-wrapper {
@@ -80,7 +79,7 @@
     }
 
     /* wish it weren't necessary to repeat but COME ON! */
-    div.wrapper {
+    /* div.wrapper {
         max-width: unset;
-    }
+    } */
 }
