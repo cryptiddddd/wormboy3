@@ -9,7 +9,7 @@
                 "dateCreated": "07/19/2023",
                 "dateModified": null,
                 "title": "quick tip: image rendering settings",
-                "contentPath": "assets/data/css-2.html",
+                "contentPath": "assets/data/tutorials/css-2.html",
                 "readMore": [
                     ["interactive comparison", "https://css-tricks.com/almanac/properties/i/image-rendering/"],
                     ["mozilla image rendering documentation", "https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering"]
@@ -21,7 +21,7 @@
                 "dateCreated": "07/18/2023",
                 "dateModified": null,
                 "title": "css units and dimensions",
-                "contentPath": "assets/data/css-1.html",
+                "contentPath": "assets/data/tutorials/css-1.html",
                 "readMore": [
                     ["freecodecamp's css unit guide", "https://www.freecodecamp.org/news/css-unit-guide/"],
                     ["freecodecamp's guide to setting up width and height for the html/body elements", "https://www.freecodecamp.org/news/html-page-width-height/"],
@@ -34,7 +34,7 @@
                 "dateCreated": "07/14/2023",
                 "dateModified": "07/18/2023",
                 "title": "working with css variables",
-                "contentPath": "assets/data/css-0.html",
+                "contentPath": "assets/data/tutorials/css-0.html",
                 "readMore": [
                     ["mozilla documentation on custom css variables", "https://developer.mozilla.org/en-US/docs/Web/CSS/--*"],
                     ["world wide web consortium's article on css variables", "https://www.w3.org/TR/css-variables-1/"]
@@ -52,7 +52,7 @@
                 "dateCreated": "07/22/2023",
                 "dateModified": null,
                 "title": "local web development + testing tools",
-                "contentPath": "assets/data/web-0.html",
+                "contentPath": "assets/data/tutorials/web-0.html",
                 "readMore": [
                     ["my links page mentions the same tools and more", "/links.html"]
                 ]
