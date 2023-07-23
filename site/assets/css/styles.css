@@ -1,288 +1,22 @@
 :root {
     --page-bg: url("../images/carpet.png");
 
-    --font-color: #fff;
     --font: 'VT323', monospace;
-    --whisper-color: #bbb;
+    --font-color: #fff;
+    --font-size: 16px;
     --accent: #9313c5;
     --accent-glow: #bd17d3;
     --secondary-accent: #f7f71c;
+    --whisper-color: #bbb;
 
     --link: #61e20c;
     --link-hover: #cbf122;
     --link-visited: #13c74f;
     
-    --nav-border: 2px solid var(--accent);
-
     --content-border: 1px solid var(--accent);
-    --win-border: 1px solid black;
-    --win-background: #000a;
 }
 
-/* unselectable elements */
-div.title, div.title span, img, div.free-elem {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* selection highlight affect */
-::selection, ::-moz-selection {
-	background-color: var(--accent);
-	color: #fff;
-}
-
-
-/* body and body elements.. */
-body {
-    background: var(--page-bg);
-    color: var(--font-color);
-    display: flex;
-    flex-flow: column nowrap;
-    font-family: var(--font);
-    margin: 0;
-    height: 100vh;  
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-
-/* TESTING HEADER */
-#main-header {
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-flow: row wrap;
-    height: auto;
-}
-
-#main-header > marquee {
-    margin: 1ex 0;
-}
-
-div.middle-wrapper {
-    display: flex;
-    flex: 0 0 100%;
-    justify-content: space-between;
-}
-
-img#long-worm {
-    display: block;
-    filter: drop-shadow(0 0 9px black);
-    max-height: 100px;
-    margin-bottom: 1em;
-}
-
-.button-wrapper {
-    align-items: center;
-    display: flex;
-    flex: 0 1 30%;
-    flex-flow: row wrap;
-    gap: 8px;
-    max-height: 100px; /* to match the worm's height. make variable? */
-    justify-content: center;
-    padding: 0 2em;
-}
-
-/* link nav, within the header. */
-nav {
-    align-self: baseline;
-    background-color: var(--win-background);
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 0 0 100%;
-    justify-content: space-between;
-    padding: 1ex 3ex;
-}
-
-nav span {
-    color: var(--accent);
-    opacity: 50%;
-}
-
-.link-wrapper:last-child {
-    text-align: right;
-}
-
-div.link-wrapper {
-    min-width: 40%;
-}
-
-/* nav */
-nav a {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-}
-
-nav a:not(:first-child) {
-    border-left: var(--nav-border);
-}
-
-nav a, nav a:visited {
-    color: var(--link);
-}
-
-nav a.external {
-    border-color: var(--accent);
-}
-
-nav a.external, nav a.external:visited {
-    color: var(--accent);
-}
-
-nav a.external:hover, nav a.external:visited:hover {
-    color: var(--accent-glow);
-}
-
-
-/* MAIN BODY CONTAINER */
-main {
-    flex-grow: 1;
-    position: relative;
-    height: 100vh;
-}
-
-hr {
-    color: var(--accent);
-    opacity: 70%;
-    height: 0;
-}
-
-img.little-img {
-    max-width: 100px;
-    margin: 0;
-}
-
-img.blinkie {
-    image-rendering: crisp-edges;
-}
-
-/* text styles */
-a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-a:hover, a:visited:hover {
-    color: var(--link-hover);
-    text-transform: uppercase;
-}
-
-a:visited {
-    color: var(--link-visited);
-}
-
-code {
-    color: var(--secondary-accent);
-}
-
-/* lists */
-ul {
-    display: block;
-    list-style-type: square;
-    list-style-position: inside;
-    margin: 0 2em;
-    padding: 0;
-    width: fit-content;
-}
-
-li {
-    text-indent: -1em;
-}
-
-.whisper {
-    color: var(--whisper-color);    
-    font-style: italic;
-}
-
-.silenced {
-    color: var(--whisper-color);
-    text-decoration: line-through;
-}
-
-.major-update {
-    animation: rainbow 4s linear infinite;
-    font-style: italic;
-}
-
-.centered {
-    text-align: center;
-}
-
-
-/* interfaces */
-button, input[type=text] {
-    background-color: black;
-    border: var(--content-border);
-    color: var(--font-color);
-    font-family: var(--font);
-    font-size: 1em;
-}
-
-button:hover:not(:disabled) {
-    background-color: #1b1b1b;
-}
-
-button:disabled {
-    color: var(--whisper-color);
-}
-
-input[type=text]:focus {
-    border-color: var(--font-color);
-}
-
-
-/* 
-a window is made up of a wrapper, a title, and content. 
-it's supposed to be an absolutely-positioned flexbox, which becomes a static part of another flex box on mobile.
-a free-elem is another element that can be dragged around the page.
-*/
-div.wrapper, div.free-elem {
-    position: absolute;
-}
-
-div.free-elem {
-    transition: transform 0.25s ease-in-out;
-}
-
-div.wrapper {
-    border: var(--win-border);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    position: absolute;
-}
-
-div.title {
-    background-color: var(--accent);
-    border: var(--content-border);
-    /* flex-basis: 1.5em; */
-    padding: 0.2em 0.5em 0 1em;
-}
-
-div.title span {
-    vertical-align: baseline;
-}
-
-div.content {
-    background-color: var(--win-background);
-    border: var(--content-border);
-    padding: 2em;
-    overflow: auto;
-    height: 100%;
-}
-
-div.content > :first-child {
-    margin-top: 0;
-}
-
-
-/* ****** SCROLL BAR ****** */
+/* defining scroll bar */
 html {
     scrollbar-width: thin;
 }
@@ -305,6 +39,111 @@ html {
 
 ::-webkit-scrollbar-button {
     height: 4px;
+}
+
+
+/* unselectable elements */
+div.title, div.title span, img, div.free-elem {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* selection highlight affect */
+::selection, ::-moz-selection {
+	background-color: var(--accent);
+	color: #fff;
+}
+
+
+/* body and body elements.. */
+body {
+    background: var(--page-bg);
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: var(--font-size);
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* text styles */
+hr {
+    color: var(--accent);
+    opacity: 70%;
+    height: 0;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+    color: var(--link-hover);
+    text-transform: uppercase;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+nav a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+}
+
+nav a:visited {
+    color: var(--link);
+}
+
+code {
+    color: var(--secondary-accent);
+}
+
+/* lists */
+ul {
+    display: block;
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 0 2em;
+    padding: 0;
+    width: fit-content;
+}
+
+li {
+    text-indent: -1em;
+}
+
+/* classes */
+.whisper {
+    color: var(--whisper-color);    
+    font-style: italic;
+}
+
+.silenced {
+    color: var(--whisper-color);
+    text-decoration: line-through;
+}
+
+.major-update {
+    animation: rainbow 4s linear infinite;
+    font-style: italic;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+.v-flex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 /* animations */
@@ -353,35 +192,8 @@ html {
 @media (max-width: 960px) {
     body {
         background-attachment: fixed;
-        min-height: unset;
+        height: unset!important;
+        min-height: unset!important;
         overflow-y: auto;
-    }
-
-    main {
-        box-sizing: border-box;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 1em;
-        margin: 1em;
-    }
-    
-    div.wrapper {
-        flex: 1 0 100%;
-        position: static;
-        max-width: unset!important;
-        width: unset;
-    }
-    
-    div.content {
-        height: 100%;
-    }
-
-    /* push images to the background */
-    div.free-elem {
-        z-index: -1;
-    }
-
-    nav {
-        overflow-x: auto;
     }
 }

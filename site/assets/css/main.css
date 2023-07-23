@@ -1,3 +1,161 @@
+:root {
+    --nav-border: 2px solid var(--accent);
+
+    --win-border: 1px solid black;
+    --win-background: #000a;
+}
+
+/* BODY settings for main */
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;  
+}
+
+/* MAIN HEADER, main header children. */
+#main-header {
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+}
+
+#main-header > marquee {
+    margin: 1ex 0;
+}
+
+div.middle-wrapper {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-between;
+}
+
+img#long-worm {
+    display: block;
+    filter: drop-shadow(0 0 9px black);
+    max-height: 100px;
+    margin-bottom: 1em;
+}
+
+.button-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 0 1 30%;
+    flex-flow: row wrap;
+    gap: 8px;
+    max-height: 100px; /* to match the worm's height. make variable? */
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 2em;
+}
+
+/* NAV LINK, within header. */
+nav {
+    align-self: baseline;
+    background-color: var(--win-background);
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 0 100%;
+    justify-content: space-between;
+    padding: 1ex 3ex;
+}
+
+nav span {
+    color: var(--accent);
+    opacity: 50%;
+}
+
+/* link wrappers, within nav. */
+div.link-wrapper {
+    min-width: 40%;
+}
+
+.link-wrapper:last-child {
+    text-align: right;
+}
+
+/* nav links, within link wrappers. */
+nav a:not(:first-child) {
+    border-left: var(--nav-border);
+}
+
+nav a.external, nav a.external:visited {
+    color: var(--accent);
+}
+
+nav a.external:hover, nav a.external:visited:hover {
+    color: var(--accent-glow);
+}
+
+
+/* MAIN BODY CONTAINER--sibling of the header. */
+main {
+    flex-grow: 1;
+    position: relative;
+    height: 100vh;
+}
+
+img.little-img {
+    max-width: 100px;
+    margin: 0;
+}
+
+img.blinkie {
+    image-rendering: crisp-edges;
+}
+
+
+/* WINDOWS WITHIN MAIN */
+
+/* 
+a window is made up of a wrapper, a title, and content. 
+absolute-positioned flexbox, which becomes a static part of another flexbox on mobile.
+a free-elem is another element that can be dragged around the page. drag.js handles that.
+*/
+div.wrapper, div.free-elem {
+    position: absolute;
+}
+
+div.free-elem {
+    transition: transform 0.25s ease-in-out;
+}
+
+div.wrapper {
+    border: var(--win-border);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    position: absolute;
+}
+
+div.title {
+    background-color: var(--accent);
+    border: var(--content-border);
+    padding: 0.2em 0.5em 0 1em;
+}
+
+div.title span {
+    vertical-align: baseline;
+}
+
+div.content {
+    background-color: var(--win-background);
+    border: var(--content-border);
+    padding: 2em;
+    overflow: auto;
+    height: 100%;
+}
+
+div.content > :first-child {
+    margin-top: 0;
+}
+
+
+/* WINDOW POSITION ZONE */
+
 #main-win {
     left: 27%;
     top: 10%;
@@ -36,12 +194,6 @@
     margin-bottom: 1.4ex;
 }
 
-#changelog-win div.content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-}
-
 #site-resources {
     max-width: 450px;
 }
@@ -62,6 +214,37 @@
 }
 
 @media (max-width: 960px) {
+    /* display edits. */
+    main {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1em;
+        height: unset;
+        margin: 1em;
+    }
+    
+    div.wrapper {
+        flex: 1 0 100%;
+        position: static;
+        max-width: unset!important;
+        width: unset;
+    }
+    
+    div.content {
+        height: 100%;
+    }
+
+    /* push images to the background */
+    div.free-elem {
+        z-index: -1;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    /* specific windows */
     #blinkie-win {
         flex: 1;
     }
@@ -77,9 +260,4 @@
     #blinkie-wrapper {
         flex-flow: row wrap;
     }
-
-    /* wish it weren't necessary to repeat but COME ON! */
-    /* div.wrapper {
-        max-width: unset;
-    } */
 }

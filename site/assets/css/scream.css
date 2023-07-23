@@ -4,7 +4,7 @@
     --font-color: #fdecec;
     
     --link: var(--accent);
-    --link-hover: #bc19ee;
+    --link-hover: var(--accent-glow);
     --link-visited: var(--accent);
 
     /* scream-specific */
@@ -149,12 +149,30 @@ div#interface-input {
     padding: 1em 2em;
 }
 
-/* woe entry */
+/* interface bases */
 button, input[type=text] {
+    background-color: black;
+    border: var(--content-border);
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: 1em;
     min-height: 2em;
     padding: 0.5em;
 }
 
+button:hover:not(:disabled) { /* hovered AND not disabled. */
+    background-color: #1b1b1b;
+}
+
+button:disabled {
+    color: var(--whisper-color);
+}
+
+input[type=text]:focus {
+    border-color: var(--font-color);
+}
+
+/* flex placing */
 button#woe-btn {
     flex: 0 1 10%;
 }

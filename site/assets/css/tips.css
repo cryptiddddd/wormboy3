@@ -1,14 +1,42 @@
 :root {
+    --font-size: 19px;
+
     --main-width: 90%;
-    --win-background: #000d
 }
 
-/* header mod */
-img#long-worm {
-    display: none;
+body {
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+/* layout styles */
+nav {
+    display: flex;
+    padding: 1em 3em;
+}
+
+main {
+    background-color: #000d;
+    border: var(--content-border);
+    border-width: 0 1px;
+    min-height: 100vh;
+    margin: auto;
+    width: 60%;
+}
+
+#page-content {
+    padding: 1em 2em;
 }
 
 /* font/block styles */
+h1 {
+    margin-top: 0;
+}
+
+p.timestamp {
+    margin-bottom: 0;
+}
+
 .notes > p {
     margin: initial;
 }
@@ -28,18 +56,9 @@ pre {
     border-radius: 5px;
 }
 
-/* main window */
-#tips-win {
-    box-sizing: border-box;
-    height: 100%;
-    left: calc(50% - var(--main-width) / 2); /* center it! */
-    top: 0%;
-    max-width: unset;
-    width: var(--main-width);
-}
-
-#tips-win > div.content {
-    font-size: 19px;
+hr.checkpoint::before {
+    color: var(--font-color);
+    content: "checkpoint! go practice what you've learned!";
 }
 
 #article img {
@@ -72,13 +91,9 @@ div.notes {
     text-align: right;
 }
 
-hr.checkpoint::before {
-    color: var(--font-color);
-    content: "checkpoint! go practice what you've learned!";
-}
-
 /* tips nav */
 #tips-nav {
+    background-color: unset;
     justify-content: space-evenly;
 }
 
@@ -86,20 +101,16 @@ hr.checkpoint::before {
     border: none;
 }
 
-/* footer placement */
-#footer-win {
-    left: 76%;
-    top: 70%;
-}
-
 
 /* mobile */
 @media (max-width: 960px) {
-    #tips-win {
-        min-width: 95%;
+    main {
+        margin: 0 1em;
+        width: unset;
     }
 
-    #article img {
-        width: 95%;
+    #page-content {
+        padding: 1em 1.5em;
     }
+
 }
