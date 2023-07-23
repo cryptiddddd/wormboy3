@@ -77,6 +77,11 @@ hr {
     height: 0;
 }
 
+em {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+
 a {
     color: var(--link);
     text-decoration: none;
@@ -106,13 +111,16 @@ code {
 }
 
 /* lists */
-ul {
+ul, ol {
     display: block;
-    list-style-type: square;
     list-style-position: inside;
     margin: 0 2em;
     padding: 0;
     width: fit-content;
+}
+
+ul {
+    list-style-type: square;
 }
 
 li {

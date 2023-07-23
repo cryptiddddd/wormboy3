@@ -48,13 +48,32 @@
         "index": [
             {
                 "category": "web",
-                "id": 0,
-                "dateCreated": "07/22/2023",
+                "id": 1,
+                "dateCreated": "07/23/2023",
                 "dateModified": null,
                 "title": "local web development + testing tools",
+                "contentPath": "assets/data/tutorials/web-1.html",
+                "readMore": [
+                    ["my links page mentions the same tools and more", "/links.html"],
+                    ["nodejs official page", "https://nodejs.org/en"],
+                    ["typescript official page", "https://www.typescriptlang.org/"],
+                    ["how to install and set up typescript", "https://www.geeksforgeeks.org/how-to-install-typescript/"],
+                    ["typescript in vscode", "https://code.visualstudio.com/Docs/languages/typescript"],
+                    ["git's webpage", "https://git-scm.com/"],
+                    ["github's docs for creating a new repository", "https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"],
+                    ["using git in vscode", "https://code.visualstudio.com/docs/sourcecontrol/overview"],
+                    ["first-time git setup", "https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"]
+                ]
+            }, 
+            {
+                "category": "web",
+                "id": 0,
+                "dateCreated": "07/23/2023",
+                "dateModified": null,
+                "title": "inspect browser tips",
                 "contentPath": "assets/data/tutorials/web-0.html",
                 "readMore": [
-                    ["my links page mentions the same tools and more", "/links.html"]
+                    
                 ]
             }
         ]

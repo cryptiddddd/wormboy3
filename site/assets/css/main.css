@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;  
+    overflow-y: auto;
 }
 
 /* MAIN HEADER, main header children. */
@@ -65,6 +66,7 @@ nav {
 nav span {
     color: var(--accent);
     opacity: 50%;
+    text-align: center;
 }
 
 /* link wrappers, within nav. */
@@ -240,7 +242,17 @@ div.content > :first-child {
         z-index: -1;
     }
 
+    .button-wrapper {
+        display: none;
+    }
+
+    #long-worm {
+        margin: auto;
+        width: 50%;
+    }
+
     nav {
+        flex-direction: column;
         overflow-x: auto;
     }
 

@@ -5,7 +5,7 @@
 
 this site is my silly neocities for silly things :]! see it live at the link above [wormboy button]/
 
-note: the repo and live site may not always match 1:1. updates may be offset from one another, but i'll be publishing updates as regularly as i feel appropriate.
+note: the repo and live site may not always match 1:1. updates may be offset from one another, but i'll be publishing updates as regularly as i feel appropriate. in the future, i will be using branches.
 
 i am making this git repo public because i love to peruse the source of my favorite sites, and i hope that this may make that easier for others to see mine.
 
@@ -27,7 +27,56 @@ the site's js is compiled typescript. here are my `tsconfig.json` compiler optio
 ```
 these settings may not be for everyone, but they work for me.
 
-to build my site, i work in vs code and i use an extension called live server to locally host. [todo: make a page talkinga bout all this.]
+
+## structure
+
+```
+site/
+├── assets/
+│   ├── css/
+│   ├── data/
+│   │   └── tutorials/
+│   ├── images/
+│   ├── js/
+│   ├── ts/
+│   └── worm.ico
+├── index.html
+└── pages.html
+```
+*where pages.html is a stand-in for whatever other pages.
+
+within the `site` folder, i currently have one other folder: `assets`. this holds all non-html files [and even some html files]: `css`, `jsons`, images, `js`/`ts`.
+
+anything outside of `assets` is expected to be accessible [not that the assets folder is remotely secure--in fact i may even give it an `index.html` for credits and browsing].
+
+for future pages with sub-pages, they will be structured like so:
+
+```
+site/
+├── assets/
+├── shrines/
+│   ├── index.html
+│   └── sonic-the-hedhgehog.html
+├── index.html
+└── pages.html
+```
+
+so that the live addresses may be: `https://wormboy3.neocities.org/shrines/` and `https://wormboy3.neocities.org/shrines/sonic-the-hedgehog`
+
+
+## other pages
+
+certain pages such as `tips.html` use javascript and address queries to fill in templates.
+
+currently, `tips.html` has four types of pages:
+- default index page
+- category page
+- article page
+- error page
+
+where the category and article pages fill in a template, and the default and error pages are fairly static/the same.
+
+i will be using this method [combining `get_data.ts` and `parse_query.ts`] for "fill-in-the-blank" html pages, if i have any future pages this way. a blog, for example, would use this model.
 
 
 ## asset sources

@@ -1,42 +1,3 @@
-<p>this tutorial is for beginning web developers, especially those here on neocities! i'm going to walk through my tools and workflow. the goal of this is to share what works for me, and what needs each tool covers! this is NOT one size fits all!!! but it's hot tips on what tools can make life a little easier.</p>
-
-<p>topics/tools i cover:</p>
-
-<ul>
-    <li><a href="#editor-plugins">editors and plugins</a></li>
-    <li><a href="#inspect-browser">browser inspect tools</a></li>
-    <li><a href="#typescript">typescript</a></li>
-    <li><a href="#git-github">git/github</a></li>
-</ul>
-
-
-<h2>editor + plugins</h2>
-
-<p>for a text editor, i primarily use <a href="https://code.visualstudio.com/">vscode</a> for my editing. i'd definitely recommend it! previously, i've used <a href="https://github.com/atom/atom">atom</a> too, <span class="whisper">rest in peace.</span> editors like vscode and atom have customizable themes and countless plugins/further customization at your disposal.</p>
-
-<p>within vscode, i use a plugin called <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">live preview</a>. what this does is runs a simple local [accessible by your machine only] server for testing your site's code.</p>
-
-<div class="notes">
-    <p><span class="whisper">but why use a local server! why not just open the html file in-browser?</span> javascript! <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp">your browser will not allow you to run a local javascript file</a> due to some security protocols. so if your site has no javascript, opening your files in browser will work fine! you can even link an external scripts.</p>
-</div>
-
-<p>one thing i really like about this workflow is that <code>&lt;a&gt;</code> elements' <code>href</code> attribute doesn't need to be formatted differently. to go back home, i can set <code>href="/index.html"</code>, and on the live site, that link will take you to <a href="/index.html">https://wormboy3.neocities.org/</a> <span class="whisper">a clean and pretty address.</span> while working in your local developer server, the address won't be so pretty, but this doesn't matter!!!!!</p>
-
-<div class="notes">
-    <p>why am i excited about this? i... i don't know.</p>
-</div>
-
-<p>the point is, using a local server is <em>super</em> easy and even auto-refreshes your browser as you edit <span class="whisper">though it can be a little overeager about it...</span></p>
-
-<p>other vscode plugins i like!</p>
-
-<ul>
-    <li><a href="https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets">pets for vscode</a>.... get a pixel kitty!!!</li>
-    <li><a href="https://marketplace.visualstudio.com/items?itemName=daylerees.rainglow">rainglo</a>... so many themes!</li>
-</ul>
-
-
-<h2 id="inspect-browser">inspect browser</h2>
 
 <p>speaking of the browser. let's talk about how to use the inspect panel in a browser. it isn't as scary as it seems. what makes it scary is how convoluted big sites' [youtube, reddit, instagram, the big ones] html is. to get some practice, try inspecting someone's neocities. <a href="https://neocities.org/browse?sort_by=random">here's some random sites</a>.</p>
 
@@ -51,11 +12,20 @@
 <img src="assets/images/tutorials/web_box_model.png" alt="css box model">
 <p class="whisper centered">the holy box model.</p>
 
+<p>this box model goes beyond broswer inspection! this box model is key to understanding block elements in css.</p>
 
-<h2 id="typescript">typescript</h2>
+<p>in this model, there are 5 layers. starting from the inside out:</p>
 
+<ol>
+    <li>blue: the box's content. the text or image. the size of this box is determined by the element's height/width properties.</li>
+    <li>purple: padding. this is some blank space around the element's content, <em>but within the block</em>, that gives the text or image some breathing room from...</li>
+    <li>grey line: the border. this is the "outline" around an element. <span class="whisper">for example, the little purple outlined boxes on my tutorial pages, or the purple lines bordering this main box.</span> the thickness of the border does change the element's size, as does the padding.</li>
+    <li>yellow: margin. this is the blank space <em>outside</em> the element and its border. <span class="whisper">for example, the space between paragraphs is a margin.</span> this creates breathing room between elements, and it can also center a block on a page! <span class="whisper">horizontally, at least. that's what <code>auto</code> does.</span></li>
+    <li>black: the element's overall position on the page. where it's placed. depending on the element, this ring might not always have printed numbers like in the image above.</li>
+</ol>
 
+<p>visualizing web elements and css properties this way can get tricky, but it's key to having control over what you write and make.</p>
 
+<p>it is also great help in debugging. why is my element so wide? oh that's right, i styled this element type this way.</p>
 
-<h2 id="git-github">git and github</h2>
-
+<p>this is something that has a lot to it, i'm gonna return to writing this tutorial later! it's my birthday today and i don't wanna!</p>

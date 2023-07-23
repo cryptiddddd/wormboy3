@@ -1,0 +1,108 @@
+<p>this tutorial is for beginning web developers, especially those here on neocities! and especially those who maybe don't code to begin with! i'm going to walk through my tools and workflow. the goal of this is to share what works for me, and what needs each tool covers! this is NOT one size fits all!!! this could be intimidating for beginngers! but it's hot tips on what tools can make life a little easier.</p>
+
+<p>topics/tools i cover:</p>
+
+<ul>
+    <li><a href="#editor-plugins">editors and plugins</a></li>
+    <li><a href="#typescript">typescript</a></li>
+    <li><a href="#git-github">git/github</a></li>
+</ul>
+
+
+<h2>editor + plugins</h2>
+
+<p>for a text editor, i primarily use <a href="https://code.visualstudio.com/">vscode</a> for my editing. i'd definitely recommend it! previously, i've used <a href="https://github.com/atom/atom">atom</a> too, <span class="whisper">rest in peace.</span> editors like vscode and atom have customizable themes and countless plugins/further customization at your disposal.</p>
+
+<p>within vscode, i use a plugin called <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">live preview</a>. what this does is runs a simple local [accessible by your machine only] server for testing your site's code.</p>
+
+<div class="notes">
+    <p><span class="whisper">but why use a local server! why not just open the html file in-browser?</span> javascript! <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp">your browser will not allow you to run a local javascript file</a> due to some security protocols. so if your site has no javascript, opening your files in browser will work fine! you can even link an external scripts.</p>
+</div>
+
+<p>one thing i really like about this workflow is that <code>&lt;a&gt;</code> elements' <code>href</code> attribute doesn't need to be formatted differently. to go back home, i can set <code>href="/index.html"</code>, and on the live site, that link will take you to <a href="/index.html">https://wormboy3.neocities.org/</a> <span class="whisper">a clean and pretty address.</span> while working in your local developer server, the address won't be so pretty, but this doesn't matter!!!!!</p>
+
+<div class="notes">
+    <p>why am i excited about this? i... i don't know.</p>
+</div>
+
+<p>the point is, using a local server is <em>super</em> easy and even auto-refreshes your browser as you edit <span class="whisper">though it can be a little overeager about it...</span></p>
+
+<p>other vscode plugins i like!</p>
+
+<ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets">pets for vscode</a>.... get a pixel kitty!!!</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=daylerees.rainglow">rainglo</a>... so many themes!</li>
+</ul>
+
+
+<h2 id="typescript">typescript</h2>
+
+<p>first: what is typescript?</p>
+
+<p>typescript is a "syntactic superset" of javascript (<a href="https://www.w3schools.com/typescript/index.php">w3schools's wording</a>). it is basically super-javascript, adding static data-typing. if you don't have experience with js, or this doesn't make sense: do not fear! this tool may not be for you yet.</p>
+
+<div class="notes">
+    <p>i use typescript because it allows me to better organize my code, and it's easier for me to read with static data types. i'm less prone to errors this way!</p>
+</div>
+
+<p>ok, how does typescript work?</p>
+
+<p>first note: your browser <em>does not</em> interpret and run typescript, it <em>only</em> interprets and runs javascript. when using typescript, you <em>only</em> write your code in typescript! then you compile it to javascript. the compiler takes <code>.ts</code> files and changes them to <code>.js</code> files--these are the files that you'll actually upload to your site.</p>
+
+<p>it adds an extra step to coding, but it pays off for me.</p>
+
+<p>ok but how does THAT work!</p>
+
+<p>on your computer, you will need to install <a href="https://nodejs.org/en">node.js</a>, follow the instructions on its site for that! then you will install typescript using node's package manager. this should be easy, but this isn't a tutorial on installing typescript, just a recommendation. see my <a href="#read-more">read more</a> for proper tutorials.</p>
+
+<p>my setup is configured so that one i want to compile my typescript to javascript, all i have to do is enter <code>npx tsc</code> in vscode's terminal tab.</p>
+
+
+<h2 id="git-github">git and github</h2>
+
+<p>WHAT IS A GIT?!?!?!?</p>
+
+<p>ok important: <em>git</em> and <em>github</em> are not one in the same.</p>
+
+<p><em>git</em> is a[n open source] version control system! it's very popular, and simple to use [especially with a text editor like vscode that doesn't make you use the terminal].</p>
+
+<p><em>github</em> is a hub for git projects, basically. it's a site that hosts and homes projects that use the git version control system.</p>
+
+<p>and a <em>version control system</em> is system that keeps track of your code over time: the edits you make, what you have to say about those edits, and even different branches of development.</p>
+
+<p>you don't have to use github to use git. you can create a local [on your machine only] git repository [place for your project to live] on one computer. it may be a little harder to navigate without github's interface, but it is not unlearnable.</p>
+
+<p>i would really suggest setting up a git repository if:</p>
+
+<ul>
+    <li>you have a larger scale project.</li>
+    <li>you like to track changes, or you want the safety of falling back to an old version of your code.</li>
+    <li>you want to get into programming!</li>
+</ul>
+
+<p>i would suggest making that git with github if:</p>
+
+<ul>
+    <li>you want to share your project.</li>
+    <li>you code from multiple machines.</li>
+    <li>it sounds easier for you to have the visual interface. github makes it easier, and that's awesome.</li>
+</ul>
+
+<div class="notes">
+    <p>don't worry about making a decision now: you can create a git or github repository of an existing project whenever you'd like.</p>
+</div>
+
+<p>both of these tools are free. to use git or github, download git from the official site. <a href="#read-more">find some tutorials</a> in my readmore.</p>
+
+
+<h2>recap</h2>
+
+<p>i use vscode and a live preview plugin as my programming environment.</p>
+
+<p>i use typescript to write organized, maintainable code for myself.</p>
+
+<p>i use github to keep my project synced between computers, as well as a history of edits, AND to share my code with others.</p>
+
+<p>these are some basic tools i really really want to suggest to my friends approaching web development, or any kind of development. even if not these specific tools, i feel the needs they fill are important to name and discuss! it makes my life so much easier and it's something i want to share!</p>
+
+<p>note: the resources below may include some extra parts and pieces that you don't need! you may also need to ask your own questions online, this is just a starting point. thank you for reading!!!!!!!</p>

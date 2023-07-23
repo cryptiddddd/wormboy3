@@ -130,6 +130,7 @@ div.notes {
 @media (max-width: 960px) {
     main {
         margin: 0 1em;
+        padding-top: 2em;
         width: unset;
     }
 
