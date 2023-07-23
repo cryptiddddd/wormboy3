@@ -42,6 +42,23 @@
             }
         ]
     },
+    "web": {
+        "name": "web",
+        "description": "tutorials and advice for general web development! these tutorials may be a little bit generic or beginner-oriented, and may cover multiple or nonspecific [of course web-related] languages.",
+        "index": [
+            {
+                "category": "web",
+                "id": 0,
+                "dateCreated": "07/22/2023",
+                "dateModified": null,
+                "title": "local web development + testing tools",
+                "contentPath": "assets/data/web-0.html",
+                "readMore": [
+                    ["my links page mentions the same tools and more", "/links.html"]
+                ]
+            }
+        ]
+    },
     "baking": {
         "name": "baking",
         "description": "someday i'd like to do baking tips..? depression meal tips?",

@@ -1,0 +1,61 @@
+<p>this tutorial is for beginning web developers, especially those here on neocities! i'm going to walk through my tools and workflow. the goal of this is to share what works for me, and what needs each tool covers! this is NOT one size fits all!!! but it's hot tips on what tools can make life a little easier.</p>
+
+<p>topics/tools i cover:</p>
+
+<ul>
+    <li><a href="#editor-plugins">editors and plugins</a></li>
+    <li><a href="#inspect-browser">browser inspect tools</a></li>
+    <li><a href="#typescript">typescript</a></li>
+    <li><a href="#git-github">git/github</a></li>
+</ul>
+
+
+<h2>editor + plugins</h2>
+
+<p>for a text editor, i primarily use <a href="https://code.visualstudio.com/">vscode</a> for my editing. i'd definitely recommend it! previously, i've used <a href="https://github.com/atom/atom">atom</a> too, <span class="whisper">rest in peace.</span> editors like vscode and atom have customizable themes and countless plugins/further customization at your disposal.</p>
+
+<p>within vscode, i use a plugin called <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">live preview</a>. what this does is runs a simple local [accessible by your machine only] server for testing your site's code.</p>
+
+<div class="notes">
+    <p><span class="whisper">but why use a local server! why not just open the html file in-browser?</span> javascript! <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp">your browser will not allow you to run a local javascript file</a> due to some security protocols. so if your site has no javascript, opening your files in browser will work fine! you can even link an external scripts.</p>
+</div>
+
+<p>one thing i really like about this workflow is that <code>&lt;a&gt;</code> elements' <code>href</code> attribute doesn't need to be formatted differently. to go back home, i can set <code>href="/index.html"</code>, and on the live site, that link will take you to <a href="/index.html">https://wormboy3.neocities.org/</a> <span class="whisper">a clean and pretty address.</span> while working in your local developer server, the address won't be so pretty, but this doesn't matter!!!!!</p>
+
+<div class="notes">
+    <p>why am i excited about this? i... i don't know.</p>
+</div>
+
+<p>the point is, using a local server is <em>super</em> easy and even auto-refreshes your browser as you edit <span class="whisper">though it can be a little overeager about it...</span></p>
+
+<p>other vscode plugins i like!</p>
+
+<ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets">pets for vscode</a>.... get a pixel kitty!!!</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=daylerees.rainglow">rainglo</a>... so many themes!</li>
+</ul>
+
+
+<h2 id="inspect-browser">inspect browser</h2>
+
+<p>speaking of the browser. let's talk about how to use the inspect panel in a browser. it isn't as scary as it seems. what makes it scary is how convoluted big sites' [youtube, reddit, instagram, the big ones] html is. to get some practice, try inspecting someone's neocities. <a href="https://neocities.org/browse?sort_by=random">here's some random sites</a>.</p>
+
+<div class="notes">
+    <p><code>f12</code> will open the inspect panel in most browsers. in firefox, you can also use <code>right click + q</code>!</p>
+</div>
+
+<p>let's open the "inspect" panel. this is typically the first panel, which lets you surf the html contents of the page. as you mouse over each element, it should be highlighted in blue on the page. click on one! next to the html text, there should be another panel labelled "rules". this will display the css rules that apply to the selected element!!! hover over different properties -- you can enable/disable, edit, and use this to debug!</p>
+
+<p>there should be another tab next to "rules"--"layout". here i will introduce you to the box model.</p>
+
+<img src="assets/images/tutorials/box_model.png" alt="css box model">
+<p class="whisper centered">the holy box model.</p>
+
+
+<h2 id="typescript">typescript</h2>
+
+
+
+
+<h2 id="git-github">git and github</h2>
+

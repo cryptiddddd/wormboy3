@@ -6,7 +6,7 @@ written in typescript, compiled with tsc.
 this file written by... WORMBOY!!!!
 */
 import { fetchJSON, fetchTXT, recentEntry } from "./get_data.js";
-import { getQueries, isEmpty } from "./parse_query.js";
+import { getQueries, isEmpty, QueryDict } from "./parse_query.js";
 
 
 // define data structures. article data is the smallest structure...
@@ -145,6 +145,7 @@ function loadArticle(article: ArticleData): void {
 
 function loadCategory(category: CategoryData): void {
     let title = document.createElement("h1");
+    title.classList.add("centered");
     title.innerText = `${category.name} advice`;
 
     let description = document.createElement("p");
@@ -174,7 +175,7 @@ function loadCategory(category: CategoryData): void {
  */
 function makeNav(categories: string[]): void {
     let nav = document.getElementById("tips-nav");
-    
+
     if (categories.length == 0) {
         // figure out how to raise the error and exit code.
         return;
@@ -187,6 +188,28 @@ function makeNav(categories: string[]): void {
         elem.innerText = cat;
 
         nav.appendChild(elem);
+    }
+}
+
+/**
+ * populates the breadcrumbs with query data. called post-validation.
+ * @param queries user's queries, validated.
+ */
+function fillBreadcrumbs(queries: QueryDict) {
+    let bread = document.getElementById("breadcrumbs");
+
+    let categoryLink = document.createElement("a");
+    categoryLink.href = `/tips.html?c=${queries.c}`;
+    categoryLink.innerText = queries.c;
+
+    bread.appendChild(categoryLink);
+
+    bread.innerHTML += "/";
+
+    if ("a" in queries) {
+        let articleLink = document.createElement("span");
+        articleLink.innerText = queries.a;
+        bread.appendChild(articleLink);
     }
 }
 
@@ -234,21 +257,23 @@ function setup(rawData: TipsDoc): void {
     //  get all categories.
     let categories = Object.keys(rawData);
     
-    // page setup.
-    makeNav(categories);
-
     // parse queries.
     var query = getQueries();
     
     // exit... unless.. what does the default page look like again? probably just toggle a display thingy.
     if (isEmpty(query)) {
+        // page setup.
+        makeNav(categories);
         showDefault(rawData);
         return;
     }
 
     // validate... if invalid, it just ignores it for now.
     let hasCategory = "c" in query && categories.includes(query.c);
-    let hasArticle = "a" in query && Number(query.a) < rawData[query.c].index.length;
+    let hasArticle = hasCategory && "a" in query && Number(query.a) < rawData[query.c].index.length;
+    
+    // fill breadcrumbs in!
+    fillBreadcrumbs(query);
     
     // call the appropriate function!!! 
     if (hasArticle && hasCategory) {

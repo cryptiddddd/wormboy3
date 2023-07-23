@@ -139,6 +139,11 @@ li {
     text-align: center;
 }
 
+.h-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
 
 .v-flex {
     display: flex;

@@ -5,6 +5,9 @@ written in typscript, compiled with tsc.
 
 this file written by wormboy!!!
 */
+
+// NOTE: ...... I REALIZED THERE'S A BUILT IN WAY TO DO THIS. OOPS. WILL FIX.
+
 // query inspired by python dicts, as i need to access them by string.
 interface QueryDict {
     [index: string]: string;
@@ -43,5 +46,6 @@ function getQueries(): QueryDict {
 
 export {
     getQueries,
-    isEmpty
+    isEmpty,
+    QueryDict
 };

@@ -1,6 +1,7 @@
 :root {
-    --font-size: 19px;
+    --font-size: 18px;
 
+    --component-bg: #000d;
     --main-width: 90%;
 }
 
@@ -10,13 +11,46 @@ body {
 }
 
 /* layout styles */
-nav {
+header {
+    align-items: center;
+    background-color: var(--component-bg);
+    border-bottom: var(--content-border);
     display: flex;
-    padding: 1em 3em;
+    max-height: 100px;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#breadcrumbs {
+    align-items: center;
+    background-color: var(--component-bg);
+    border-bottom: var(--content-border);
+    display: flex;
+    padding: 3px;
+    position: fixed;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+}
+
+#breadcrumbs a, #breadcrumbs span {
+    margin: 0 6px;
+}
+
+#breadcrumbs a, #breadcrumbs a:visited {
+    color: var(--accent);
+}
+
+#breadcrumbs a:hover, #breadcrumbs a:visited:hover {
+    color: var(--accent-glow);
+}
+
+nav {
+    justify-content: space-evenly!important;
 }
 
 main {
-    background-color: #000d;
+    background-color: var(--component-bg);
     border: var(--content-border);
     border-width: 0 1px;
     min-height: 100vh;
@@ -25,7 +59,7 @@ main {
 }
 
 #page-content {
-    padding: 1em 2em;
+    padding: 3em 2em 1em;
 }
 
 /* font/block styles */
@@ -89,16 +123,6 @@ div.notes {
     margin: 3em 1em;
     overflow: visible;
     text-align: right;
-}
-
-/* tips nav */
-#tips-nav {
-    background-color: unset;
-    justify-content: space-evenly;
-}
-
-#tips-nav a {
-    border: none;
 }
 
 
