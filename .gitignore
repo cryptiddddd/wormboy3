@@ -6,3 +6,7 @@ tsconfig.json
 .vscode/
 node_modules/
 spare/
+
+# shh.. in production
+site/shrines/
+site/assets/fonts/
