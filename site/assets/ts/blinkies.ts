@@ -6,6 +6,7 @@ written in typescript, compiled with tsc.
 this file written by wormboy.
  */
 import { fetchJSON } from "./get_data.js";
+import { shuffle } from "./shuffle_array.js";
 
 interface AssetIndex {
     blinkies: Array<string>,
@@ -22,8 +23,8 @@ interface AssetIndex {
 
     // create callback
     function blinkieCallback(data: AssetIndex) {
-        // todo: shuffle the array
-    
+        shuffle(data.blinkies);
+
         // for each blinkie, add an img.
         data.blinkies.forEach(fileName => {
             let newImg = document.createElement("img");
@@ -36,5 +37,5 @@ interface AssetIndex {
     }
     
     // now get that data
-    fetchJSON("../assets/images/index.json", blinkieCallback);
+    fetchJSON("../assets/data/images.json", blinkieCallback);
 };

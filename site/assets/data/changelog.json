@@ -1,5 +1,13 @@
 [
     {
+        "date": "07/25/2023",
+        "title": "scrambled blinkies",
+        "body": "minor update, long time coming: now all the blinkies shuffle on my page! i may make it so only 20 are put on the page or whatever... but i dunno :] <span class='whisper'>oh and i got a new ico... more worms to come...</span></p><p>currently, the git is a little... off from the actual live site. this is cuz i'm working on more things with the header and overall interface. and i'm having fun with it, i just... eh. i need to get my shit together when it comes to branches!</p><p>worm boy out!",
+        "gitCommit": "",
+        "id": 8,
+        "isMajor": false
+    },
+    {
         "date":"07/23/2023",
         "title": "header 1.0!",
         "body": "this took me a little longer than expected, <span class='whisper'>but i've been doing some other things too...</span></p><p>but here comes the wormboy header! i am still tweaking and working out the design, so the site will be scrollable for now... bear with me as i figure out how i want things to be placed.</p><p>coming soon: i swear to god accessibility settings, and a new links page layout :]",
