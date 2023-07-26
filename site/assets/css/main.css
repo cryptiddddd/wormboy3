@@ -3,6 +3,9 @@
 
     --win-border: 1px solid black;
     --win-background: #000a;
+
+    --button-hover: #bbb3;
+    --button-activate: #bbb5;
 }
 
 /* BODY settings for main */
@@ -36,19 +39,54 @@ img#long-worm {
     display: block;
     filter: drop-shadow(0 0 9px black);
     max-height: 100px;
-    margin-bottom: 1em;
+    margin: 0 auto 1em;
 }
 
-.button-wrapper {
-    align-items: center;
+.menu-wrapper {
     display: flex;
     flex: 0 1 30%;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     gap: 8px;
-    max-height: 100px; /* to match the worm's height. make variable? */
     justify-content: center;
+    max-height: 100px; /* to match the worm's height. make variable? */
     overflow: hidden;
-    padding: 0 2em;
+    padding: 0 4em;
+}
+
+.menu-item {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: var(--font-color);
+    display: flex;
+    flex: 0 2 auto;
+    flex-flow: column;
+    gap: 1ex;
+    max-width: 50%;
+    min-width: 20%;
+    padding: 3px;
+}
+
+.menu-item:hover {
+    background: var(--button-hover);
+    color: unset!important;
+}
+
+.menu-item:active {
+    background: var(--button-activate);
+    color: unset!important;
+}
+
+.menu-item:visited {
+    color: unset!important;
+}
+
+.menu-wrapper span {
+    text-transform: uppercase;
+}
+
+.menu-wrapper img {
+    width: 30px;
 }
 
 /* NAV LINK, within header. */
@@ -99,15 +137,23 @@ main {
     height: 100vh;
 }
 
+.button-wrapper {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    margin: 1ex 0;
+    max-height: 100px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 2em;
+}
+
 img.little-img {
-    max-width: 100px;
     margin: 0;
+    max-width: 100px;
+    min-width: 75px;
 }
-
-img.blinkie {
-    image-rendering: crisp-edges;
-}
-
 
 /* WINDOWS WITHIN MAIN */
 
@@ -122,6 +168,10 @@ div.wrapper, div.free-elem {
 
 div.free-elem {
     transition: transform 0.25s ease-in-out;
+}
+
+div.free-elem, div.title {
+    cursor: grab;
 }
 
 div.wrapper {
@@ -156,6 +206,23 @@ div.content > :first-child {
 }
 
 
+/* the forklifts */
+#forklift1, #forklift2, #forklift3 {
+    animation: sizeBounce 3s ease-in-out infinite alternate;
+}
+
+#forklift1 {
+    animation-delay: .5s;
+}
+
+#forklift2 {
+    animation-delay: 1s;
+}
+
+#forklift3 {
+    animation-delay: 1.5s;
+}
+
 /* WINDOW POSITION ZONE */
 
 #main-win {
@@ -182,8 +249,9 @@ div.content > :first-child {
     gap: 0.4em;
 }
 
-#blinkie-win img {
-    flex: auto;
+.blinkie {
+    flex: 30%;
+    image-rendering: crisp-edges;
 }
 
 #changelog-win {
@@ -217,6 +285,17 @@ div.content > :first-child {
 
 @media (max-width: 960px) {
     /* display edits. */
+    div.middle-wrapper {
+        display: block!important;
+        margin: 1em 0;
+    }
+
+    nav {
+        flex-direction: column;
+        overflow-x: auto;
+        padding: 1ex 0;
+    }
+
     main {
         box-sizing: border-box;
         display: flex;
@@ -225,11 +304,19 @@ div.content > :first-child {
         height: unset;
         margin: 1em;
     }
+
+    #long-worm {
+        display: none!important;
+    }
     
+    div.title {
+        cursor: unset;
+    }
+
     div.wrapper {
         flex: 1 0 100%;
         position: static;
-        max-width: unset!important;
+        max-width: unset!important; /* REALLY IMPORTANT ! */
         width: unset;
     }
     
@@ -242,34 +329,16 @@ div.content > :first-child {
         z-index: -1;
     }
 
-    .button-wrapper {
-        display: none;
-    }
-
-    #long-worm {
-        margin: auto;
-        width: 50%;
-    }
-
-    nav {
-        flex-direction: column;
-        overflow-x: auto;
-    }
-
-    /* specific windows */
-    #blinkie-win {
-        flex: 1;
-    }
-
-    #blinkie-win div.content {
-        overflow: auto;
-    }
-
-    #blinkie-win, #changelog-win {
-        height: 250px;
-    }
-
     #blinkie-wrapper {
         flex-flow: row wrap;
+    }
+
+    #forklift2 {
+        display: none
+    }
+
+    /* why only yellow on mobile? because of the vision i have. it only works with an element that takes up the full width, and right now that's the one in the header. it just looks ugly otherwise! damn. */
+    .construction {
+        background: #fcf95018;
     }
 }

@@ -19,7 +19,9 @@
 /* defining scroll bar */
 html {
     scrollbar-width: thin;
-}
+    /* cursor: url(https://cur.cursors-4u.net/nature/images10/nat996.png), auto; */
+    /* cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1571.ani), url(https://ani.cursors-4u.net/games/gam-16/gam1571.png), auto; */
+} 
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -69,6 +71,12 @@ body {
     overflow: hidden;
 }
 
+/* buttons basics */
+button {
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: var(--font-size);
+}
 
 /* text styles */
 hr {
@@ -99,7 +107,7 @@ a:visited {
 nav a {
     font-size: 1.2em;
     text-transform: uppercase;
-    padding: 2px 8px;
+    padding: 2px 1em;
 }
 
 nav a:visited {
@@ -200,6 +208,13 @@ li {
     }
 }
 
+@keyframes sizeBounce {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(0.3);
+    }
+}   
 
 /* mobile theme */
 @media (max-width: 960px) {

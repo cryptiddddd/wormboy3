@@ -2,7 +2,6 @@
     --font-size: 18px;
 
     --component-bg: #000d;
-    --main-width: 90%;
 }
 
 body {
@@ -46,6 +45,7 @@ header {
 }
 
 nav {
+    font-size: 1.5em;
     justify-content: space-evenly!important;
 }
 
@@ -111,7 +111,7 @@ hr.checkpoint::before {
 }
 
 div.notes {
-    border: 1px dashed var(--accent);
+    border: 2px inset var(--accent);
     margin: 1em auto;
     padding: 0.8em 2em;
     width: 65%;
@@ -136,6 +136,10 @@ div.notes {
 
     #page-content {
         padding: 1em 1.5em;
+    }
+
+    pre {
+        width: 100%;
     }
 
 }

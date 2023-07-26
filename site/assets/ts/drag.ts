@@ -36,7 +36,9 @@ function bringToFront(wrapper: HTMLElement): void {
 
 // disables element dragging.
 (window as any).closeDrag = function (handle: HTMLElement): void {
-    handle.setAttribute("onmouseup", "");
+    handle.style.removeProperty("cursor"); // unset cursor
+
+    handle.removeAttribute("onmouseup");
 
     xOffset = yOffset = null;
     currentWrapper = null;
@@ -51,6 +53,9 @@ function bringToFront(wrapper: HTMLElement): void {
     // set global vars -- get difference between position and cursor.
     xOffset = currentWrapper.offsetLeft - cursorX;
     yOffset = currentWrapper.offsetTop - cursorY;
+
+    // grabbing cursor
+    handle.style.cursor = "grabbing";
 
     // set onmouseup event [release].
     handle.setAttribute("onmouseup", "closeDrag(this);");
