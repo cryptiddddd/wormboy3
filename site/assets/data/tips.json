@@ -50,11 +50,12 @@
                 "category": "web",
                 "id": 1,
                 "dateCreated": "07/23/2023",
-                "dateModified": null,
+                "dateModified": "07/26/2023",
                 "title": "local web development + testing tools",
                 "contentPath": "assets/data/tutorials/web-1.html",
                 "readMore": [
                     ["my links page mentions the same tools and more", "/links.html"],
+                    ["emmet toolkit", "https://docs.emmet.io/"],
                     ["nodejs official page", "https://nodejs.org/en"],
                     ["typescript official page", "https://www.typescriptlang.org/"],
                     ["how to install and set up typescript", "https://www.geeksforgeeks.org/how-to-install-typescript/"],
