@@ -54,7 +54,6 @@ function recentEntry(index: Record<string, string>[], dateProperty: string = "da
     let difference, current; // loop vars
     for (let obj of index) {
         current = new Date(obj[dateProperty]);
-        console.log(current);
         difference = today.getTime() - current.getTime();
 
         if (difference < minDiff) {
