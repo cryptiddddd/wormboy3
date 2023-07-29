@@ -147,6 +147,10 @@ main {
     padding: 0 2em;
 }
 
+.button-wrapper img {
+    border: var(--win-border);
+}
+
 #friend-buttons, #other-buttons {
     display: flex;
     flex-flow: row wrap;
@@ -264,7 +268,6 @@ div.content > :first-child {
 
 .blinkie {
     flex: 30%;
-    image-rendering: crisp-edges;
 }
 
 #changelog-win {
@@ -369,3 +372,18 @@ div.content > :first-child {
         background: #fcf95018;
     }
 }
+
+/* possible plain black on white theme?? */
+/* :root {
+    --page-bg: #fff;
+
+    --accent: #fff;
+    --accent-glow: #aaa;
+    --font-color: #000;
+
+    --link: #1f95f7;
+    --link-hover: #1ff0f7;
+    --link-visited: #4446f0;
+
+    --win-background: transparent;
+} */

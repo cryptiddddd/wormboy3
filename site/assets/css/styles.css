@@ -155,6 +155,10 @@ li {
     text-align: center;
 }
 
+.blinkie {
+    image-rendering: crisp-edges;
+}
+
 .h-flex {
     display: flex;
     flex-flow: row nowrap;
