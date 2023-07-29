@@ -23,5 +23,19 @@
         "the_goldfish.gif",
         "they_them.gif",
         "when_fruit.gif"
+    ],
+    "friendButtons": [
+        ["../button.png", "https://neocities.org/site/wormboy3"],
+        ["https://everetcetera.neocities.org/images/ETCbutton.png", "https://everetcetera.neocities.org/"],
+        ["paracosm_button.jpg", "https://keplari.neocities.org/"],
+        ["sweetpeasprite.png", "https://sweetpeasprite.neocities.org/"],
+        ["houseoffun.gif", "https://houseoffun.neocities.org/"],
+        ["visitmossland.png", "https://mossland.neocities.org/"],
+        ["https://divorceflorida.neocities.org/button.png", "https://divorceflorida.neocities.org/"]
+    ],
+    "otherButtons": [
+        ["https://momg.neocities.org/site-images/momg-badge.gif", "https://momg.neocities.org/"],
+        ["plasticdinogif.gif", "https://plasticdino.neocities.org/"],
+        ["https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif", "https://yesterweb.org/no-to-web3/"]
     ]
 }

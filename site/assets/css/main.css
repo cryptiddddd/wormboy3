@@ -155,7 +155,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     gap: 8px;
-    flex-basis: 32%;
+    flex-basis: 28%;
 }
 
 #friend-buttons {
@@ -332,6 +332,8 @@ div.content > :first-child {
     /* buttons: just display them in a big chunk */
     .button-wrapper {
         flex-wrap: wrap;
+        max-height: 100px;
+        overflow: auto;
     }
     /* sort of "dissolves" the boundaries of these div's.    */
     #friend-buttons, #other-buttons {
