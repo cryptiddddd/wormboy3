@@ -23,6 +23,7 @@ function fillButtonDiv(divId: string, imageData: string[][]): void {
     for (let info of imageData) {
         let newA = document.createElement("a");
         newA.href = info[1];
+        newA.target = "_blank";
 
         let newImg = document.createElement("img");
         newImg.src = info[0].startsWith("http") ? info[0] : `assets/images/buttons/${info[0]}`
