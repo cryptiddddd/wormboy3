@@ -253,7 +253,7 @@ div.content > :first-child {
 }
 
 #self-promo {
-    max-width: 250px;
+    max-width: 400px;
 }
 
 #blinkie-win {
@@ -297,6 +297,12 @@ div.content > :first-child {
 #footer-win {
     top: 65%;
     left: 1%;
+}
+
+
+/* other? */
+#focbwr {
+    border: 1px solid var(--whisper-color);
 }
 
 @media (max-width: 960px) {
@@ -369,7 +375,11 @@ div.content > :first-child {
         display: none
     }
 
-    /* why only yellow on mobile? because of the vision i have. it only works with an element that takes up the full width, and right now that's the one in the header. it just looks ugly otherwise! damn. */
+    #webring-win div.content {
+        display: flex;
+        justify-content: center;
+    }
+
     .construction {
         background: #fcf95018;
     }
