@@ -26,16 +26,99 @@
     ],
     "friendButtons": [
         ["../button.png", "https://neocities.org/site/wormboy3"],
-        ["https://everetcetera.neocities.org/images/ETCbutton.png", "https://everetcetera.neocities.org/"],
+        ["https://everetcetera.neocities.org/assets/img/ETCbutton.png", "https://everetcetera.neocities.org/"],
         ["paracosm_button.jpg", "https://keplari.neocities.org/"],
         ["sweetpeasprite.png", "https://sweetpeasprite.neocities.org/"],
         ["houseoffun.gif", "https://houseoffun.neocities.org/"],
         ["visitmossland.png", "https://mossland.neocities.org/"],
-        ["https://divorceflorida.neocities.org/button.png", "https://divorceflorida.neocities.org/"]
+        ["https://divorceflorida.neocities.org/button.png", "https://divorceflorida.neocities.org/"],
+        ["spark_button.gif", "https://sparkdust.neocities.org/"]
     ],
     "otherButtons": [
         ["https://momg.neocities.org/site-images/momg-badge.gif", "https://momg.neocities.org/"],
         ["plasticdinogif.gif", "https://plasticdino.neocities.org/"],
         ["https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif", "https://yesterweb.org/no-to-web3/"]
+    ],
+    "gallery": [
+        {
+            "altText": "a rotating purple cube with stars inside and shifting light.",
+            "filePath": "cube_1.gif",
+            "title": "my first cube",
+            "date": "05/17/2023",
+            "id": 0,
+            "modelCredit": null
+        },
+        {
+            "altText": "an orange monkey head, slowly turning toward the camera.",
+            "filePath": "monkey.gif",
+            "title": "evil monkey named suzanne test",
+            "date": "05/17/2023",
+            "id": 1,
+            "modelCredit": null
+        },
+        {
+            "altText": "a rotating purple cube, this time glossy and slightly textured.",
+            "filePath": "cube_2.gif",
+            "title": "my second purple galaxy cube",
+            "date": "05/25/2023",
+            "id": 2,
+            "modelCredit": null
+        },
+        {
+            "altText": "a dark purple rotating cube, with spots of magenta within.",
+            "filePath": "cube_3.gif",
+            "title": "my third purple galaxy cube",
+            "date": "05/25/2023",
+            "id": 3,
+            "modelCredit": null
+        },
+        {
+            "altText": "a green-blue sea creature, rotating and bouncing.",
+            "filePath": "john_dice_rotate.gif",
+            "title": "john dice, beloved creature",
+            "date": "07/16/2023",
+            "id": 4,
+            "modelCredit": null
+        },
+        {
+            "altText": "a green-blue sea creature, scuttling toward the camera.",
+            "filePath": "john_dice_scuttle.gif",
+            "title": "john dice scuttles for a meal",
+            "date": "07/16/2023",
+            "id": 5,
+            "modelCredit": null
+        },
+        {
+            "altText": "a slightly off-model kirby, suddenly breaking apart and exploding.",
+            "filePath": "kirby_explodes.gif",
+            "title": "kirby explodes",
+            "date": "07/26/2023",
+            "id": 6,
+            "modelCredit": null
+        },
+        {
+            "altText": "a slightly off-model kirby, rotating. it has a little butt.",
+            "filePath": "kirby_rotate.gif",
+            "title": "kirby rotation",
+            "date": "08/05/2023",
+            "id": 7,
+            "modelCredit": null
+        },
+        {
+            "altText": "a tile-textured black cube, rotating under shifting colored lights.",
+            "filePath": "black_cube.gif",
+            "title": "velvety black cube with shifting lights",
+            "date": "08/02/2023",
+            "id": 8,
+            "modelCredit": null
+        },
+        {
+            "altText": "a rotating sea creature, colored black and glossy, under shifting colored lights.",
+            "filePath": "glossy_john_dice.gif",
+            "title": "velvety black john dice with shifting lights",
+            "date": "08/02/2023",
+            "id": 9,
+            "modelCredit": null
+        }
     ]
 }

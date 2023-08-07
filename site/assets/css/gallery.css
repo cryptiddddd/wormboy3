@@ -1,0 +1,94 @@
+/* this file is for the gallery page, it ditches all wormboy motifs for the sake of pretentious minimalist velvet. */
+:root {
+    --body-bg: linear-gradient(45deg, #000, #222);
+    --font-color: #fff;
+    --overlay-bg: #fffa;
+
+    --cursive: 'Tangerine', cursive;
+    --serifed: 'Nanum Myeongjo', serif;
+}
+
+body {
+    background: var(--body-bg);
+    background-size: contain;
+    color: var(--font-color);
+    font-family: var(--serifed);
+
+    /* layout */
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+header {
+    text-align: right;
+    padding: 1px 2em;
+}
+
+h1 {
+    font-family: var(--cursive);
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap; 
+    height: 500px;
+    justify-content: center;
+    margin: 0 auto 1em;
+    width: 70%;
+}
+
+#highlight-img {
+    max-height: 400px;
+}
+
+div#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+}
+
+#gallery img {
+    max-height: 150px;
+}
+
+#zoom-overlay {
+    align-items: center;
+    background-color: var(--overlay-bg);
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    display: none;
+}
+
+
+/* mobile styles */
+@media (max-width: 960px) {
+    div#gallery {
+        width: 80%;
+    }
+
+    #gallery img {
+        max-height: 100px;
+    }
+}
+
+
+/* styles for classes. */
+.roman-numeral {
+    font-family: var(--serifed);
+    font-weight: 400;
+}

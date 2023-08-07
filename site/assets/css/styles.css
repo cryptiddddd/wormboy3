@@ -1,7 +1,7 @@
 :root {
     --page-bg: url("../images/carpet.png");
 
-    --font: 'VT323', monospace;
+    --font: 'VT323', 'Courier New', monospace;
     --font-color: #fff;
     --font-size: 16px;
     --accent: #9313c5;
