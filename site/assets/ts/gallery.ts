@@ -69,6 +69,7 @@ function setHighlight(artID: number) {
     
     displayImg.src = `${GALLERY_PATH}${piece.filePath}`;
     displayImg.alt = piece.altText;
+    displayImg.setAttribute("onclick", `zoomIn(${piece.id})`);
     
     // note: later, convert the date to local.
     displayTitle.innerText = piece.title;

@@ -5,16 +5,20 @@
     --overlay-bg: #000e;
     --light-overlay-bg: #fff4;
 
-    --link-base: var(--font-color);
-
     --cursive: 'Tangerine', cursive;
     --serifed: 'Nanum Myeongjo', serif;
     
     --fade-in-anim: fade-in 1s ease-out;
+
+    --common-width: 70%;
 }
 
 ::selection, ::-moz-selection {
-    background-color: #9313c599;
+    background-color: #cecece99;
+}
+
+html {
+    scrollbar-width: thin;
 }
 
 body {
@@ -45,15 +49,21 @@ header nav {
     gap: 2em;
 
     /* styling */
+    
     font-size: 1.5em;
 }
 
 nav a {
-    color: var(--link-base);
+    background: linear-gradient(135deg, var(--font-color), #888, #444);
+    background-clip: text;
+    background-size: 250%;
+    color: transparent;
+    transition: background-position 400ms ease-in-out;
 }
 
 /* links are expected to be font awesome icons. */
 nav a:hover {
+    background-position: 90% 90%;
     border-bottom: 1px solid var(--font-color);
 }
 
@@ -66,8 +76,10 @@ h1 {
 
 /* text section */
 section {
-    padding: 2em;
+    margin: auto;
+    padding: 1em;
     text-align: center;
+    width: calc(var(--common-width) * 0.75);
 }
 
 /* main section */
@@ -95,11 +107,10 @@ main {
     align-items: center;
     display: flex;
     flex-flow: row nowrap; 
-    gap: 1em;
     height: 500px;
     justify-content: space-between;
     margin: 0 auto 1em;
-    width: 70%;
+    width: var(--common-width);
 }
 
 #highlight-img {
@@ -110,8 +121,14 @@ main {
     transition: width 1s ease-in-out;
 }
 
+#highlight-text {
+    flex-grow: 0;
+    text-align: center;
+}
+
 #highlight-caption {
     font-style: italic;
+    text-align: right;
 }
 
 div#gallery {
@@ -193,6 +210,7 @@ footer {
 
     .button {
         height: unset;
+        padding: 1ex;
     }
 
     .button:first-of-type {
@@ -212,6 +230,10 @@ footer {
 
 .light-background {
     background-color: var(--light-overlay-bg)!important;
+}
+
+.home-link {
+    color: #daabf096;
 }
 
 
@@ -246,6 +268,10 @@ div#gallery {
     animation-delay: 700ms;
 }
 
-footer {
+#about {
     animation-delay: 900ms;
+}
+
+footer {
+    animation-delay: 1050ms;
 }
