@@ -14,13 +14,13 @@ interface GalleryItem {
     filePath: string,
     id: number,
     title: string,
+    lightBackground: boolean,
     modelCredit: string | null
 };
 
 const GALLERY_PATH = "assets/images/gallery/";
 
 const gallery = document.getElementById("gallery");
-const galleryDisplay = document.getElementById("image-display");
 
 // display elements.
 const displayTitle = document.getElementById("highlight-title");
@@ -31,6 +31,33 @@ const zoomOverlay = document.getElementById("zoom-overlay");
 
 var galleryData: GalleryItem[];
 var currentID: number;
+
+
+// calendar words
+const DOTW = [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+];
+
+const MONTHS = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may", 
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december"
+];
 
 
 /**
@@ -47,7 +74,7 @@ function setHighlight(artID: number) {
     displayTitle.innerText = piece.title;
     
     let date = new Date(piece.date);
-    displayCaption.innerText = ``;
+    displayCaption.innerText = `${DOTW[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
     currentID = artID; // remember it
 };
@@ -69,13 +96,27 @@ function setHighlight(artID: number) {
 };
 
 // zooming function
-(window as any).zoomIn = function (element: HTMLImageElement) {
-    (zoomOverlay.firstElementChild as HTMLImageElement).src = element.src;
-    zoomOverlay.style.display = "flex";
+(window as any).zoomIn = function (artID: number) {
+    // get data
+    let piece = galleryData[artID];
 
+    (zoomOverlay.firstElementChild as HTMLImageElement).src = `${GALLERY_PATH}${piece.filePath}`;
+    
+    if (piece.lightBackground) zoomOverlay.classList.add("light-background");
+    else zoomOverlay.classList.remove("light-background");
+
+    // toggle visibility
+    zoomOverlay.style.visibility = "visible";
+    zoomOverlay.style.opacity = "1";
     document.body.style.overflow = "hidden";
 };
 
+// onclick for the zoom overlay
+(window as any).overlayClick = function () {
+    zoomOverlay.style.opacity = '0'; 
+    document.body.style.overflow = '';
+    zoomOverlay.style.visibility = 'hidden';
+};
 
 /**
  * 
@@ -94,7 +135,7 @@ function loadGallery(data: any): void {
 
         // event setup.
         image.setAttribute("onmouseover", `setHighlight(${piece.id});`)
-        image.setAttribute("onclick", "zoomIn(this);");
+        image.setAttribute("onclick", `zoomIn(${piece.id});`);
 
         // add to document.
         gallery.appendChild(image);

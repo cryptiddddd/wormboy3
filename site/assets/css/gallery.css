@@ -2,10 +2,19 @@
 :root {
     --body-bg: linear-gradient(45deg, #000, #222);
     --font-color: #fff;
-    --overlay-bg: #fffa;
+    --overlay-bg: #000e;
+    --light-overlay-bg: #fff4;
+
+    --link-base: var(--font-color);
 
     --cursive: 'Tangerine', cursive;
     --serifed: 'Nanum Myeongjo', serif;
+    
+    --fade-in-anim: fade-in 1s ease-out;
+}
+
+::selection, ::-moz-selection {
+    background-color: #9313c599;
 }
 
 body {
@@ -19,33 +28,90 @@ body {
     min-height: 100vh;
 }
 
-
 header {
-    text-align: right;
-    padding: 1px 2em;
+    /* layout */
+    align-items: first baseline;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2em 4em;
+}
+
+header nav {
+    /* layout */
+    align-items: baseline;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2em;
+
+    /* styling */
+    font-size: 1.5em;
+}
+
+nav a {
+    color: var(--link-base);
+}
+
+/* links are expected to be font awesome icons. */
+nav a:hover {
+    border-bottom: 1px solid var(--font-color);
 }
 
 h1 {
     font-family: var(--cursive);
+    font-size: 3em;
+    margin: 0;
+    text-transform: capitalize;
 }
 
+/* text section */
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+/* main section */
 .button {
+    /* layout */
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 150px;
 
+    /* style */
+    transition: background-color 500ms ease-in-out;
+}
 
+.button:hover {
+    background-color: #fff1;
+}
+
+.button:active {
+    background-color: #fff2;
 }
 
 main {
     align-items: center;
     display: flex;
     flex-flow: row nowrap; 
+    gap: 1em;
     height: 500px;
-    justify-content:space-evenly;
+    justify-content: space-between;
     margin: 0 auto 1em;
     width: 70%;
 }
 
 #highlight-img {
     max-height: 400px;
+    max-width: 500px;
+
+    /* styling */
+    transition: width 1s ease-in-out;
+}
+
+#highlight-caption {
+    font-style: italic;
 }
 
 div#gallery {
@@ -54,7 +120,7 @@ div#gallery {
     gap: 1em;
     justify-content: center;
     margin: 3em auto;
-    max-width: 950px
+    max-width: 950px;
 }
 
 #gallery img {
@@ -64,20 +130,30 @@ div#gallery {
 #zoom-overlay {
     align-items: center;
     background-color: var(--overlay-bg);
+    display: flex;
     height: 100vh;
     justify-content: center;
     position: fixed;
     left: 0;
+    opacity: 0;
     top: 0;
+    visibility: hidden;
     width: 100vw;
     z-index: 100;
-    display: none;
+
+    /* style */
+    transition: opacity 200ms ease-in-out;
 }
 
-/* text section */
-section {
-    padding: 2em;
+#zoom-overlay img {
+    transition: opacity 400ms ease-in-out;
+}
+
+/* silly footer */
+footer {
+    color: color-mix(in srgb, var(--font-color) 70%, #fff0);
     text-align: center;
+    padding: 1em;
 }
 
 /* mobile styles */
@@ -89,6 +165,42 @@ section {
     #gallery img {
         max-height: 100px;
     }
+
+    header {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em 1.5em;
+    }
+
+    header nav {
+        font-size: 1.25em;
+    }
+
+    main {
+        flex-wrap: wrap;
+        height: unset;
+        width: 90%
+    }
+
+    #highlight-img {
+        max-height: unset;
+        max-width: 100%;
+    }
+
+    #highlight-text {
+        flex: 1 0 100%;
+    }
+
+    .button {
+        height: unset;
+    }
+
+    .button:first-of-type {
+        order: 3;
+    }
+    .button:last-of-type {
+        order: 4;
+    }
 }
 
 
@@ -96,4 +208,44 @@ section {
 .roman-numeral {
     font-family: var(--serifed);
     font-weight: 400;
+}
+
+.light-background {
+    background-color: var(--light-overlay-bg)!important;
+}
+
+
+/* animations */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        translate: 0 25px;
+    } 100% {
+        opacity: 1;
+        translate: 0px;
+    }
+}
+
+header, section, main, div#gallery, footer {
+    /* styling */
+    animation: var(--fade-in-anim);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+section {
+    animation-delay: 150ms;
+}
+
+main {
+    animation-delay: 450ms;
+}
+
+div#gallery {
+    animation-delay: 700ms;
+}
+
+footer {
+    animation-delay: 900ms;
 }

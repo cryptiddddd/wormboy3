@@ -46,6 +46,7 @@
             "title": "my first cube",
             "date": "05/17/2023",
             "id": 0,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -54,6 +55,7 @@
             "title": "evil monkey named suzanne test",
             "date": "05/17/2023",
             "id": 1,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -62,6 +64,7 @@
             "title": "my second purple galaxy cube",
             "date": "05/25/2023",
             "id": 2,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -70,6 +73,7 @@
             "title": "my third purple galaxy cube",
             "date": "05/25/2023",
             "id": 3,
+            "lightBackground": true,
             "modelCredit": null
         },
         {
@@ -78,6 +82,7 @@
             "title": "john dice, beloved creature",
             "date": "07/16/2023",
             "id": 4,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -86,6 +91,7 @@
             "title": "john dice scuttles for a meal",
             "date": "07/16/2023",
             "id": 5,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -94,6 +100,7 @@
             "title": "kirby explodes",
             "date": "07/26/2023",
             "id": 6,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -102,6 +109,7 @@
             "title": "kirby rotation",
             "date": "08/05/2023",
             "id": 7,
+            "lightBackground": false,
             "modelCredit": null
         },
         {
@@ -110,6 +118,7 @@
             "title": "velvety black cube with shifting lights",
             "date": "08/02/2023",
             "id": 8,
+            "lightBackground": true,
             "modelCredit": null
         },
         {
@@ -118,6 +127,7 @@
             "title": "velvety black john dice with shifting lights",
             "date": "08/02/2023",
             "id": 9,
+            "lightBackground": true,
             "modelCredit": null
         }
     ]

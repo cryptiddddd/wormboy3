@@ -16,27 +16,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/efae99f57b.js" crossorigin="anonymous"></script>
+
     <!-- links/css -->
     <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="shortcut icon" href="assets/fancy_worm.ico" type="image/x-icon">
 
     <!-- scripts -->
     <script type="module" src="assets/js/gallery.js"></script>
 </head>
 <body>
     <header>
+        <nav>
+            <a href="/index.html"><i class="fa-solid fa-worm"></i></a>
+            <a href="https://blender.org" class="external-link"><i class="fa-solid fa-blender"></i></a>
+        </nav>
         <h1>Worm Boy <span class="roman-numeral">Ⅲ</span>'s Art Show</h1>
     </header>
 
+    <section>
+        <p>Worm Boy Three's handsomest art gallery forever. Welcome to Wormb's art gallery, where dreams become reality.</p>
+        <p>About Wormy. Worm boy is an independent artist working out of a hole in the ground. He Has a blender. He pUts things in this plender.</p>
+        <p>this... is what comes out.</p>
+    </section>
+
     <!-- displays the main highlighted image -->
     <main>
-        <div class="button">⟵</div>
-        <div id="highlight">
-            <!-- attributes filled in with js.  -->
-            <img id="highlight-img">
+        <!-- attributes filled in with js.  -->
+        <div class="button" onclick="rotateHighlight(-1);">
+            <span>⟵</span>
+        </div>
+        <img id="highlight-img">
+        <div id="highlight-text">
             <h1 id="highlight-title"></h1>
             <p id="highlight-caption"></p>
         </div>
-        <div class="button">⟶</div>
+        <div class="button" onclick="rotateHighlight(1);">
+            <span>⟶</span>
+        </div>
     </main>
 
     <div id="gallery">
@@ -44,15 +62,14 @@
     </div>
     
     <!-- displays a clicked image-zooms. -->
-    <div id="zoom-overlay" onclick="this.style.display = 'none';">
+    <div id="zoom-overlay" onclick="overlayClick();">
         <!-- attributes filled with js -->
         <img> 
     </div>
 
-    <section>
-        <p>Worm Boy Three's handsomest art gallery forever.</p>
-        <p>wormbo y three art very very very very good yeah</p>
-    </section>
+    <footer>
+        <p>©MMXXIII WormBoyⅢ</p>
+    </footer>
 
 </body>
 </html>
