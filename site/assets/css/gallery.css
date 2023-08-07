@@ -29,17 +29,17 @@ h1 {
     font-family: var(--cursive);
 }
 
-section {
-    padding: 2em;
-    text-align: center;
+.button {
+
+
 }
 
 main {
     align-items: center;
     display: flex;
-    flex-flow: column nowrap; 
+    flex-flow: row nowrap; 
     height: 500px;
-    justify-content: center;
+    justify-content:space-evenly;
     margin: 0 auto 1em;
     width: 70%;
 }
@@ -53,8 +53,8 @@ div#gallery {
     flex-flow: row wrap;
     gap: 1em;
     justify-content: center;
-    margin: auto;
-    width: 60%;
+    margin: 3em auto;
+    max-width: 950px
 }
 
 #gallery img {
@@ -74,6 +74,11 @@ div#gallery {
     display: none;
 }
 
+/* text section */
+section {
+    padding: 2em;
+    text-align: center;
+}
 
 /* mobile styles */
 @media (max-width: 960px) {

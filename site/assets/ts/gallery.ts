@@ -30,6 +30,7 @@ const displayCaption = document.getElementById("highlight-caption");
 const zoomOverlay = document.getElementById("zoom-overlay");
 
 var galleryData: GalleryItem[];
+var currentID: number;
 
 
 /**
@@ -38,18 +39,34 @@ var galleryData: GalleryItem[];
  */
 function setHighlight(artID: number) {
     let piece = galleryData[artID];
-
+    
     displayImg.src = `${GALLERY_PATH}${piece.filePath}`;
     displayImg.alt = piece.altText;
-
+    
     // note: later, convert the date to local.
     displayTitle.innerText = piece.title;
-
+    
     let date = new Date(piece.date);
     displayCaption.innerText = ``;
+
+    currentID = artID; // remember it
 };
 
 (window as any).setHighlight = setHighlight; // gotta be accessible.
+
+/**
+ * rotates the highlight by the given count.
+ * @i the number 
+ */
+(window as any).rotateHighlight = function (i: number): void {
+    let nextID = currentID + i;
+
+    // correct to the functional range
+    if (nextID == galleryData.length) nextID = 0;
+    else if (nextID <= 0) nextID = galleryData.length - 1;
+
+    setHighlight(nextID);
+};
 
 // zooming function
 (window as any).zoomIn = function (element: HTMLImageElement) {

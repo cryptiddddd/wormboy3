@@ -28,10 +28,15 @@
     </header>
 
     <!-- displays the main highlighted image -->
-    <main id="image-display">
-        <img id="highlight-img"> <!-- attributes filled in with js.  -->
-        <h1 id="highlight-title"></h1>
-        <p id="highlight-caption"></p>
+    <main>
+        <div class="button">⟵</div>
+        <div id="highlight">
+            <!-- attributes filled in with js.  -->
+            <img id="highlight-img">
+            <h1 id="highlight-title"></h1>
+            <p id="highlight-caption"></p>
+        </div>
+        <div class="button">⟶</div>
     </main>
 
     <div id="gallery">
@@ -40,7 +45,8 @@
     
     <!-- displays a clicked image-zooms. -->
     <div id="zoom-overlay" onclick="this.style.display = 'none';">
-        <img> <!-- attributes filled with js -->
+        <!-- attributes filled with js -->
+        <img> 
     </div>
 
     <section>
