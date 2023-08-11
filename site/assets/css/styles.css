@@ -43,6 +43,9 @@ html {
     height: 4px;
 }
 
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px dotted var(--accent);
+}
 
 /* unselectable elements */
 div.title, div.title span, img, div.free-elem {

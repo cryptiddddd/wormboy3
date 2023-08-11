@@ -173,21 +173,37 @@ function loadCategory(category: CategoryData): void {
  * populates the existing nav element
  * @param categories an array of names of categories.
  */
-function makeNav(categories: string[]): void {
+function makeNav(data: TipsDoc): void {
     let nav = document.getElementById("tips-nav");
-
-    if (categories.length == 0) {
-        // figure out how to raise the error and exit code.
-        return;
-    }
+    
+    let categories = Object.keys(data);
 
     // populate!
     for (let cat of categories) {
-        let elem = document.createElement("a");
-        elem.href = `?c=${cat}`;
-        elem.innerText = cat;
+        let link = document.createElement("a");
+        link.href = `?c=${cat}`;
+        link.innerText = cat;
+        link.classList.add("nav-category");
 
-        nav.appendChild(elem);
+        let listItem = document.createElement("li");
+        listItem.appendChild(link);
+
+        // populate links to all individual articles.
+        let submenu = document.createElement("ul");
+        for (let art of data[cat].index) {
+            let sublink = document.createElement("a");
+            sublink.href = `?c=${cat}&a=${art.id}`;
+            sublink.innerText = art.title;
+
+            let sublistItem = document.createElement("li");
+            sublistItem.appendChild(sublink);
+
+            submenu.appendChild(sublistItem);
+        }
+
+        if (data[cat].index.length > 0) listItem.appendChild(submenu);
+
+        nav.appendChild(listItem);
     }
 }
 
@@ -218,6 +234,8 @@ function fillBreadcrumbs(queries: QueryDict) {
  * reveals the default page when no query is given.
  */
 function showDefault(data: TipsDoc): void {
+    makeNav(data);
+
     let entries: ArticleData[] = [];
 
     for (let category in data) {
@@ -263,7 +281,6 @@ function setup(rawData: TipsDoc): void {
     // exit... unless.. what does the default page look like again? probably just toggle a display thingy.
     if (isEmpty(query)) {
         // page setup.
-        makeNav(categories);
         showDefault(rawData);
         return;
     }

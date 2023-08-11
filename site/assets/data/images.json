@@ -129,6 +129,15 @@
             "id": 9,
             "lightBackground": true,
             "modelCredit": null
+        },
+        {
+            "altText": "a spinning glass sphere, with 15 multicolored marbles bouncing and rolling within.",
+            "filePath": "gumball.gif",
+            "title": "advanced gumball orb",
+            "date": "08/09/2023",
+            "id": 10,
+            "lightBackground": false,
+            "modelCredit": null
         }
     ]
 }

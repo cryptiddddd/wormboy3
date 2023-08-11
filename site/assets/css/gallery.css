@@ -56,6 +56,7 @@ header nav {
 nav a {
     background: linear-gradient(135deg, var(--font-color), #888, #444);
     background-clip: text;
+    -webkit-background-clip: text;
     background-size: 250%;
     color: transparent;
     transition: background-position 400ms ease-in-out;
@@ -114,6 +115,7 @@ main {
 }
 
 #highlight-img {
+    margin: auto;
     max-height: 400px;
     max-width: 500px;
 

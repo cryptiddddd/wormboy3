@@ -44,9 +44,8 @@ header {
     color: var(--accent-glow);
 }
 
-nav {
-    font-size: 1.5em;
-    justify-content: space-evenly!important;
+a.nav-category {
+    text-transform: uppercase;
 }
 
 main {

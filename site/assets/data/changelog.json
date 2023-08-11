@@ -1,9 +1,17 @@
 [
     {
+        "date": "08/11/2023",
+        "title": "minor tweaks, progress slowed",
+        "body": "guess who has a little bit of burnout ... it is me.</p><p>this is ok though, i will be so brave about it. this update comes with a couple lil touches:<ul><li>visible focus styling for links, buttons, and inputs. <span class='whisper'>ex: when you hit tab and cycle through elements on the page.</span></li><li>another item in the gallery</li><li>different nav structure on the tips page.</li></ul><p>a little disappointed cuz i wanna have more articles written, but it's ok and i forgive myself. bye bye!!!",
+        "gitCommit": "",
+        "id": 12,
+        "isMajor": false
+    },
+    {
         "date": "08/07/2023",
         "title": "opened art gallery",
         "body": "it's been a while since an update! <span class='whisper'>sidenote: i've done about 3 other projects while working lightly on wormboy whoops</span> still working on other exciting and new things, but this update is the debut of my <a href='gallery.html' class='new'>epic art gallery</a>! more will be added as i dick around.",
-        "gitCommit": "",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/821617a2fc3585a0a9838dc8c535a75abbaf8772",
         "id": 11,
         "isMajor": true
     },
