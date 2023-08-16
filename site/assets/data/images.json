@@ -138,6 +138,15 @@
             "id": 10,
             "lightBackground": false,
             "modelCredit": null
+        },
+        {
+            "altText": "a cube falls from the sky, landing on a ring of lights in a dark room. the cube is transparent, and like jelly. it bounces on impact.",
+            "filePath": "softbody_glass.gif", 
+            "title": "glass jello",
+            "date": "08/16/2023",
+            "id": 11,
+            "lightBackground": true,
+            "modelCredit": null
         }
     ]
 }

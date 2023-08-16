@@ -3,7 +3,7 @@
         "date": "08/11/2023",
         "title": "minor tweaks, progress slowed",
         "body": "guess who has a little bit of burnout ... it is me.</p><p>this is ok though, i will be so brave about it. this update comes with a couple lil touches:<ul><li>visible focus styling for links, buttons, and inputs. <span class='whisper'>ex: when you hit tab and cycle through elements on the page.</span></li><li>another item in the gallery</li><li>different nav structure on the tips page.</li></ul><p>a little disappointed cuz i wanna have more articles written, but it's ok and i forgive myself. bye bye!!!</p><p class='whisper'>ps: now i added meta tags to each page to give it a little theme color for the preview embeds on discord. yay!",
-        "gitCommit": "",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/85cd9281e70267bf0d06b2f88e359d3fb949bf52",
         "id": 12,
         "isMajor": false
     },
