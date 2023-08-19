@@ -209,6 +209,10 @@ footer {
     #highlight-text {
         flex: 1 0 100%;
     }
+    
+    #highlight-title {
+        margin-top: 10px;
+    }
 
     .button {
         height: unset;

@@ -147,6 +147,24 @@
             "id": 11,
             "lightBackground": true,
             "modelCredit": null
+        },
+        {
+            "altText": "john dice falls to the floor, and deflates like a sad rubber balloon upon impact.",
+            "filePath": "john_dice_squish.gif",
+            "title": "john dice deflates",
+            "date": "08/16/2023",
+            "id": 12,
+            "lightBackground": false,
+            "modelCredit": null
+        },
+        {
+            "altText": "john dice takes a slow tumble down the stairs, squishing as he does.",
+            "filePath": "john_dice_stairs.gif",
+            "title": "stairs tragedy",
+            "date": "08/19/2023",
+            "id": 13,
+            "lightBackground": false,
+            "modelCredit": null
         }
     ]
 }
