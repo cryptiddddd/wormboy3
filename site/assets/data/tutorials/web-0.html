@@ -1,18 +1,21 @@
+<p>this article is a quick ramble about the inspect panel. at the bottom, i have the references that will actually help out. this is perhaps just a promotion for the humble service of the inspect browser panel, plus my favorite tools within it.</p>
 
-<p>speaking of the browser. let's talk about how to use the inspect panel in a browser. it isn't as scary as it seems. what makes it scary is how convoluted big sites' [youtube, reddit, instagram, the big ones] html is. to get some practice, try inspecting someone's neocities. <a href="https://neocities.org/browse?sort_by=random">here's some random sites</a>.</p>
+<p class="whisper">hey! why should you care to read this? i dunno, maybe don't read the whole thing. but these are some tools that can really really help work through issues when they arise, <em>plus</em> they teach you more about how html/css/javascript/your BROWSER works and work together! AWESOME !!!!!!</p>
+
+<p>the inspect panel! it isn't as scary as it seems. what makes it scary is how convoluted big sites' [youtube, reddit, instagram, the big ones] html is. to get some practice, try inspecting someone's neocities. <a href="https://neocities.org/browse?sort_by=random">here's some random sites</a>.</p>
 
 <div class="notes">
     <p><code>f12</code> will open the inspect panel in most browsers. in firefox, you can also use <code>right click + q</code>!</p>
 </div>
 
-<p>let's open the "inspect" panel. this is typically the first panel, which lets you surf the html contents of the page. as you mouse over each element, it should be highlighted in blue on the page. click on one! next to the html text, there should be another panel labelled "rules". this will display the css rules that apply to the selected element!!! hover over different properties -- you can enable/disable, edit, and use this to debug!</p>
+<p>open the "inspect" panel. this is typically the first panel, which lets you surf the html contents of the page. as you mouse over each element, it should be highlighted in blue on the page. click on one! next to the html text, there should be another panel labelled "rules". this will display the css rules that apply to the selected element!!! hover over different properties -- you can enable/disable, edit, and use this to debug!</p>
 
 <p>there should be another tab next to "rules"--"layout". here i will introduce you to the box model.</p>
 
 <img src="assets/images/tutorials/web_box_model.png" alt="css box model">
 <p class="whisper centered">the holy box model.</p>
 
-<p>this box model goes beyond broswer inspection! this box model is key to understanding block elements in css.</p>
+<p>this box model goes beyond browser inspection! this box model is key to understanding block elements in css.</p>
 
 <p>in this model, there are 5 layers. starting from the inside out:</p>
 
@@ -26,6 +29,28 @@
 
 <p>visualizing web elements and css properties this way can get tricky, but it's key to having control over what you write and make.</p>
 
-<p>it is also great help in debugging. why is my element so wide? oh that's right, i styled this element type this way.</p>
+<p>my other favorite thing in the inspection panel is the section where -- when you select an element -- it lists all the css rules applied to the element, and crosses out the rules that are overridden, and grays out those that are inapplicable.</p>
 
-<p>this is something that has a lot to it, i'm gonna return to writing this tutorial later! it's my birthday today and i don't wanna!</p>
+<p>it is GREAT help in debugging. why isn't my element wide? oh yeah, it's not a block! or, oh yeah! this other rule overwrites that!</p>
+
+<div class="notes">
+    <p>tip: do you want to prioritize a specific property for whatever reason? NOW YOU CAN!!! follow the property's value with <code>!important</code>, and the browser will ignore what would usually overwrite the given property. for example:</p>
+    <pre><code class="language-css">
+#most-prioritized-selector {
+    color: red;
+}
+
+.less-prioritized {
+    color: blue!important;
+}
+    </code></pre>
+    <p>now an element with the given class <em>and</em> id will be blue rather than red, where it would typically be red, <span class="whisper">as the id selector has a higher priority than the class selector as far as i know...</span></p>
+</div>
+
+<p>i guess i wanted to blab about it a bit! i'll now link some good resources on it, but i guess i wanted to say it's not so scary. AND!!!!!! you can make edits to a webpage in your browser very very easily, i use it all the time to help my dear friend <a href="https://keplari.neocities.org/">ducked jeans</a>.</p>
+
+<p>for more information on all of this, see my read more. <span class="whisper">the four top links came from <a href="https://developer.mozilla.org/en-US/docs/Web#developer_tools_documentation">this page of mozilla's webdocs</a>...</span></p>
+
+<div class="notes">
+    <p>guess what! across most browsers, the inspect element panel works very similarly. there will be a similar layout, similar features, etc. mix and match to your liking.</p>
+</div>

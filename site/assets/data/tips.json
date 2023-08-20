@@ -70,11 +70,17 @@
                 "category": "web",
                 "id": 0,
                 "dateCreated": "07/23/2023",
-                "dateModified": null,
-                "title": "inspect browser tips",
+                "dateModified": "08/19/2023",
+                "title": "use browser inspection!!!",
                 "contentPath": "assets/data/tutorials/web-0.html",
                 "readMore": [
-                    
+                    ["firefox inspector documentation", "https://firefox-source-docs.mozilla.org/devtools-user/index.html"],
+                    ["chrome inspector documentation", "https://developer.chrome.com/docs/devtools/"],
+                    ["safari inspector documentation", "https://webkit.org/web-inspector/"],
+                    ["edge inspector documentation", "https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/"],
+                    ["awesome inspector panel breakdown", "https://kinsta.com/blog/inspect-element/"],
+                    ["more on the box model, from w3schools", "https://www.w3schools.com/Css/css_boxmodel.asp"],
+                    ["mozilla's docs on the box model", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"]
                 ]
             }
         ]
