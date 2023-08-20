@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<title>wormy links</title>
+	<title>wormy bookmarks</title>
 
     <!-- preview meta -->
     <meta property="description" content="look at all those cool links! i have somethign to share with YOU!!!!!">
@@ -19,164 +19,456 @@
 
     <!-- mine -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/links.css">
 	<link rel="icon" href="assets/worm.ico">
-    <script type="module" src="assets/js/buttons.js"></script>
     <script type="module" src="assets/js/drag.js"></script>
     <script type="module" src="assets/js/scatter.js"></script>
 </head>
 <body>
-    <header id="main-header">
-        <marquee scrollamount="3">welcome to wormOS :]</marquee>
-        
-        <div class="middle-wrapper">
-            <div class="menu-wrapper">
-                <a  class="menu-item" href="index.html">
-                    <img src="assets/images/green_pink_worm.png" alt="green and pink worm">
-                    <span>home</span>
-                </a>
-                <a class="menu-item" href="about.html">
-                    <img src="assets/images/blue_pink_worm.png" alt="blue and pink worm">
-                    <span>about</span>
-                </a>
-                <a class="menu-item" href="gallery.html">
-                    <img src="assets/images/purple_yellow_worm.png" alt="purple and yellow worm">
-                    <span>my art</span>
-                </a>
-                <a class="menu-item">
-                    <img src="assets/images/blue_orange_worm.png" alt="blue and orange worm">
-                    <span>fart</span>
-                </a>
-                
-            </div>
-            <img src="assets/images/long_worm.png" alt="a long and colorful worm." id="long-worm">
-            <div class="menu-wrapper construction">
-                <!-- more buttons here... someday -->
-                <p><em>site under BIIIIIG construction!</em></p>
-                <img src="assets/images/forklift.gif" alt="forklift image" class="little-img" id="forklift1">
-                <img src="assets/images/forklift.gif" alt="forklift image" class="little-img" id="forklift2">
-                <img src="assets/images/forklift.gif" alt="forklift image" class="little-img" id="forklift3">
-            </div>
-        </div>
-            
-        <nav>
-            <div class="link-wrapper">
-                <a href="/links.html">bookmarks</a><!-- using comments to prevent the whitespace, which has implications on the spacing. 
-                --><a href="/tips.html">coding tips</a><!--
-                --><a href="/scream.html">scream</a>
-            </div>
-            <span>wormOS 1.0.1</span>
-            <div class="link-wrapper">
-                <a href="/changelog.html">changelog</a><!--
-                --><a class="external" href="https://github.com/cryptiddddd/wormboy3" target="_blank">github</a><!--
-            --><a class="external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">????</a>
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="button-wrapper"> 
-            <div id="friend-buttons">
-                <!-- my button and friend buttons!! -->                
-            </div>
-            <div id="other-buttons">
-                <!-- other things that are SO cool but i don't know them personally -->
-            </div>
-        </div>
+      <!-- drag around my funny little friends! -->
+    <div class="randomPos free-elem">
+        <img src="assets/images/accordion.gif" alt="accordion gif" class="little-img">
+    </div>
+    <div class="randomPos free-elem">
+        <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
+    </div>
+    <div class="randomPos free-elem">
+        <img src="assets/images/angel_fish.gif" alt="angel fish gif" class="little-img">
+    </div>
+    <div class="randomPos free-elem">
+        <img src="assets/images/cd.gif" alt="a gif of a rotating cd." class="little-img">
+    </div>
+    <div class="randomPos free-elem">
+        <img src="assets/images/playing_card.gif" alt="a gif of a rotating playing card." class="little-img">
+    </div>
 
+    <div class="container">
+        <!-- main section: the table. -->
+        <main>
+            <!-- one category -->
+            <section id="my-projects">
+                <!-- header -->
+                <div class="bookmark-category">
+                    <div>my projects</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>wormboy3</div>
+                        <div><a href="/index.html">https://wormboy3.neocities.org/</a></div>
+                    </summary>
+                    <p>hey! that's where you are right now.</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>javascript freebies</div>
+                        <div><a href="https://github.com/cryptiddddd/javascript-freebies">https://github.com/cryptiddddd/javascript-freebies</a></div>
+                    </summary>
+                    <p>a bunch of free scripts intended for YOUR neocities!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>friends of cranebot</div>
+                        <div><a href="https://friends-of-cranebot.pages.dev/">https://friends-of-cranebot.pages.dev/</a></div>
+                    </summary>
+                    <p>my webring with my friends!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>grocery quest</div>
+                        <div><a href="https://cryptidddd.itch.io/groceryquest">https://cryptidddd.itch.io/groceryquest</a></div>
+                    </summary>
+                    <p>my wip text adventure, hasn't been updated in a while but there it is...</p>
+                </details>
+
+            </section>
+
+            <section id="misc">
+                <div class="bookmark-category">
+                    <div>miscellaneous!</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>archive dot org</div>
+                        <div><a href="https://archive.org/">https://archive.org/</a></div>
+                    </summary>
+                    <p>this site can do anything forever</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>let's make a music podcast</div>
+                        <div><a href="https://letsmakeamusic.com/">https://letsmakeamusic.com/</a></div>
+                    </summary>
+                    <p>the awesomest podcast ever.</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>can you acquire wine?</div>
+                        <div><a href="https://clickventures.clickhole.com/you-re-8-years-old-can-you-acquire-wine-without-gettin-1825124363">https://clickventures.clickhole.com/you-re-8-years-old-can-you-acquire-wine-without-gettin-1825124363</a></div>
+                    </summary>
+                    <p>CLICKHOLE ADVENTURE!!!!!! this is hilarious please</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>sheet music -- tutorials by hugo</div>
+                        <div><a href="https://www.tutorialsbyhugo.com/sheets/">https://www.tutorialsbyhugo.com/sheets/</a></div>
+                    </summary>
+                    <p>yay free sheet music! mostly pop/radio music.</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>sheet music -- theishter</div>
+                        <div><a href="https://www.theishter.com/sheet-music.html">https://www.theishter.com/sheet-music.html</a></div>
+                    </summary>
+                    <p>free sheet music! anime and video games.</p>
+                </details>
+
+            </section>
+
+            <section id="games">
+                <div class="bookmark-category">
+                    <div>epic free games online</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>online scrabble</div>
+                        <div><a href="https://www.lexulous.com/">https://www.lexulous.com/</a></div>
+                    </summary>
+                    <p>i like to play scrabble here with my friends</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>tetris online</div>
+                        <div><a href="https://tetr.io">https://tetr.io</a></div>
+                    </summary>
+                    <p>i like to play tetris here with strangers</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>kultisti on itchio</div>
+                        <div><a href="https://kultisti.itch.io/">https://kultisti.itch.io/</a></div>
+                    </summary>
+                    <p>i do not know this person but i love their games and art style, please go check them out!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>npckc on itchio</div>
+                        <div><a href="https://npckc.itch.io/">https://npckc.itch.io/</a></div>
+                    </summary>
+                    <p>another person i don't know who i really admire for what they make.</p>
+                </details>
+            </section>
+
+            <section id="graphics">
+                <div class="bookmark-category">
+                    <div>graphics >:]</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>gifcities</div>
+                        <div><a href="https://gifcities.org/">https://gifcities.org/</a></div>
+                    </summary>
+                    <p>a bunch of gifs archived from geocities</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>the gif gallery</div>
+                        <div><a href="https://momg.neocities.org/">https://momg.neocities.org/</a></div>
+                    </summary>
+                    <p>similar to the above! but no searching</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>blinkie cafe</div>
+                        <div><a href="https://blinkies.cafe/">https://blinkies.cafe/</a></div>
+                    </summary>
+                    <p>a bunch of customizable blinkies!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>treasure cove gifs</div>
+                        <div><a href="https://everetcetera.neocities.org/treasurecove">https://everetcetera.neocities.org/treasurecove</a></div>
+                    </summary>
+                    <p>my friend ripped these from an old dos game... they're AWESOME.</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>cutie internet archive</div>
+                        <div><a href="https://archive.cinni.net/">https://archive.cinni.net/</a></div>
+                    </summary>
+                    <p>so many cute pixels</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>smilies</div>
+                        <div><a href="https://www.mazeguy.net/smilies.html">https://www.mazeguy.net/smilies.html</a></div>
+                    </summary>
+                    <p>old school pixel smilies :]!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>online button maker</div>
+                        <div><a href="https://hekate2.github.io/buttonmaker/">https://hekate2.github.io/buttonmaker/</a></div>
+                    </summary>
+                    <p>make your web button ONLINE!!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>color palletes</div>
+                        <div><a href="https://lospec.com/">https://lospec.com/</a></div>
+                    </summary>
+                    <p>i like this place :]</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>graphics gale</div>
+                        <div><a href="https://graphicsgale.com/us/">https://graphicsgale.com/us/</a></div>
+                    </summary>
+                    <p>free alternative to aseprite!</p>
+                </details>
+
+            </section>
+
+            <section id="learn">
+                <div class="bookmark-category">
+                    <div>learn!</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>css reference</div>
+                        <div><a href="https://css-tricks.com/almanac/">https://css-tricks.com/almanac/</a></div>
+                    </summary>
+                    <p>learn so much about css</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>learn regular expressions!</div>
+                        <div><a href="https://regex101.com/">https://regex101.com/</a></div>
+                    </summary>
+                    <p>learn how to use regular expressions for processing text!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>start learning web development -- w3</div>
+                        <div><a href="https://www.w3schools.com/where_to_start.asp">https://www.w3schools.com/where_to_start.asp</a></div>
+                    </summary>
+                    <p>w3schools... classic..</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>web development docs</div>
+                        <div><a href="https://developer.mozilla.org/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web</a></div>
+                    </summary>
+                    <p>my favorite reference guide</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>discord bot with python</div>
+                        <div><a href="https://pycord.dev/">https://pycord.dev/</a></div>
+                    </summary>
+                    <p>PYCORD MY LOVE!!!</p>
+                </details>
+            </section>
+
+            <section id="toys">
+                <div class="bookmark-category">
+                    <div>nerdy toys</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>shadertoy</div>
+                        <div><a href="https://www.shadertoy.com/">https://www.shadertoy.com/</a></div>
+                    </summary>
+                    <p>quite a learning curve, but yay learning about shaders!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>blender</div>
+                        <div><a href="https://www.blender.org/">https://www.blender.org/</a></div>
+                    </summary>
+                    <p>another learning curve but i love it it's free go make a cube rotate go gayboy go</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>pixela api</div>
+                        <div><a href="https://pixe.la/">https://pixe.la/</a></div>
+                    </summary>
+                    <p>an api you can use to create to track how much you do something each day. warning: you do all the coding yourself!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>beginner-friendly visual novel engine</div>
+                        <div><a href="https://www.renpy.org/">https://www.renpy.org/</a></div>
+                    </summary>
+                    <p>i LOVE this thing. i made something super dorky with it and it got me into python &lt;3</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>my favorite python editor</div>
+                        <div><a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></div>
+                    </summary>
+                    <p>AWESOME... i would only not recommend this for django projects, but for another other python, it's really awesome, VERY beginner friendly</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>vscode text editor</div>
+                        <div><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></div>
+                    </summary>
+                    <p>yeah.. yeah i use vscode. see the coding tools section for extensions</p>
+                </details>
+            </section>
+
+            <section id="tools">
+                <div class="bookmark-category">
+                    <div>coding tools!</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>neocities site info api</div>
+                        <div><a href="https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3">https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3</a></div>
+                    </summary>
+                    <p>api to use for site info -- creation date, last updated, views, tags...</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>online toyhouse editor</div>
+                        <div><a href="https://th.circlejourney.net/#">https://th.circlejourney.net/#</a></div>
+                    </summary>
+                    <p>in-browser editor for toyhouse character profiles!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>tinytools</div>
+                        <div><a href="https://tinytools.directory/">https://tinytools.directory/</a></div>
+                    </summary>
+                    <p>a list to even MORE tools that are free and experimental for interactive mediums!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>shieldsio</div>
+                        <div><a href="https://shields.io/">https://shields.io/</a></div>
+                    </summary>
+                    <p>nice custom and dynamic badges to use, namely for code projects but the world is your oyster</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>drawio</div>
+                        <div><a href="https://www.drawio.com/">https://www.drawio.com/</a></div>
+                    </summary>
+                    <p>AWESOME tool to make design diagrams</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>fontawesome</div>
+                        <div><a href="https://fontawesome.com/">https://fontawesome.com/</a></div>
+                    </summary>
+                    <p>very smooth .svg icons you can use on your site!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>ren'py pronoun tool</div>
+                        <div><a href="https://npckc.itch.io/pronoun-tool">https://npckc.itch.io/pronoun-tool</a></div>
+                    </summary>
+                    <p>extension for ren'py to display your characters' pronouns!</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>vscode local preview server extension</div>
+                        <div><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server</a></div>
+                    </summary>
+                    <p>preview your site on your computer PRIVATELY !!! and easily.</p>
+                </details>
+
+            </section>
+
+            <section id="browser-extensions">
+                <div class="bookmark-category">
+                    <div>epic browser extensiosn!!!</div>
+                </div>
+
+                <details class="link-line">
+                    <summary>
+                        <div>youtube dislike count</div>
+                        <div><a href="https://returnyoutubedislike.com/">https://returnyoutubedislike.com/</a></div>
+                    </summary>
+                    <p>returns the youtube dislike counter</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>bypass paywalls [firefox link]</div>
+                        <div><a href="https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean">https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean</a></div>
+                    </summary>
+                    <p>here's the firefox version of this epic extension to bypass paywalls. i use it to get recipes off of the new york times website :]</p>
+                </details>
+
+                <details class="link-line">
+                    <summary>
+                        <div>dark reader</div>
+                        <div><a href="https://darkreader.org/">https://darkreader.org/</a></div>
+                    </summary>
+                    <p>automatically makes webpages dark and usually quite nice still. my eyes are so sensitive.</p>
+                </details>
+            </section>
+
+        </main>
         
-        <div class="randomPos free-elem">
-            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-        </div>
-        <div class="randomPos free-elem">
-            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-        </div>
-        <div class="randomPos free-elem">
-            <img src="assets/images/chicken.gif" alt="chicken gif" class="little-img">
-        </div>
-        <div class="randomPos free-elem">
-            <img src="assets/images/cd.gif" alt="a gif of a rotating cd." class="little-img">
-        </div>
-        
-        <div class="wrapper randomPos" id="self-promo">
-            <div class="title">
-                <span>self-promo</span>
+        <!-- quick aside: all the categories -->
+        <aside>
+            <p>some links i really really really really wanted to share!!!</p>
+            <hr>
+            <h1>categories</h1>
+            <div class="table-of-contents">
+                <a href="#my-projects">my projects</a>
+                <a href="#misc">miscellaneous</a>
+                <a href="#games">games</a>
+                <a href="#graphics">graphics</a>
+                <a href="#learn">learning</a>
+                <a href="#toys">code toys</a>
+                <a href="#tools">code tools</a>
+                <a href="#browser-extensions">cool browser extensions</a>
             </div>
-            <div class="content">
-                <p>interested in javascript freebies?</p>
-                <p>i have some <a href="https://github.com/cryptiddddd/javascript-freebies" class="new" target="_blank">here</a>!</p>
-                <p>these are all intended for neocities, and easy to set up. please follow the written instructions. projects include:</p>
-                <ul>
-                    <li>pagedoll randomizer.</li>
-                    <li>image enlarging on click.</li>
-                    <li>last updated timestamp.</li>
-                </ul>
-                <p>i'm quite proud of ALLLLL of these, and i pride myself on clean code and effects.</p>
-                <hr>
-                <p>looking for coding tutorials?</p>
-                <p>i'm putting together some tips and advice for html, css, and js! i am just a little worm so i may not have much to offer, but if i can teach anyone anything it will be worth it.</p>
-                <p>find my first article <a class="new" href="tips.html?c=css&a=0">here!</a></p>
-            </div>
-        </div>
-        <div class="wrapper randomPos" id="site-resources">
-            <div class="title">
-                <span>resources</span>
-            </div>
-            <div class="content">
-                <h1>valuable sites</h1>
-                <p>in the spirit of not letting the web become monopolized:</p>
-                <ul>
-                    <li><a href="https://archive.org">archive dot org!!</a> i cannot overemphasize the importance of this site.</li>
-                    <li>more to come.... i'm embarrassed to not have more!</li>
-                </ul>
-            </div>
-        </div>
-        <div class="wrapper randomPos" id="neocities-resources">
-            <div class="title">
-                <span>tools for neocities!</span>
-            </div>
-            <div class="content">
-                <h1>do you have neocities?</h1>
-                <p>oh YEAH you do babey. here are some tools:</p>
-                <ul>
-                    <li><a href="https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3">site info API</a> -- replace my sitename with yours, get a json with information such as when your site last updated.</li>
-                    <li><a href="https://code.visualstudio.com/">vscode</a> -- approachable text editor if you're getting into coding and neocities!</li>
-                    <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">vscode local preview server</a> -- a plug-in for vscode that i use to preview my site as i edit!</li>
-                    <li><a href="https://hekate2.github.io/buttonmaker/">online button maker!</a></li>
-                </ul>
-                <p> and graphics. who doesn't like some good graphics.</p>
-                <ul>
-                    <li><a href="https://everetcetera.neocities.org/treasurecove">treasure cove gifs</a> -- ripped by my friend ETC!!!</li>
-                    <li><a href="https://gifcities.org">gifcities</a> -- the internet archive's geocities gif archive.</li>
-                    <li><a href="https://archive.cinni.net/">cutie internet archive</a> -- a BUNCH of cute pixel graphics! searchable archive.</li>
-                    <li><a href="https://www.mazeguy.net/smilies.html">smilies!!!</a></li>
-                    <li><a href="https://plasticdino.neocities.org/graphics">plasticdino's graphics</a>, she has some really cool art too.</li>
-                    <li><a href="https://momg.neocities.org/">the gif gallery!</a></li>
-                    <li><a href="https://blinkies.cafe/">blinkies.cafe!!!</a> everybody love blinkies.cafe. they got home stuck.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="wrapper" id="random-win">
-            <div class="title">
-                <span>random-links</span>
-            </div>
-            <div class="content">
-                <ul>
-                    <li><a href="https://www.returnyoutubedislike.com/">browser extension for the youtube dislike button.</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="wrapper" id="footer-win">
-            <div class="title">
-                <span>footer-window</span>
-            </div>
-            <div class="content centered">
-                <p>copyright 2023 WORM BOY!</p>
-                <a href="https://github.com/cryptiddddd/wormboy3" target="_blank">see my code on github</a>
-                or
-                <a href="https://github.com/cryptiddddd/wormboy3/issues" target="_blank">report a site bug</a>
-            </div>
-        </div>
-    </main>
+        </aside>
+    </div>
 </body>
 </html>

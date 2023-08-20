@@ -1,0 +1,128 @@
+/* 
+styles specific to my bookmarks page.
+
+note: copy-pasted over styles for free-elem and little-img, as i use these here on this page. 
+*/
+
+body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+div.container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+    height: 80%;
+    width: 80%;
+}
+
+main, aside {
+    background-color: #000c;
+    border: var(--content-border);
+    border-radius: 1em;
+    padding: 1em;
+    flex: auto;
+}
+
+/* table */
+main {
+    overflow-y: auto;
+}
+
+section {
+    margin: 1em 0;
+}
+
+section:first-child, section:last-child {
+    margin: 0;
+}
+
+.bookmark-category, .link-line {
+    padding: 0.9ex;
+}
+
+.bookmark-category {
+    background-color: var(--accent);
+    border-radius: 1ex 1ex 0 0;
+    padding: 1.5ex;
+    position: sticky;
+}
+
+details summary div:first-child::before {
+    content: "▸";
+    margin: 0 1em;
+}
+
+details[open] summary div:first-child::before {
+    content: "▾";
+}
+
+.link-line summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.link-line p {
+    margin: 1ex 0;
+    margin-left: 3em;
+}
+
+.link-line:nth-of-type(2n) {
+    background-color: #fff2;
+}
+
+
+/* toc aside */
+
+aside {
+    text-align: center;
+    min-width: 300px;
+}
+
+aside h1 {
+    margin-top: 0;
+}
+
+.table-of-contents {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1ex;
+}
+
+/* little free floating images. */
+img.little-img {
+    margin: 0;
+    max-width: 100px;
+    min-width: 75px;
+}
+
+div.free-elem {
+    cursor: grab;
+    position: absolute;
+    transition: transform 0.25s ease-in-out;
+    z-index: 1;
+}
+
+/* mobile styles */
+@media (max-width: 960px) {
+
+    div.container {
+        flex-flow: column nowrap;
+        margin: 2em 0;
+    }
+
+    aside {
+        order: 1;
+    }
+
+    main {
+        order: 2;
+    }
+
+    div.free-elem {
+        z-index: -1;
+    }
+}
