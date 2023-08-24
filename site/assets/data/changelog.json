@@ -1,5 +1,13 @@
 [
     {
+        "date": "08/20/2023",
+        "title": "link page revamped",
+        "body": "that's right babey!!!!!!!!! i have been wanting to do this a while, and so while i'm still sorta low energy, here it is: a compilation of links to free games and tools and resources. this page will be frequently updated as i think of and discover new things i'd like to share. but! here is it's starting point.</p><p class='whisper'>note: not merging this with the main branch just yet, as i think i'll rewrite it to be generated like other pages are :]!</p><p>anyways, find that <a href='/links.html'>HERE!!!!!</a>",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/4264b01a18e47547a139d4ea2674ff5fa8a330f4",
+        "id": 13,
+        "isMajor": true
+    },
+    {
         "date": "08/11/2023",
         "title": "minor tweaks, progress slowed",
         "body": "guess who has a little bit of burnout ... it is me.</p><p>this is ok though, i will be so brave about it. this update comes with a couple lil touches:<ul><li>visible focus styling for links, buttons, and inputs. <span class='whisper'>ex: when you hit tab and cycle through elements on the page.</span></li><li>another item in the gallery</li><li>different nav structure on the tips page.</li></ul><p>a little disappointed cuz i wanna have more articles written, but it's ok and i forgive myself. bye bye!!!</p><p class='whisper'>ps: now i added meta tags to each page to give it a little theme color for the preview embeds on discord. yay!",
