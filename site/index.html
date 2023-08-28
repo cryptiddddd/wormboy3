@@ -26,8 +26,10 @@
     <script type="module" src="assets/js/changelog.js"></script>
     <script type="module" src="assets/js/scatter.js"></script>
     <script type="module" src="assets/js/drag.js"></script>
+    <script type="module" src="assets/js/music.js"></script>
+    <script type="module" src="assets/js/focbwr.js"></script>
 </head>
-<body onload="populateBlinkes(); populateChangelog(5);">
+<body onload="populateBlinkes(); populateChangelog(5); favArtists('fav-artists')">
     <header id="main-header">
         <marquee scrollamount="3">welcome to wormOS :]</marquee>
         
@@ -105,6 +107,23 @@
                 <p>even more recent update: ART GALLERY IS OPEN! WORMBOY FROEEVR!!! <a href="gallery.html">YAY!!!</a></p>
             </div>
         </div>
+
+        <div class="wrapper" id="music-win">
+            <div class="title">
+                <span>music-window</span>
+            </div>
+            <div class="content" id="fav-artists">
+                <p class="whisper">loading...</p>
+            </div>
+        </div>
+
+        <div class="wrapper" id="webring-win">
+            <div class="title"><span>my webring!</span></div>
+            <div class="content">
+                <div id="focbwr"><!-- webring widget here :D! --></div>
+            </div>
+        </div>
+
         <div class="wrapper" id="changelog-win">
             <div class="title">
                 <span>what's new?</span>
@@ -114,6 +133,7 @@
                 <a href="/changelog.html">see full changelog...</a>
             </div>
         </div>
+
         <div class="wrapper" id="blinkie-win">
             <div class="title">
                 <span>blinkie-window</span>
@@ -122,6 +142,7 @@
                 <div id="blinkie-wrapper"><!-- placeholder for blinkie population. --></div>
             </div>
         </div>
+
         <div class="wrapper" id="footer-win">
             <div class="title">
                 <span>footer-window</span>

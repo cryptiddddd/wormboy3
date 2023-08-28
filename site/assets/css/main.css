@@ -256,6 +256,15 @@ div.content > :first-child {
     max-width: 400px;
 }
 
+#music-win {
+    left: 64%;
+}
+
+#webring-win {
+    left: 61%;
+    top: 49%;
+}
+
 #blinkie-win {
     left: 84%;
 }

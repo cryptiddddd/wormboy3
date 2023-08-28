@@ -1,5 +1,13 @@
 [
     {
+        "date": "08/26/2023",
+        "title": "music api launch!!",
+        "body": "it is live! what is? uhhhh</p><p>i made an api that acts as a proxy between people viewing your website and your spotify data. it CANNOT be used by others just yet <span class='whisper'>i need to bring documentation to spotify and get their approval....</span> but it WILL be something available to others. what can you do with this api? click <a>here</a> to find out !!</p><p>um so anyways yeah now my top 5 artists are displayed on my homepage!",
+        "gitCommit": "",
+        "id": 13,
+        "isMajor": true
+    },
+    {
         "date": "08/11/2023",
         "title": "minor tweaks, progress slowed",
         "body": "guess who has a little bit of burnout ... it is me.</p><p>this is ok though, i will be so brave about it. this update comes with a couple lil touches:<ul><li>visible focus styling for links, buttons, and inputs. <span class='whisper'>ex: when you hit tab and cycle through elements on the page.</span></li><li>another item in the gallery</li><li>different nav structure on the tips page.</li></ul><p>a little disappointed cuz i wanna have more articles written, but it's ok and i forgive myself. bye bye!!!</p><p class='whisper'>ps: now i added meta tags to each page to give it a little theme color for the preview embeds on discord. yay!",
