@@ -4,6 +4,14 @@
         "title": "music api launch!!",
         "body": "it is live! what is? uhhhh</p><p>i made an api that acts as a proxy between people viewing your website and your spotify data. it CANNOT be used by others just yet <span class='whisper'>i need to bring documentation to spotify and get their approval....</span> but it WILL be something available to others. what can you do with this api? click <a>here</a> to find out !!</p><p>um so anyways yeah now my top 5 artists are displayed on my homepage!",
         "gitCommit": "",
+        "id": 14,
+        "isMajor": true
+    },
+    {
+        "date": "08/20/2023",
+        "title": "link page revamped",
+        "body": "that's right babey!!!!!!!!! i have been wanting to do this a while, and so while i'm still sorta low energy, here it is: a compilation of links to free games and tools and resources. this page will be frequently updated as i think of and discover new things i'd like to share. but! here is it's starting point.</p><p class='whisper'>note: not merging this with the main branch just yet, as i think i'll rewrite it to be generated like other pages are :]!</p><p>anyways, find that <a href='/links.html'>HERE!!!!!</a>",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/4264b01a18e47547a139d4ea2674ff5fa8a330f4",
         "id": 13,
         "isMajor": true
     },
