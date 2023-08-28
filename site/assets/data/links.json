@@ -1,0 +1,276 @@
+[
+    {
+        "title": "my projects",
+        "hashID": "my-projects",
+        "items": [
+            {
+                "comment": "hey! that's where you are right now.",
+                "text": "wormboy3",
+                "trueURL": "./index.html",
+                "url": "https://wormboy3.neocities.org/"
+            },
+            {
+                "comment": "a bunch of free scripts intended for YOUR neocities!",
+                "text": "javascript freebies",
+                "url": "https://github.com/cryptiddddd/javascript-freebies"
+            },
+            {
+                "comment": "my webring with my friends!",
+                "text": "friends of cranebot",
+                "url": "https://friends-of-cranebot.pages.dev/"
+            },
+            {
+                "comment": "a work in progress api that allows you to display some spotify stats on your neocities!",
+                "text": "wormboy's music proxy api",
+                "url": "https://music.wormboy-api.workers.dev/00000"
+            },
+            {
+                "comment": "my wip text adventure, hasn't been updated in a while but there it is...",
+                "text": "grocery quest",
+                "url": "https://cryptidddd.itch.io/groceryquest"
+            }
+        ]
+    },
+    {
+        "title": "miscellaneous!",
+        "hashID": "misc",
+        "items": [
+            {
+                "comment": "this site can do anything forever",
+                "text": "archive dot org",
+                "url": "https://archive.org/"
+            },
+            {
+                "comment": "the awesomest podcast ever.",
+                "text": "let's make a music podcast",
+                "url": "https://letsmakeamusic.com/"
+            },
+            {
+                "comment": "CLICKHOLE ADVENTURE!!!!!! this is hilarious please",
+                "text": "can you acquire wine?",
+                "url": "https://clickventures.clickhole.com/you-re-8-years-old-can-you-acquire-wine-without-gettin-1825124363"
+            },
+            {
+                "comment": "yay free sheet music! mostly pop/radio music.",
+                "text": "sheet music -- tutorials by hugo",
+                "url": "https://www.tutorialsbyhugo.com/sheets/"
+            },
+            {
+                "comment": "free sheet music! anime and video games.",
+                "text": "sheet music -- theishter",
+                "url": "https://www.theishter.com/sheet-music.html"
+            }
+        ]
+    },
+    {
+        "title": "epic free games online",
+        "hashID": "games",
+        "items": [
+            {
+                "comment": "i like to play scrabble here with my friends",
+                "text": "online scrabble",
+                "url": "https://lexulous.com/"
+            },
+            {
+                "comment": "i like to play tetris here with strangers",
+                "text": "tetris online",
+                "url": "https://tetr.io"
+            },
+            {
+                "comment": "i do not know this person but i love their games and art style, please go check them out!",
+                "text": "kultisti on itchio",
+                "url": "https://kultisti.itch.io/"
+            },
+            {
+                "comment": "another person i don't know who i really admire for what they make.",
+                "text": "npckc on itchio",
+                "url": "https://npckc.itch.io/"
+            }
+        ]
+    },
+    {
+        "title": "graphics >:]",
+        "hashID": "graphics",
+        "items": [
+            {
+                "comment": "a bunch of gifs archived from geocities",
+                "text": "gifcities",
+                "url": "https://gifcities.org/"
+            },
+            {
+                "comment": "similar to the above gifcities! but no searching",
+                "text": "the gif gallery",
+                "url": "https://momg.neocities.org/"
+            },
+            {
+                "comment": "a bunch of customizable blinkies!",
+                "text": "blinkie cafe",
+                "url": "https://blinkies.cafe/"
+            },
+            {
+                "comment": "my friend ripped these from an old dos game... they're AWESOME.",
+                "text": "treasure cove gifs",
+                "url": "https://everetcetera.neocities.org/treasurecove"
+            },
+            {
+                "comment": "so many cute pixels",
+                "text": "cutie internet archive",
+                "url": "https://archive.cinni.net/"
+            },
+            {
+                "comment": "old school pixel smilies :]!",
+                "text": "smilies",
+                "url": "https://www.mazeguy.net/smilies.html"
+            },
+            {
+                "comment": "make your web button ONLINE!!",
+                "text": "online button maker",
+                "url": "https://hekate2.github.io/buttonmaker/"
+            },
+            {
+                "comment": "i like this place :]",
+                "text": "color palettes",
+                "url": "https://lospec.com/"
+            },
+            {
+                "comment": "free alternative to aseprite!",
+                "text": "graphics gale",
+                "url": "https://graphicsgale.com/us/"
+            }
+        ]
+    },
+    {
+        "title": "learn!",
+        "hashID": "learn",
+        "items": [
+            {
+                "comment": "learn so much about css",
+                "text": "css reference",
+                "url": "https://css-tricks.com/almanac/"
+            },
+            {
+                "comment": "learn how to use regular expressions for processing text!",
+                "text": "learn regular expressions!",
+                "url": "https://regex101.com/"
+            },
+            {
+                "comment": "w3schools... classic..",
+                "text": "start learning web development -- w3",
+                "url": "https://www.w3schools.com/where_to_start.asp"
+            },
+            {
+                "comment": "my favorite reference guide",
+                "text": "web development docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web"
+            },
+            {
+                "comment": "PYCORD MY LOVE!!!",
+                "text": "discord bot with python",
+                "url": "https://pycord.dev/"
+            }
+        ]
+    },
+    {
+        "title": "nerdy toys",
+        "hashID": "toys",
+        "items": [
+            {
+                "comment": "quite a learning curve, but yay learning about shaders!",
+                "text": "shadertoy",
+                "url": "https://www.shadertoy.com/"
+            },
+            {
+                "comment": "another learning curve but i love it it's free go make a cube rotate go gayboy go",
+                "text": "blender",
+                "url": "https://www.blender.org/"
+            },
+            {
+                "comment": "an api you can use to create to track how much you do something each day. warning: you do all the coding yourself!",
+                "text": "pixela api",
+                "url": "https://pixe.la/"
+            },
+            {
+                "comment": "i LOVE this thing. i made something super dorky with it and it got me into python <3",
+                "text": "beginner-friendly visual novel engine",
+                "url": "https://www.renpy.org/"
+            },
+            {
+                "comment": "AWESOME... i would only not recommend this for django projects, but for another other python, it's really awesome, VERY beginner friendly",
+                "text": "my favorite python editor",
+                "url": "https://www.jetbrains.com/pycharm/"
+            },
+            {
+                "comment": "yeah.. yeah i use vscode. see the coding tools section for extensions",
+                "text": "vscode text editor",
+                "url": "https://code.visualstudio.com/"
+            }
+        ]
+    },
+    {
+        "title": "coding tools!",
+        "hashID": "tools",
+        "items": [
+            {
+                "comment": "api to use for site info -- creation date, last updated, views, tags...",
+                "text": "neocities site info api",
+                "url": "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3"
+            },
+            {
+                "comment": "in-browser editor for toyhouse character profiles!",
+                "text": "online toyhouse editor",
+                "url": "https://th.circlejourney.net/"
+            },
+            {
+                "comment": "a list to even MORE tools that are free and experimental for interactive mediums!",
+                "text": "tinytools",
+                "url": "https://tinytools.directory/"
+            },
+            {
+                "comment": "nice custom and dynamic badges to use, namely for code projects but the world is your oyster",
+                "text": "shieldsio",
+                "url": "https://shields.io/"
+            },
+            {
+                "comment": "AWESOME tool to make design diagrams",
+                "text": "drawio",
+                "url": "https://www.drawio.com/"
+            },
+            {
+                "comment": "very smooth .svg icons you can use on your site!",
+                "text": "fontawesome",
+                "url": "https://fontawesome.com/"
+            },
+            {
+                "comment": "extension for ren'py to display your characters' pronouns!",
+                "text": "ren'py pronoun tool",
+                "url": "https://npckc.itch.io/pronoun-tool"
+            },
+            {
+                "comment": "preview your site on your computer PRIVATELY !!! and easily.",
+                "text": "vscode local preview server extension",
+                "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server"
+            }
+        ]
+    },
+    {
+        "title": "epic browser extensions!",
+        "hashID": "browser-extensions",
+        "items": [
+            {
+                "comment": "returns the youtube dislike counter",
+                "text": "youtube dislike count",
+                "url": "https://returnyoutubedislike.com/"
+            },
+            {
+                "comment": "here's the firefox version of this epic extension to bypass paywalls. i use it to get recipes off of the new york times website :]",
+                "text": "bypass paywalls [firefox link]",
+                "url": "https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean"
+            },
+            {
+                "comment": "automatically makes webpages dark and usually quite nice still. my eyes are so sensitive.",
+                "text": "dark reader",
+                "url": "https://darkreader.org/"
+            }
+        ]
+    }
+]
