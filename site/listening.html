@@ -5,24 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my wormy delights</title>
 
+    <link rel="shortcut icon" href="assets/worm.ico" type="image/x-icon">
+
     <style>
         :root {
-            --image-size: 640px;
+            --image-size: 20dvw;
+        }
+
+        @media (max-width: 800px) {
+            :root {
+                --image-size: 33.333333dvw;
+            }
+        }
+
+        html {
+            scrollbar-width: thin;
         }
 
         body {
             margin: 0;
+            overflow-x: hidden;
         }
 
         #collage {
-            display: grid;
-            gap: 1px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-auto-rows: var(--image-size);
-            overflow: hidden;
+            display: flex;
+            flex-flow: row wrap;
+            width: 120%;
         }
 
-        #collage > * {
+        a {
+            display: contents;
+        }
+
+        #collage img {
+            margin: 0;
             max-height: var(--image-size);
             max-width: var(--image-size);
         }
@@ -30,7 +46,7 @@
 
     <script type="module" src="assets/js/music.js"></script>
 </head>
-<body onload="recentlyPlayedCollage('collage', 10)">
+<body onload="recentlyPlayedCollage('collage', 30)">
     <div id="collage">
         <!-- loading images... -->
     </div>

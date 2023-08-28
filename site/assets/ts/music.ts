@@ -105,12 +105,17 @@ function recentlyPlayedCollage(elementID: string, limit: number): void {
         if (!validate(response)) { return; }
 
         for (let item of (response.data.items as TrackData[])) {
-            let newElem = document.createElement("img");
+            let imgElem = document.createElement("img");
+            let linkElem = document.createElement("a");
 
-            newElem.src = item.album.artwork.url;
-            newElem.alt = `${item.artists[0]} - ${item.album.name}`;
+            linkElem.href = item.spotifyURL;
+            linkElem.target = "_blank";
 
-            element.appendChild(newElem);
+            imgElem.src = item.album.artwork.url;
+            imgElem.alt = `${item.artists[0]} - ${item.album.name}`;
+
+            linkElem.appendChild(imgElem);
+            element.appendChild(linkElem);
         }
     }
     
