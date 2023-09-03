@@ -1,8 +1,8 @@
 [
     {
         "date": "08/26/2023",
-        "title": "music api launch!!",
-        "body": "it is live! what is? uhhhh</p><p>i made an api that acts as a proxy between people viewing your website and your spotify data. it CANNOT be used by others just yet <span class='whisper'>i need to bring documentation to spotify and get their approval....</span> but it WILL be something available to others. what can you do with this api? click <a href='https://music.wormboy-api.workers.dev/docs'>here</a> to find out !!</p><p>um so anyways yeah now my top 5 artists are displayed on my homepage!",
+        "title": "SECRET music api launch",
+        "body": "LOG EDITED what did i do! i made a secret personal api to get myself and my friends spotify data to display on neocities. and it is secret so don't tell anyone ok? i put a lot of work into it though. anyways now will wood and queef jerky on my homepage.",
         "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/24fd894c4bae1caaccdef68f99a5584d3d1fc6a0",
         "id": 14,
         "isMajor": true
