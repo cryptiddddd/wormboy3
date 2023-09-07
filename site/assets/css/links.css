@@ -51,6 +51,10 @@ section:first-child, section:last-child {
     position: sticky;
 }
 
+.bookmark-category ::selection, .bookmark-category ::-moz-selection {
+    background-color: #0005;
+}
+
 details summary div:first-child::before {
     content: "▸";
     margin: 0 1em;

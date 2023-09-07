@@ -122,11 +122,11 @@ nav a:not(:first-child) {
 }
 
 nav a.external, nav a.external:visited {
-    color: var(--accent);
+    color: var(--secondary-accent);
 }
 
 nav a.external:hover, nav a.external:visited:hover {
-    color: var(--accent-glow);
+    color: var(--secondary-accent-hover);
 }
 
 

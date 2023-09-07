@@ -7,6 +7,7 @@
     --accent: #9313c5;
     --accent-glow: #bd17d3;
     --secondary-accent: #f7f71c;
+    --secondary-accent-hover: #f7f78e;
     --whisper-color: #bbb;
 
     --link: #61e20c;
@@ -59,7 +60,7 @@ div.title, div.title span, img, div.free-elem {
 
 /* selection highlight affect */
 ::selection, ::-moz-selection {
-	background-color: var(--accent);
+	background-color: color-mix(in srgb, var(--accent) 70%, transparent);
 	color: #fff;
 }
 
