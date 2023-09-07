@@ -53,6 +53,7 @@ main {
     border: var(--content-border);
     border-width: 0 1px;
     min-height: 100vh;
+    min-width: 700px;
     margin: auto;
     width: 60%;
 }

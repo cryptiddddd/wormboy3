@@ -1,0 +1,218 @@
+<p>ohhh my GOD i promise this is the most pretentious i will ever ever get with these articles and titles. ok anyways.</p>
+
+<p>i'm writing this article as a bit of self-reflection on some projects i've been working on lately, things i've been learning, and re-learning, and re-learning. if there's anyone who reads this, i want you to be able to take away a couple points:</p>
+
+<ol>
+    <li>css so powerful you can do whatever you want forever.</li>
+    <li>think about page layout as a property of the <em>whole</em> page, rather than only thinking about the position of individual pieces.</li>
+    <li>if you'd like to think of it this way: css fills two purposes: <em>fashion</em> and <em>layout</em>. i am learning to organize these separately in my own code.</li>
+    <li>to center a div, give its parent element these css properties: <code>display: flex; align-items: center; justify-content: center;</code> AND check the parent element's height.</li>
+</ol>
+
+<p>so. i'll probably use these points as an outline for this article! but anyways.</p>
+
+<div class="notes">
+    <p>at the <a href="#read-more">end of the article</a>, i'll have some links to more css stuff. the last two -- the flex cheatsheet and grid guide -- are two that <em>really really</em> helped me. if you tire of my rambles and desire some immediate guidance, check those out!</p>
+</div>
+
+<h2>css so powerful forever</h2>
+
+<p>especially on a static site, i feel like css is the glue between your pages <span class="whisper">when you're using the same stylesheets for all [or a selection of] pages, at least</span>. it is what provides the consistent aesthetic/layout, which keeps ppl oriented while surfing.</p>
+
+<div class="notes">
+    <p>shout out to everyone on neocities who makes every page on their site different, whether in color scheme, images, layout, etc. that fucking RULES!!!!!!</p>
+    <p class="whisper">shout out to anyone who breaks the "rules" and "design philosophies" i talk about, they're not ever here to limit.</p>
+</div>
+
+<p>it also tends to be the most interesting part of your page, and frankly what i spend the most time on <span class="whisper">as i also try to make my projects mobile-friendly, which i find to be a fun challenge.</span></p>
+
+<p>umm that said css can be really intimidating and confusing, especially as a beginner. and i think i wanna write this from the perspective of someone who has grown to love it, but still has a lot to learn. i think i really want to say that learning about grid/flex layouts really changed this world for me, and gave me a stronger sense of control over what i build. <span class="whisper">it also helped to learn and keep in mind that the <code>&lt;body&gt;</code> element has a default 8px margin, which i generally suggest setting to 0.</span></p>
+
+<h2>styling the whole page, not the sections</h2>
+
+<p>so this is where this gets really subjective and situational. NOT all pages are the same, not all pages must be the same. however for me, as an individual and a developer, there are going to be some trends in the things i make, i'm honestly writing this to talk out these trends and tendencies i'm picking up. it doesn't mean that everything i make is THE SAME, they certainly aren't, but i notice myself repeating the same steps often!</p>
+
+<p>when i design a site or page, i always start with the sketch of the overall layout. maybe i don't even know what to title the page yet, i kinda just scribble where words should be, but the point is i start by thinking out the layout. which means that, ultimately, i start my project thinking about the css before the html. <span class="whisper">debatedly, honestly, as a key part of your html is how you group things, and at this point i <em>am</em> in fact thinking about how things are grouped together. i suppose that layout is at the intersection of html and css, if you'd like to think of it this way... however...</span> i try to decide if the layout i'm drawing should be <em>flex</em> or a <em>grid</em>, or if i should just keep it to the default vertical-only layout.</p>
+
+<p>when i actually get to the coding part, i of course start with the html, as you need content in order to <em>style</em> the content. however, this step is where it gets tricky for me. sure, i can write out a bunch of "lorem ipsum", but my struggle comes with deciding how to mark different elements. should the main section of the page just be a <code>&lt;main&gt;</code> element? or should that <code>&lt;main&gt;</code> have a class? should this secondary nav menu also be a <code>&lt;nav&gt;</code> element? do i style the element or the class? do i split these properties between two different classes? three different classes? WHAT AM I SUPPOSED TO NAME ALL THESE CLASSES? <em>WHICH PARTS DO I GIVE IDS!!!!</em></p>
+
+<p>anyways um. it's a lot. and i have these questions often. recently i completed a demo site for an unrelated project, and at a certain point i realized that i needed to restructure not the webpage or layout itself, but how i wrote my css. i'm still in the middle of this, it is TIRING and i don't WANNA! but, i'm trying to answer some of the above questions: i <em>will</em> be using more classes, and splitting up properties between multiple classes -- that will make more classes re-usable, which will make new pages easier to build, AND will make the visuals overall more consistent! i also plan on separating the pages <em>overall</em> layout from the smaller sub-layouts, or the reusable layouts [think evenly-spaced flexes, little rows of buttons, so on...]</p>
+
+<p>so this sort of brings me to my next branch of the rant:</p>
+
+<h2>layout vs fashion</h2>
+
+<p>what i mean here is: placement/spacing vs colors/fonts/so on. distinguishing between properties that determine these two things has rewired how i think about css, and honestly made a lot of things much more manageable.</p>
+
+<p>for example, here are some css properties i think of as "layout" properties:</p>
+
+<ul>
+    <li><code>padding</code></li>
+    <li><code>margin</code></li>
+    <li><code>display</code></li>
+    <li><code>position</code></li>
+    <li><code>height</code>/<code>min-height</code>/<code>max-height</code></li>
+    <li><code>width</code>/<code>min-width</code>/<code>max-width</code></li>
+    <li><code>order</code></li>
+    <li><code>flex</code></li>
+    <li><code>grid-area</code></li>
+    <li><code>gap</code></li>
+    <li><code>align-items</code></li>
+    <li><code>justify-content</code></li>
+    <li><code>top</code></li>
+    <li><code>right</code></li>
+    <li><code>bottom</code></li>
+    <li><code>left</code></li>
+    <li><code>z-index</code></li>
+    <li>and more...</li>
+</ul>
+
+<p>and here are properties i think of as "fashion":</p>
+
+<ul>
+    <li><code>background-color</code>/<code>background-image</code>/<code>background</code></li>
+    <li><code>color</code></li>
+    <li><code>font-family</code></li>
+    <li><code>font-weight</code></li>
+    <li><code>font-style</code></li>
+    <li><code>text-decoration</code></li>
+    <li><code>text-transform</code></li>
+    <li><code>border-radius</code></li>
+    <li>and of course more...</li>
+</ul>
+
+<div class="notes">
+    <p>just looking at these lists, ummm you may notice that i could think of more layout properties off the top of my head than fashion properties. and this is because, technically speaking, i'm pretty sure there are more layout properties than fashion properties. for example, flex and grid layouts each have so many properties! both for the parent container AND the flex/grid items.</p>
+</div>
+
+<p>i hope this sorta illustrates the two categories i have in my head. but alas! there are dilemmas...</p>
+
+<p>for instance: <code>border</code>. where does it go! is the border property for fashion-only? no, because a border with <em>any</em> thickness <span class="whisper">ie, any visible border</span> has consequences on the layout around it <span class="whisper">see: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the box model</a></span>.</p>
+
+<div class="notes">
+    <p>do borders make things harder for you? do you want a border that doesn't mess with the layout and spacing of your page? TADA!!!!! see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline">outline</a> property.</p>
+    <p>a good use for <code>outline</code> is when you want a 'border' to appear around an element on hover. the <code>border</code> property would make it wiggle around awkwardly in many cases.</p>
+</div>
+
+<p>i'm getting off-topic. i mean to say that <code>border</code> as a property may add a certain fashion or aesthetic to a page, but it also <em>technically</em> is a layout thing, as border has a place on the box model. so where i put it for my own purposes tends to be contextual! <span class="whisper">but it more often than not goes under fashion it seems...</span></p>
+
+<p>there are other properties that break this binary as well. for example: <code>content</code>, a property that only really applies to <code>::before</code> and <code>::after</code> pseudo elements. the value of this property <em>can</em> determine the height/width of the psuedo element technically speaking, but it is again contextual to how you use it! i would even argue that shoe-horning the <code>content</code> property into one of my categories would be excluding or erasing its purpose <span class="whisper">sorta like gender, this binary is a construct that does not help or include everyone, but can be used to simplify things.</span></p>
+
+<div class="notes">
+    <p>learn more about these mysterious psuedoelements <a href="https://www.w3schools.com/CSS/css_pseudo_elements.asp">here</a>!</p>
+</div>
+
+<p>anyways, as a quick summary: i like to separate my css rules into two categories, "layout" and "fashion", as those are two central purposes css serves. by separating them, i can run through a checklist of getting the fashion <span class="whisper">at least in the neighborhood of</span> where i'd like, and then i can focus more on what it takes to get the page laid out as i'd like. "fashion" and "layout" have some points of intersection, and i think that how these two interact is what design is all about BABEY!!!!!!! or not, i dunno, what do you think it's about!</p>
+
+<h2>how to center a div</h2>
+
+<p>because this is in fact where i post <em>tutorials</em> and not my private diary, here is something to be of direct and practical use: how to center a div. by wormboy 3. sponsored by nature valley granoly bar.</p>
+
+<p>my friends ask me all the time... Wwom boy... how doyou center that div? and you know what i tell them? "hey man, define "center". do you want the div to be the center of the page? the center of a section on a page? do you want to center its content? what are you saying?"</p>
+
+<p>it's TRUE! what ARE you sayign! the first one probably. i know it's the first one. i was like you once, typing it madly into google and crying when it told me to use flex. i know. it's ok. i know.</p>
+
+<p>so let's do something simple: we're going to make a page that has a nice background, and one div in the smack dab center. what i'm gonna talk about here will hopefully get you started on your css flex journey, and you can apply these principles to all sorts of things.</p>
+
+<p>step one: html</p>
+
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;simple page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;p&gt;my virtual business card. or whatever.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>BAM. simple as it gets. your body has one thing: a little div. awesome</p>
+
+<p>step two: css</p>
+
+<pre><code class="language-css">
+body {
+    /* make it as tall as the viewport, and disable scrolling. */
+    height: 100vh;
+    overflow: hidden;
+    /* like i said before -- default is 8px. GET RID OF IT!!! */
+    margin: 0;
+
+    /* flex properties */
+    display: flex;
+    align-items: center; /* align vertically */
+    justify-content: center; /* align horizontally */
+
+    /* fashion properties */
+    background-image: url(https://wormboy3.neocities.org/assets/images/carpet.png);
+}
+
+.card {
+    /* fashion properties*/
+    background-color: white;
+
+    /* 
+    optional height/width. 
+    note: percentages are relative to the parent element [in this case: the body] 
+    */
+    height: 20%;
+    width: 30%;
+}
+</code></pre>
+
+<p>and ta-da! the div is centered! you will have a page with my silly carpet background, and a white rectangle in the middle, with times new roman font in black. awesome! it's not very pretty, but awesome!</p>
+
+<p>the content within has not been styled to sit in the center of the card div. the card div hasn't even gotten a border. if you're so inclined, try playing around with the following code -- i even squished it into one file.</p>
+
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;test&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            /* layout */
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* fashion */
+            background-image: url(https://wormboy3.neocities.org/assets/images/carpet.png);
+        }
+
+        .card {
+            /* fashion */
+            background-color: white;
+
+            /* optional height/width. */
+            height: 20%;
+            width: 30%;
+
+            /* add padding here! or make it another flex to center the p! do WHATEVER YOU WANT BABEY!!!*/
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;p&gt;my epic website content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>anyways.</p>
+
+<h2>conclusion</h2>
+
+<p>i didn't go as deep tonight as i wanted, but alas! it was good to get some thoughts out there. let me know what you thought, if you bothered to read? if this was way out there, i apologize, but it's been on my mind a lot and i've been thinking about ways to make css more approachable when i'm helping friends out with it.</p>
+
+<p>i should really get back to that project i mentioned, but it's sleepy time now. worm boy just started lexapro!</p>

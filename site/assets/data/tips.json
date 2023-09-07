@@ -5,6 +5,21 @@
         "index": [
             {
                 "category": "css",
+                "id": 3,
+                "dateCreated": "09/06/2023",
+                "dateModified": null,
+                "title": "my thoughts on css philosophy",
+                "contentPath": "assets/data/tutorials/css-3.html",
+                "readMore": [
+                    ["what is css? [w3schools]", "https://www.w3schools.com/css/css_intro.asp"],
+                    ["mozilla article/documents on css layout", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout"],
+                    ["guidelines for css code", "https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS"],
+                    ["css flex cheatsheet", "https://www.freecodecamp.org/news/flexbox-the-ultimate-css-flex-cheatsheet/"],
+                    ["css grid guide", "https://css-tricks.com/snippets/css/complete-guide-grid/"]
+                ]
+            },
+            {
+                "category": "css",
                 "id": 2,
                 "dateCreated": "07/19/2023",
                 "dateModified": "08/30/2023",
