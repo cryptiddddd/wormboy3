@@ -132,6 +132,7 @@ div.notes {
         margin: 0 1em;
         padding-top: 2em;
         width: unset;
+        min-width: unset;
     }
 
     #page-content {
