@@ -259,6 +259,16 @@
                 "comment": "preview your site on your computer PRIVATELY !!! and easily.",
                 "text": "vscode local preview server extension",
                 "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server"
+            },
+            {
+                "comment": "creates little file structure trees!!!! awesome. i keep forgetting about this",
+                "text": "ascii tree generator",
+                "url": "https://ascii-tree-generator.com/"
+            },
+            {
+                "comment": "another file tree generator! this one is pretty nice too i prefer its ascii",
+                "text": "another ascii tree generator",
+                "url": "https://tree.nathanfriend.io/"
             }
         ]
     },
