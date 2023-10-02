@@ -135,10 +135,6 @@ ul {
     list-style-type: square;
 }
 
-#fav-artists li::marker {
-    color: var(--accent);
-}
-
 li {
     text-indent: -1em;
 }
