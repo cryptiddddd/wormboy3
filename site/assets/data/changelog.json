@@ -1,5 +1,13 @@
 [
     {
+        "date": "11/13/2023",
+        "title": "css fix, new article",
+        "body": "i MISSED THIS HI!!1 today i fixed the css on my <a href='/gallery.html'>art</a> page, and added a <a href='/tips.html?c=web&a=2'>new article</a>.</p><p>and because i can, a brief ramble about my life and times. i've been working on a couple other projects, one of which being a fancy professional website that's been taking a lot of time, it's volunteer work but i'm learning a lot, and it's definitely worth it because it'll be replacing a website that nobody uses or likes using right now!",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/87626c4d4d135d103784d7c774abda42b640268e",
+        "id": 15,
+        "isMajor": false
+    },
+    {
         "date": "08/26/2023",
         "title": "SECRET music api launch",
         "body": "LOG EDITED what did i do! i made a secret personal api to get myself and my friends spotify data to display on neocities. and it is secret so don't tell anyone ok? i put a lot of work into it though. anyways now will wood and queef jerky on my homepage.",
