@@ -63,6 +63,21 @@
         "index": [
             {
                 "category": "web",
+                "id": 2,
+                "dateCreated": "11/12/2023",
+                "dateModified": null,
+                "title": "changing css with javascript",
+                "contentPath": "assets/data/tutorials/web-2.html",
+                "readMore": [
+                    ["inline vs internal vs external css", "https://www.w3schools.com/CSS/css_howto.asp"],
+                    ["mozilla on dynamic styling", "https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"],
+                    ["mozilla documentation on css style declaration object (how to interact with styles via javascript", "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration"],
+                    ["mozilla's reference on cssom", "https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model"],
+                    ["css tricks on the cssom", "https://css-tricks.com/an-introduction-and-guide-to-the-css-object-model-cssom/"]
+                ]
+            },
+            {
+                "category": "web",
                 "id": 1,
                 "dateCreated": "07/23/2023",
                 "dateModified": "07/26/2023",
