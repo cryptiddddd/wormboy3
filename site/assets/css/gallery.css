@@ -95,6 +95,10 @@ section {
     transition: background-color 500ms ease-in-out;
 }
 
+.button:last-child {
+    justify-self: end;
+}
+
 .button:hover {
     background-color: #fff1;
 }
@@ -105,10 +109,11 @@ section {
 
 main {
     align-items: center;
-    display: flex;
-    flex-flow: row nowrap; 
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    gap: 1em;
     height: 500px;
-    justify-content: space-between;
     margin: 0 auto 1em;
     width: var(--common-width);
 }
@@ -195,7 +200,9 @@ footer {
     }
 
     main {
-        flex-wrap: wrap;
+        grid-template: "i i"
+                       "t t"
+                       "l r";
         height: unset;
         width: 90%
     }
@@ -203,10 +210,11 @@ footer {
     #highlight-img {
         max-height: unset;
         max-width: 100%;
+        grid-area: i;
     }
 
     #highlight-text {
-        flex: 1 0 100%;
+        grid-area: t;
     }
     
     #highlight-title {
@@ -219,10 +227,11 @@ footer {
     }
 
     .button:first-of-type {
-        order: 3;
+        grid-area: l;
     }
+
     .button:last-of-type {
-        order: 4;
+        grid-area: r;
     }
 }
 
