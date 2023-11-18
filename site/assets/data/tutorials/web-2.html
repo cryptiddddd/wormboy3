@@ -1,0 +1,92 @@
+<p>shout out to <a href="https://everetcetera.neocities.org/">everetcetera</a> for inspiring this ramble! this ""article"" is about how to alter your webpage's css styling with javascript. i will talk about a couple different ways to do this, but please keep in mind that this is by no means an exhaustive list. further, every body do thing different!!!!!!!!!!!!!</p>
+
+<h2>adding inline styling</h2>
+
+<div class="notes">
+    <p>if you do not know about the differences between inline, internal, and external css, <a href="https://www.w3schools.com/CSS/css_howto.asp">check out what w3schools has to say</a>. for this article, i will remind you: inline styling has priority over internal and external styling.</p>
+</div>
+
+<p>with javascript, you can add/alter/remove attributes from your html elements. adding styling is therefore pretty easy. here is my approach:</p>
+
+<pre><code class="language-js">
+// get the element
+let element = document.getElementById("special-boy");
+
+// apply special styling.
+element.style.color = "magenta"; 
+</code></pre>
+
+<p>which changes your code like so!:</p>
+
+<pre><code class="language-html">    
+&lt;!-- before --&gt;
+&lt;p id="special-boy"&gt;lala lalaa! elmo world!&lt;/p&gt;
+
+&lt;!-- after --&gt;
+&lt;p id="special-boy" style="color: magenta;"&gt;lala lalaa! elmo world!&lt;/p&gt;
+</code></pre>
+
+<p>here, you access an element's style with the <code>.style</code> property, which holds sub-properties for every css property. for instance, you could also change <code>element.style.background</code> to edit the background property, or <code>element.style.backgroundColor</code> to edit the background-color property.</p>
+
+<div class="notes">
+    <p>note the difference in capitalization and lack of hyphens. in the css language, individual words in a property name are separated by hyphens (<code>-</code>), whereas in javascript, individual words are in camel case (camelCase). <span class="whisper">this is because in javascript, hyphens are an invalid character to include in a variable name, as they represent an arithmetic operation!</span></p>
+</div>
+
+<p>this strategy works for one element, or you could loop and do it for multiple elements as needed -- especially if you want to do something like giving a series of elements each their own colors.</p>
+
+<hr class="checkpoint">
+
+<h2>add a class to an element</h2>
+
+<p>instead of altering an elements <code>style</code> attribute, you could alter its <code>class</code> attribute, and add [or remove!] a class. the page's styling will immediately update.</p>
+
+<p>the <code>class</code> attribute is accessed like so:</p>
+
+<pre><code class="language-js">
+// get the element
+let element = document.getElementById("regular-boy");
+
+// add a new class.
+element.classList.add("special");
+</code></pre>
+
+<p>which alters your code like so:</p>
+
+<pre><code class="language-html">
+&lt;!-- before --&gt;
+&lt;p id="regular-boy"&gt;wah! wawawa! wa!&lt;/p&gt;
+
+&lt;!-- after --&gt;
+&lt;p id="regular-boy" class="special"&gt;wah! wawawa! wa!&lt;/p&gt;
+</code></pre>
+
+<p>as shown, the <code>classList</code> property is the list of classes applied to an element [the same values written in the html tag like so: &lt;p class="one two three"&gt;], and the <code>classList.add()</code> method allows you to append a new class to the element.</p>
+
+<hr class="checkpoint">
+
+<h2>altering the page's css rules</h2>
+
+<p>i actually learned something new during my research: you can in fact edit the css rules of a page. i have never done this before, but just like how there is a DOM [document object model], there is a <a href="https://css-tricks.com/an-introduction-and-guide-to-the-css-object-model-cssom/">CSSOM</a> [cascading stylesheets objectmodel, or css object-model] <span class="whisper">which i didn't even know about.</span></p>
+
+<p>i should note: the practicality of this moves into a more advanced territory. for example: if you don't want to alter an element's style, but you want to read <em>from</em> an element's style, that is where the cssom would come in.</p>
+
+<div class="notes">
+    <p>I SHOULD ALSO NOTE: I HOPE TO BE ACCURATE BUT I HAVEN'T REALLY WORKED WITH THIS BEFORE! I COULD BE WRONG!!!! i link documentation below :]</p>
+</div>
+
+<p>in my first example, we altered an element's color with <code>element.style.color</code>, which set its <em>inline</em> color. <code>element.style</code> only includes inline styling, it will not tell you what color the element appears on your screen. here is where cssom comes in:</p>
+
+<pre><code class="language-js">
+    // retrieve text color
+    let textColor = window.getComputedStyle(document.body).color;
+
+    // print it babey!
+    console.log(textColor);
+</code></pre>
+
+<p>the <code>window</code> object has a method to get the "computed" style of a given element [in this example, the given element being <code>document.body</code>. the method <code>window.getComputedStyle()</code> will return an object that holds all the computed style properties of the given element. this includes internal/external styling!</p>
+
+<p>as i have not worked with this before, i don't have too much to say about it. maybe go experiment yay!!!!!</p>
+
+<hr class="checkpoint">
+
