@@ -69,6 +69,11 @@
                 "comment": "read it online.. FREE.. um yeah so i haven't read it yet but i'm getting started on it < 3",
                 "text": "read tokyo ghoul",
                 "url": "http://tokyoghoul.xyz"
+            }, 
+            {
+                "comment": "interactive music videos these are so FREAKING COOL!!!!!!!!!!!!!!!!!!!!!!!!!!!! get on desktop and listen to a tunes.",
+                "text": "a number from the ghost",
+                "url": "https://www.anumberfromtheghost.com/"
             }
         ]
     },
@@ -218,6 +223,10 @@
                 "comment": "yeah.. yeah i use vscode. see the coding tools section for extensions",
                 "text": "vscode text editor",
                 "url": "https://code.visualstudio.com/"
+            }, {
+                "comment": "three dee wonderland IN YOUR BROWSER!!!!! DUDE....",
+                "text": "threejs library",
+                "url": "https://threejs.org/"
             }
         ]
     },
