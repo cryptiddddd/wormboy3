@@ -67,7 +67,7 @@ div.title, div.title span, img, div.free-elem {
 
 /* body and body elements.. */
 body {
-    background: var(--page-bg);
+    background: var(--page-bg) #000;
     color: var(--font-color);
     font-family: var(--font);
     font-size: var(--font-size);
