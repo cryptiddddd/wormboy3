@@ -35,13 +35,13 @@ var currentID: number;
 
 // calendar words
 const DOTW = [
+    "sunday",
     "monday",
     "tuesday",
     "wednesday",
     "thursday",
     "friday",
-    "saturday",
-    "sunday"
+    "saturday"
 ];
 
 const MONTHS = [
@@ -75,7 +75,7 @@ function setHighlight(artID: number) {
     displayTitle.innerText = piece.title;
     
     let date = new Date(piece.date);
-    displayCaption.innerText = `${DOTW[date.getDay() - 1]}, ${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+    displayCaption.innerText = `${DOTW[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
     currentID = artID; // remember it
 };

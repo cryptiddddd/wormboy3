@@ -130,5 +130,5 @@ function autoOpen(): void {
 
     // insert before footer, for mobile viewer convenience.
     let footer = document.getElementById("footer-win");
-    document.body.lastElementChild.insertBefore(wrapper, footer);
+    footer.parentElement.insertBefore(wrapper, footer);
 };

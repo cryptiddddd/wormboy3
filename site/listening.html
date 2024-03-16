@@ -23,8 +23,11 @@
         }
 
         body {
+            background: black;
+            color: white;
             margin: 0;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
         #collage {
@@ -42,13 +45,22 @@
             max-height: var(--image-size);
             max-width: var(--image-size);
         }
+
+        /* loading message */
+        #collage:empty {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #collage:empty::before {
+            content: "uh oh.. loading...";
+        }
     </style>
 
     <script type="module" src="assets/js/music.js"></script>
 </head>
 <body onload="recentlyPlayedCollage('collage', 30)">
-    <div id="collage">
-        <!-- loading images... -->
-    </div>
+    <!-- loading images... -->
+    <div id="collage"></div>
 </body>
 </html>

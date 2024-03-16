@@ -74,6 +74,16 @@
                 "comment": "read it online.. FREE.. um yeah so i haven't read it yet but i'm getting started on it < 3",
                 "text": "read tokyo ghoul",
                 "url": "http://tokyoghoul.xyz"
+            }, 
+            {
+                "comment": "interactive music videos these are so FREAKING COOL!!!!!!!!!!!!!!!!!!!!!!!!!!!! get on desktop and listen to a tunes.",
+                "text": "a number from the ghost",
+                "url": "https://www.anumberfromtheghost.com/"
+            }, 
+            {
+                "comment": "i go here just about every day and i think about it every night. i love you geometric unicode shapes. i have a poster on my ceiling",
+                "text": "wikipedia page on geometric unicode characters",
+                "url": "https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)"
             }
         ]
     },
@@ -223,6 +233,10 @@
                 "comment": "yeah.. yeah i use vscode. see the coding tools section for extensions",
                 "text": "vscode text editor",
                 "url": "https://code.visualstudio.com/"
+            }, {
+                "comment": "three dee wonderland IN YOUR BROWSER!!!!! DUDE....",
+                "text": "threejs library",
+                "url": "https://threejs.org/"
             }
         ]
     },
