@@ -149,6 +149,7 @@ main {
 
 .button-wrapper img {
     border: var(--win-border);
+    width: 88px;
 }
 
 #friend-buttons, #other-buttons {
