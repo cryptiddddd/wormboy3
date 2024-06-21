@@ -82,7 +82,15 @@ button {
     font-size: var(--font-size);
 }
 
+input {
+    accent-color: var(--accent);
+}
+
 /* text styles */
+pre {
+    font-size: 12px;
+}
+
 hr {
     color: var(--accent);
     opacity: 70%;
@@ -231,5 +239,15 @@ li {
         height: unset!important;
         min-height: unset!important;
         overflow-y: auto;
+    }
+
+    .v-flex-mobile {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
+    .contents-mobile {
+        display: contents;
     }
 }

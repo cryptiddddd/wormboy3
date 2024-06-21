@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="darkreader-lock">
+
+    <title>markdown to html!</title>
+
+    <!-- preview meta -->
+    <meta property="description" content="worm boy web site !!!!!!!!!!!! ">
+    <meta property="og:site_name" content="wormboy3">
+    <meta property="author" content="wormboy">
+    <meta name="theme-color" content="#9313c5">
+    <meta name="og:image" itemprop="image" content="/assets/images/green_pink_worm.png">
+	
+    <!-- google font[s] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- highlightjs -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <!-- theme for highlightjs -->
+    <link rel="stylesheet" href="assets/css/yukaii-dark-dimmed.css">
+
+    <!-- mine -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/tool.css">
+    <link rel="icon" href="assets/worm.ico">
+
+    <script type="module" src="assets/js/markdown.js"></script>
+
+    <!-- script appends call to highlightjs when ready -->
+    <script id="script-hljs">hljs.highlightAll();</script>
+</head>
+<body>
+    
+    <header class="tool-header">
+        <a href="index.html">⟵ return to wormboy3</a>
+    </header>
+
+    <main class="h-flex contents-mobile">
+
+        <section class="input-panel">
+            <h2>markdown input</h2>
+            <textarea id="input" placeholder="typy typyt here"></textarea>
+        </section>
+
+        <section class="output-panel">
+            <h2>html/preview output</h2>
+            <!-- place for output -->
+            <div>
+                <pre><code class="language-html" id="output">&lt;!-- code will appear here! --&gt;</code></pre>
+            </div>
+
+            <div class="h-flex">
+                <label for="render-preview">
+                    <input type="checkbox" id="auto-preview" />
+                    render preview automatically
+                </label>
+                
+                <button id="copy-text">copy html to clippyboard</button>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>

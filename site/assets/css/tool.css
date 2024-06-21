@@ -1,0 +1,80 @@
+/* styling for the markdown tool */
+
+:root {
+    --bg: #000a;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+
+    overflow-y: auto;
+    height: 100dvh;
+    padding-bottom: 1em;
+    box-sizing: border-box;
+}
+
+header.tool-header {
+    background-color: var(--bg);
+    border-bottom: var(--content-border);
+    padding: 1em 1ex;
+}
+
+main {
+    gap: 2em;
+    padding: 0 1em;
+    flex: 1 0 auto;
+}
+
+section {
+    background-color: var(--bg);
+    border: var(--content-border);
+    box-sizing: border-box;
+    padding: 2em 1em;
+
+    flex: 1 1 auto;
+}
+
+
+/* INPUT styling . augh */
+
+textarea, button, input {
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+    border: none;
+
+    accent-color: var(--link);
+}
+
+textarea, button {
+    padding: 1ex 1em;
+}
+
+textarea {
+    border: var(--content-border);
+    box-sizing: border-box;
+    resize: vertical;
+    margin: 0 auto;
+    width: 100%;
+
+    min-height: 4em;
+}
+
+button {
+    background-color: var(--link);
+    border-radius: 5px;
+    color: black;
+}
+
+button:hover {
+    background-color: var(--link-hover);
+    text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+    section {
+        border-width: 1px 0;
+    }
+}
