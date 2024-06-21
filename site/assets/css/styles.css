@@ -1,9 +1,12 @@
 :root {
-    --page-bg: url("../images/carpet.png");
-
+    /* constants */
     --font: 'VT323', 'Courier New', monospace;
-    --font-color: #fff;
     --font-size: 16px;
+    --content-border: 1px solid var(--accent);
+    
+    /* colors / theme pieces */
+    --page-bg: url("../images/carpet.png");
+    --font-color: #fff;
     --accent: #9313c5;
     --accent-glow: #bd17d3;
     --secondary-accent: #f7f71c;
@@ -13,8 +16,6 @@
     --link: #61e20c;
     --link-hover: #cbf122;
     --link-visited: #13c74f;
-    
-    --content-border: 1px solid var(--accent);
 }
 
 /* defining scroll bar */
