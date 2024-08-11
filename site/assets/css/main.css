@@ -260,14 +260,14 @@ div.content > :first-child {
 #music-win {
     left: 64%;
 
-    flex: 1 1 30%;
+    flex: 1 1 20%;
 }
 
 #webring-win {
     left: 61%;
     top: 49%;
 
-    flex: 1 1 40%;
+    flex: 1 1 30%;
 }
 
 #blinkie-win {
@@ -288,6 +288,8 @@ div.content > :first-child {
     left: 3%;
     top: 20%;
     max-width: 400px;
+
+    flex: 1 1 30%;
 }
 
 #changelog-wrapper {
