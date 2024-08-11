@@ -259,11 +259,15 @@ div.content > :first-child {
 
 #music-win {
     left: 64%;
+
+    flex: 1 1 30%;
 }
 
 #webring-win {
     left: 61%;
     top: 49%;
+
+    flex: 1 1 40%;
 }
 
 #blinkie-win {
@@ -277,7 +281,7 @@ div.content > :first-child {
 }
 
 .blinkie {
-    flex: 30%;
+    flex: 1 1 30%;
 }
 
 #changelog-win {
@@ -313,6 +317,7 @@ div.content > :first-child {
 /* other? */
 #focbwr {
     border: 1px solid var(--whisper-color);
+    margin: auto;
 }
 
 @media (max-width: 960px) {
