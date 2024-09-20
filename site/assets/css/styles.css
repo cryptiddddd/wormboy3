@@ -184,6 +184,10 @@ li {
     justify-content: space-between;
 }
 
+.gap-1 {
+    gap: 1em;
+}
+
 /* animations */
 .new {
     display: inline-block;

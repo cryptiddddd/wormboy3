@@ -22,9 +22,16 @@ header.tool-header {
 }
 
 main {
-    gap: 2em;
-    padding: 0 1em;
+    gap: 1em;
+
+    box-sizing: border-box;
     flex: 1 0 auto;
+    max-width: 100%;
+    padding: 0 1ex;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
 }
 
 section {
@@ -32,8 +39,7 @@ section {
     border: var(--content-border);
     box-sizing: border-box;
     padding: 2em 1em;
-
-    flex: 1 1 auto;
+    max-width: 100%;
 }
 
 
@@ -52,14 +58,18 @@ textarea, button {
     padding: 1ex 1em;
 }
 
-textarea {
+textarea, input[type=text] {
     border: var(--content-border);
     box-sizing: border-box;
+}
+
+textarea {
     resize: vertical;
     margin: 0 auto;
-    width: 100%;
+    width: 100% !important;
 
     min-height: 4em;
+    height: 10em;
 }
 
 button {
@@ -73,8 +83,33 @@ button:hover {
     text-transform: uppercase;
 }
 
+#custom {
+    padding: 1ex 0;
+}
+
+#output {
+    resize: vertical;
+    overflow: auto;
+
+    max-height: 500px;
+    white-space: break-spaces;
+
+    padding: 1em;
+    box-sizing: border-box;
+    
+}
+
 @media (max-width: 960px) {
+    main {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+    }
+
     section {
         border-width: 1px 0;
+    }
+
+    #output {
+        max-width: unset;
     }
 }
