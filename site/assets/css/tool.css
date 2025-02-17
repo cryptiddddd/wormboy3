@@ -61,6 +61,7 @@ textarea, button {
 textarea, input[type=text] {
     border: var(--content-border);
     box-sizing: border-box;
+    width: 100%;
 }
 
 textarea {
@@ -85,6 +86,7 @@ button:hover {
 
 #custom {
     padding: 1ex 0;
+    flex-direction: column-reverse;
 }
 
 #output {
