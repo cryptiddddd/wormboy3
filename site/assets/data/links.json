@@ -166,6 +166,11 @@
                 "comment": "consistently adorable little pixels, really satisfying to look at and they're all little squares! yay!",
                 "text": "vashti's pixel collection",
                 "url": "https://vashti.neocities.org/pix"
+            },
+            {
+                "comment": "free textures?? for projects??? yes please",
+                "text": "texturelabs",
+                "url": "https://texturelabs.org/"
             }
         ]
     },
@@ -293,6 +298,16 @@
                 "comment": "another file tree generator! this one is pretty nice too i prefer its ascii",
                 "text": "another ascii tree generator",
                 "url": "https://tree.nathanfriend.io/"
+            },
+            {
+                "comment": "a nice gradient generator to create a color palette from",
+                "text": "gradient generator",
+                "url": "https://colordesigner.io/gradient-generator"
+            },
+            {
+                "comment": "for linux users: a tool to help design and preview a color palette for your terminal",
+                "text": "terminal.sexy",
+                "url": "https://terminal.sexy/"
             }
         ]
     },
