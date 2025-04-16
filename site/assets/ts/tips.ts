@@ -5,9 +5,19 @@ written in typescript, compiled with tsc.
 
 this file written by... WORMBOY!!!!
 */
+
+// @ts-ignore Import module
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
 import { fetchJSON, fetchTXT, recentEntry } from "./get_data.js";
 import { getQueries, isEmpty, QueryDict } from "./parse_query.js";
 
+
+// TODO: move this to a common file
+marked.use({
+    breaks: true,
+    gfm: true
+});
 
 // define data structures. article data is the smallest structure...
 interface ArticleData {
@@ -128,7 +138,7 @@ function loadArticle(article: ArticleData): void {
     // fill out article body
     function buildArticle(data: string): void {
         // fill data.
-        articleDiv.innerHTML += data;
+        articleDiv.innerHTML += article.contentPath.endsWith(".md")? marked.parse(data): data;
 
         // then create readmore section.
         fillArticleReadmore(article);
