@@ -124,6 +124,15 @@ div.notes {
     text-align: right;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid white;
+    padding: 1ex;
+}
+
 
 /* mobile */
 @media (max-width: 960px) {
