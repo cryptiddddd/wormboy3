@@ -63,6 +63,15 @@
         "index": [
             {
                 "category": "web",
+                "id": 3,
+                "dateCreated": "04/20/2025",
+                "dateModified": null,
+                "title": "guide to various free web host services",
+                "contentPath": "assets/data/tutorials/web-3.md",
+                "readMore": []
+            },
+            {
+                "category": "web",
                 "id": 2,
                 "dateCreated": "11/12/2023",
                 "dateModified": null,

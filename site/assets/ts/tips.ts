@@ -103,6 +103,8 @@ function fillArticleHeader(data: ArticleData): void {
  * @return no return, just edits the document.
  */
 function fillArticleReadmore(data: ArticleData): void {
+    if (!data.readMore.length) return;
+    
     // create title
     let title = document.createElement("h2");
     title.id = "read-more";
