@@ -18,6 +18,7 @@ Please note:
 | --------------------------------------------------------------- | :----------------------: | ---------------------------- | ------------------------------------------------------------------ |
 | Neocities<br>([neocities.org](https://neocities.org/))          | With $5/month membership | [account name].neocities.org | 1GB storage; 1 site; certain file types (video/music restricted). |
 | GitHub Pages<br>([pages.github.com](https://pages.github.com/)) |           Yes            | [username].github.io         |                                                                    |
+| NekoWeb<br>([nekoweb.org](https://nekoweb.org/))               |           Yes            | [project].nekoweb.org | 500 max files; 500MB storage.                                              |
 | Static.App<br>([static.app](https://static.app/))               |           Yes            | [project].static.domains     | 1 site; 50MB storage.                                              |
 
 ### Neocities
@@ -31,6 +32,13 @@ Neocities is very user- and beginner-friendly: you can drag and drop files to up
 GitHub Pages is static site hosting provided by GitHub. Every account supports one Pages site -- this site is created by making a public repository named "username.github.io" (wherein "username" is your username). The content of this repository will then be publicly accessible as a static site via that URL. 
 
 GitHub Pages, by nature of being a Git repository, provides all the features GitHub offers for all other hosted repositories, and is very developer-friendly. There are tools, such as GitHub Actions, to manage and streamline production.
+
+### NekoWeb
+
+NekoWeb is perhaps less popular than Neocities, but it is more sincerely what Neocities wants to be. There are no filetype restrictions, a more accessible API for users, and membership ($3/month) provides access to FTP use.
+
+NekoWeb sites are plain HTML/CSS/JS, and thereby any GitHub Pages or Neocities website can easily be ported over, which the site supports.
+
 
 ### Static.App
 
