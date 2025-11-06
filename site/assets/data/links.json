@@ -92,6 +92,11 @@
         "hashID": "games",
         "items": [
             {
+                "comment": "I LOVE THESE I LOVE YOU GEOMETERY I LVOE YOAUWARHAURHAURH",
+                "text": "euclidea geometry puzzles",
+                "url": "https://www.euclidea.xyz/"
+            },
+            {
                 "comment": "i like to play scrabble here with my friends",
                 "text": "online scrabble",
                 "url": "https://lexulous.com/"
@@ -207,6 +212,11 @@
                 "comment": "PYCORD MY LOVE!!!",
                 "text": "discord bot with python",
                 "url": "https://pycord.dev/"
+            },
+            {
+                "comment": "interactive open source way to learn about shaders and how to write them :D :D :D",
+                "text": "the book of shaders",
+                "url": "https://thebookofshaders.com/"
             }
         ]
     },
@@ -318,6 +328,11 @@
                 "comment": "allows you to use a blackboard in your vscode coding world if you do that. very usey and easy. nice! also just a website that works too",
                 "text": "excalidraw vscode plugin",
                 "url": "https://github.com/excalidraw/excalidraw-vscode"
+            },
+            {
+                "comment": "quick generation of colorized prompt templates for ur bash terminal : ^]",
+                "text": "bash prompt generator",
+                "url": "https://robotmoon.com/bash-prompt-generator/"
             }
         ]
     },
