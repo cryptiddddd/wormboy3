@@ -124,9 +124,29 @@
             }
         ]
     },
-    "baking": {
-        "name": "baking",
-        "description": "someday i'd like to do baking tips..? depression meal tips?",
+    "bash": {
+        "name": "bash",
+        "description": "bash is an interactive shell scripting language typically used on linux systems! these aren't necessarily beginner tutorials, though i wouldn't call myself an expert by any measure.",
+        "index": [
+            {
+                "category": "bash",
+                "id": 0,
+                "dateCreated": "11/06/2025",
+                "dateModified": null,
+                "title": "PROCESS SUBSTITUTION and a quick screenshot utility for linux",
+                "contentPath": "assets/data/tutorials/bash-0.md",
+                "readMore": [
+                    ["more about process substitution", "https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html"],
+                    ["maim package", "https://github.com/naelstrof/maim"],
+                    ["imagemagick package", "https://github.com/ImageMagick/ImageMagick"],
+                    ["more about getting into linux ricing", "https://www.reddit.com/r/linuxquestions/comments/kflzb3/a_noobs_guide_to_linux_ricing/"]
+                ]
+            }
+        ]
+    },
+    "cooking": {
+        "name": "cooking",
+        "description": "someday i'd like to do cooking tips..? depression meal tips?",
         "index": []
     }
 }
