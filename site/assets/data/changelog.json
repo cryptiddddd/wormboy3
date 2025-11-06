@@ -1,5 +1,13 @@
 [
     {
+        "date": "11/06/2025",
+        "title": "updated about",
+        "body": "hi every poney. i made an update to my <a href='/about.html'>about page</a> cuz i reaaalized oh i started this when i was 22 and i never even dtold you about my birthday . unebleivelbale. anyways. minor updates here and there, namely in adding links, but hopefully some writing soon. i've been sick, recovering but sick, and doing a lot of linux fun so i want to maybe document some of my learnings for the yay of it all. anyways. i ove you ",
+        "gitCommit": "https://github.com/cryptiddddd/wormboy3/commit/26ff270818e8190c57d79ac5e722775b8c9e334a",
+        "id": 18,
+        "isMajor": false
+    },
+    {
         "date": "04/16/2025",
         "title": "The return",
         "body": "hello everypony... it has been some time, but maybe this is my return? i have no idea.</p><p>it makes me sad that i haven't kept this site updated much, but then again, the reason for that is because i've learned a lot and graduated to greate larger things quicker. pretty craaazy! but i want this page to grow with me, so... i've considered building it differently, in ways that might not be as easy to look through the source code for... so i'm torn ngl! i also love using just vanilla html/css/ts cuz that feels so pure and that's so refreshing to return to after all the bullshit worm has been doing. guuhh.</p><p>anyways. this is more of a journal than a changelog. all i've done is fixed a few minor things that no longer work (i don't use spotify anymore so..byebye music thang :/), and thinking about what next promise to .. final fulfill.. also i'm working on articles about linux stuff . smile",
