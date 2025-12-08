@@ -91,6 +91,9 @@ div#container {
     justify-content: space-evenly;
     margin: 2em;
     row-gap: 1.5em;
+
+    height: 100%;
+    width: 100%;
 }
 
 div#container:empty::before {
@@ -98,18 +101,38 @@ div#container:empty::before {
     color: #fff8;
 }
 
-div#container div {
-    flex: 0 3 auto;
-    max-width: 20%;
+.woe {
     padding: 0.5em;
     text-align: center;
-    z-index: -1;
 
     /* animations */
     animation-name: fade-in, rock;
     animation-iteration-count: 1, infinite;
     animation-duration: 0.8s, 3s;
     animation-timing-function: ease-in, linear;
+}
+
+button.woe {
+    border: none!important;
+    background-color: transparent!important;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.woe::before {
+    position: absolute;
+}
+
+button.woe:hover > * {
+    visibility: hidden;
+}
+
+button.woe:hover::before {
+    content: "DESTROY";
+    color: red;
 }
 
 /* woe animations */

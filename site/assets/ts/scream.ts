@@ -5,8 +5,22 @@ written in typescript, compiled with tsc.
 
 file written by wormboy!!!
 */
-let woeInput = document.getElementById("woe-input") as HTMLInputElement;
-let woeBtn = document.getElementById("woe-btn") as HTMLButtonElement;
+
+// helper funcs to plug in later
+
+function explodeIt(woe: HTMLElement): void {
+
+
+    miseryVoid.removeChild(woe);
+}
+
+
+// constants / real variables
+const woeInput = document.getElementById("woe-input") as HTMLInputElement;
+const woeBtn = document.getElementById("woe-btn") as HTMLButtonElement;
+
+const miseryVoid = document.getElementById("container") as HTMLDivElement;
+
 
 // connect the woe-input text box to the yell button--autoclick and enabling the button.
 woeInput.addEventListener("keyup", event => {
@@ -28,14 +42,21 @@ woeInput.addEventListener("keyup", event => {
     // protection
     if (woeInput === null || woeInput.value === "") return;
 
-    let newWoe = document.createElement("div");
+    let newWoe = document.createElement("button");
+    newWoe.classList.add("woe");
+    let woeText = document.createElement("span");
+
+
+    // build button
+    newWoe.addEventListener("click", () => explodeIt(newWoe));
 
     // grab user text and reset.
-    newWoe.innerText = woeInput.value;
+    woeText.innerText = woeInput.value;
     woeInput.value = "";
     
-    // add
-    document.getElementById("container").appendChild(newWoe);
+    // build and add
+    newWoe.appendChild(woeText);
+    miseryVoid.appendChild(newWoe);
 };
 
 
@@ -43,11 +64,9 @@ woeInput.addEventListener("keyup", event => {
  * clears all input.
 */
 (window as any).clearVoid = function () {
-    let container = document.getElementById("container");
+    if (miseryVoid.childElementCount == 0) return;
 
-    if (container.childElementCount == 0) return;
-
-    container.innerHTML = "";
+    miseryVoid.innerHTML = "";
 };
 
 
