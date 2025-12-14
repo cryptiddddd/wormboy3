@@ -56,18 +56,23 @@
                 "url": "https://letsmakeamusic.com/"
             },
             {
+                "comment": "this made me actually wnat to learn goegrpahy. my suggestions are cashmere radio in berlin and nonstop casiopea in japan",
+                "text": "world-wide radio",
+                "url": "https://radio.garden/"
+            },
+            {
                 "comment": "CLICKHOLE ADVENTURE!!!!!! this is hilarious please",
                 "text": "can you acquire wine?",
                 "url": "https://clickventures.clickhole.com/you-re-8-years-old-can-you-acquire-wine-without-gettin-1825124363"
             },
             {
                 "comment": "yay free sheet music! mostly pop/radio music.",
-                "text": "sheet music -- tutorials by hugo",
+                "text": "sheet music: tutorials by hugo",
                 "url": "https://www.tutorialsbyhugo.com/sheets/"
             },
             {
                 "comment": "free sheet music! anime and video games.",
-                "text": "sheet music -- theishter",
+                "text": "sheet music: theishter",
                 "url": "https://www.theishter.com/sheet-music.html"
             },
             {
@@ -115,6 +120,11 @@
                 "comment": "another person i don't know who i really admire for what they make.",
                 "text": "npckc on itchio",
                 "url": "https://npckc.itch.io/"
+            },
+            {
+                "comment": "USE ADBLOCK but look now you don't have to download stupid bullshit on your phone you can play in browser and ignore ads yes yesye seyysees",
+                "text": "appstore slop online",
+                "url": "https://poki.com/"
             }
         ]
     },
@@ -181,6 +191,11 @@
                 "comment": "have a zine to print?? helps organiz e  how to do it! put it on page and no brain it.",
                 "text": "zine arranger",
                 "url": "https://nashhigh.itch.io/zinearranger"
+            },
+            {
+                "comment": "want to make a zine??? obsessed w css like the me??? Yeah. i think this is sick i love css",
+                "text": "tutorial: make zine with css",
+                "url": "https://dev.to/rowan_m/create-a-printable-zine-with-css-5c0c"
             }
         ]
     },
@@ -199,8 +214,8 @@
                 "url": "https://regex101.com/"
             },
             {
-                "comment": "w3schools... classic..",
-                "text": "start learning web development -- w3",
+                "comment": "classic starting ptoint for anyone learning, i really do like their quizzes",
+                "text": "w3 schools",
                 "url": "https://www.w3schools.com/where_to_start.asp"
             },
             {
