@@ -30,8 +30,17 @@
                 "url": "https://cryptidddd.itch.io/groceryquest"
             }
         ]
-    },
-    {
+    }, {
+        "title": "zines!!!!",
+        "hashID": "zines",
+        "items": [
+            {
+                "comment": "warning for in-depth drug talk. personally i believe in harm reduction, i think these zines are great educational resources pls be safe and take care of those around you.",
+                "text": "harm reduction zines",
+                "url": "https://dhammaflow.org/hrmrdxzines/"
+            }
+        ]
+    }, {
         "title": "miscellaneous!",
         "hashID": "misc",
         "items": [
