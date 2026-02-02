@@ -132,7 +132,7 @@ button.woe:hover > * {
 
 button.woe:hover::before {
     content: "DESTROY";
-    color: red;
+    color: #bb1600;
 }
 
 /* woe animations */
