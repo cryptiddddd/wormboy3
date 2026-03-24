@@ -146,7 +146,30 @@
     },
     "cooking": {
         "name": "cooking",
-        "description": "someday i'd like to do cooking tips..? depression meal tips?",
-        "index": []
+        "description": "these are some reaslly good meals i made for you and your family.",
+        "index": [
+            {
+                "category": "cooking",
+                "id": 0,
+                "dateCreated": "03/23/2026",
+                "dateModified": null,
+                "title": "tomato chicken pasta",
+                "contentPath": "assets/data/tutorials/cooking-0.md"
+            }, {
+                "category": "cooking",
+                "id": 1,
+                "dateCreated": "03/23/2026",
+                "dateModified": null,
+                "title": "ramen and spam",
+                "contentPath": "assets/data/tutorials/cooking-1.md"
+            }, {
+                "category": "cooking",
+                "id": 2,
+                "dateCreated": "03/23/2026",
+                "dateModified": null,
+                "title": "tomato coconut rice",
+                "contentPath": "assets/data/tutorials/cooking-2.md"
+            }
+        ]
     }
 }
