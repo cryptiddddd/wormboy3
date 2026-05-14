@@ -132,14 +132,15 @@
                 "category": "bash",
                 "id": 0,
                 "dateCreated": "11/06/2025",
-                "dateModified": null,
+                "dateModified": "05/14/2026",
                 "title": "PROCESS SUBSTITUTION and a quick screenshot utility for linux",
                 "contentPath": "assets/data/tutorials/bash-0.md",
                 "readMore": [
                     ["more about process substitution", "https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html"],
                     ["maim package", "https://github.com/naelstrof/maim"],
                     ["imagemagick package", "https://github.com/ImageMagick/ImageMagick"],
-                    ["more about getting into linux ricing", "https://www.reddit.com/r/linuxquestions/comments/kflzb3/a_noobs_guide_to_linux_ricing/"]
+                    ["more about getting into linux ricing", "https://www.reddit.com/r/linuxquestions/comments/kflzb3/a_noobs_guide_to_linux_ricing/"],
+                    ["more about $PIPESTATUS", "https://linuxsimply.com/bash-scripting-tutorial/process-and-signal-handling/exit-codes/pipestatus/"]
                 ]
             }
         ]

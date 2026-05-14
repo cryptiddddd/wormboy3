@@ -4,11 +4,13 @@ lately i've been spending time workign on some linux rices. <span class="whisper
 one thing i wanted to do is to clean up my scfreenshot utility that i use. i have a one-liner that lets me take a screencap of a portion of the screen. here is the command:
 
 ```bash
-maim -s | xclip -selection clipboard -t image/png -i
+maim -s -q -u | xclip -selection clipboard -t image/png -i
 ```
 
 BREAK IT DOWN:
 - `maim` is short for "<em>ma</em>ke <em>im</em>age", which is a program that.. makes image. this is the part where you click and drag to capture an area of da screen, or just click on a window to capture the window (the `-s` argument is what specifies this action)
+    - the `-q` argument silences all error output, just to simplify things
+    - the `-u` argument makes sure to hide your cursor in the screenshot.
 - `|` this vertical pipe rules. this is not a beginner bash tutorial, but basically this pipe dictates that we will "pipe" the output of the first command (maim) into the input of the second command.
 - `xclip` is our second command, and it is basically a nice and simple clipboard utility. thing. it is how we say "put this data on the clipboard so i can paste it somewhere".
 
@@ -60,7 +62,7 @@ great so maybe that make no sense let's see it in action. here is my script for 
 
 ```bash
 # take screenshot
-maim -s | xclip -selection clipboard -t image/png -i
+maim -s -q -u | xclip -selection clipboard -t image/png -i
 
 # read dimensions from clipboard data
 dimensions=$(identify -format "%w × %h" <(xclip -o -selection clipboard))
@@ -85,7 +87,7 @@ let's look at the long way around i could have done this
 
 ```bash
 # take screenshot
-maim -s | xclip -selection clipboard -t image/png -i
+maim -s -q -u | xclip -selection clipboard -t image/png -i
 
 # save clipboard to file
 TEMP_FILE=/tmp/0.png
@@ -116,7 +118,12 @@ hi there if you are on linux and wanna use this script:
 ```bash
 #!/usr/bin/bash
 
-maim -s | xclip -selection clipboard -t image/png -i
+maim -s -q -u | xclip -selection clipboard -t image/png -i
+
+# handle maim cancellation.
+if [[ "${PIPESTATUS[0]}" -ne 0 ]]; then
+    exit 1
+fi
 
 dimensions=$(identify -format "%w × %h" <(xclip -o -selection clipboard))
 
@@ -132,3 +139,14 @@ ensure you have the following dependencies installed:
 then save the above code to a .sh file (ie, "worm-screenshot.sh"), and ensure it has permission to execute.
 
 binding it to a key will depend on your window manager. i use i3, and this is something i can easily bind in the config files. there's some crazy lingo for you, but if you're using something like mint cinnamon edition, you can go to system settings > keyboard and try and make a shortcut from there.
+
+## updates!
+
+though now you've learend about process substitution, i've now improved this bash script and made sure it includes error/cancellation handling!
+
+i've also learned more about piping in this process, and the most important thing i've learned is the variable, `$PIPESTATUS`, which is an array of exit statuses from the most recent pipe. without use of `$PIPESTATUS`, the exit status of the overall piped command is simply the exit status of the final command. ie, you can pipe flawed data into a second command, and if that second command exits successfully, it may not be apparent that ever there was an issue.
+
+i hope this article has taught someone about processes and working with them within the bash interactive shell! even if i've just given an example of a partial screenshot utility :]
+
+the above nippets have been given some corrections, but you can grab a more complete script [here!](https://github.com/cryptiddddd/wormboy-scripts/blob/main/scripts/worm-screenshot.sh)
+
