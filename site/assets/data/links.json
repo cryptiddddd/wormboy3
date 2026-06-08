@@ -289,6 +289,11 @@
         "hashID": "tools",
         "items": [
             {
+                "comment": "what better way to learn how a new language works than to know what you DON'T want to worry about maintaining yourself in a project.",
+                "text": "gitignore templates",
+                "url": "https://www.toptal.com/developers/gitignore"
+            },
+            {
                 "comment": "api to use for site info -- creation date, last updated, views, tags...",
                 "text": "neocities site info api",
                 "url": "https://weirdscifi.ratiosemper.com/neocities.php?sitename=wormboy3"
